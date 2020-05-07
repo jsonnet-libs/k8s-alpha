@@ -1,0 +1,3 @@
+{
+  priorityClass: (import 'priorityClass.libsonnet')
+}

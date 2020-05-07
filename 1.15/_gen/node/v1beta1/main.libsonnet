@@ -1,0 +1,3 @@
+{
+  runtimeClass: (import 'runtimeClass.libsonnet')
+}
