@@ -2,10 +2,12 @@
   core+: {
     v1+: {
       configMap+: {
+        local withData(data) = if data != {} then super.withData(data) else {},
+        withData:: withData,
         new(name, data)::
           super.new(name)
           + super.metadata.withName(name)
-          + super.withData(data),
+          + withData(data),
       },
 
       container+: {
@@ -16,7 +18,7 @@
         // using a local here to re-use new, because it is lexically scoped,
         // while `self` is not
         local new(containerPort) = super.withContainerPort(containerPort),
-        new(containerPort):: new,
+        new:: new,
         newNamed(containerPort, name):: new(containerPort) + super.withName(name),
       },
 
@@ -51,7 +53,7 @@
 
       servicePort+:: {
         local new(port, targetPort) = super.withPort(port) + super.withTargetPort(targetPort),
-        new(port, targetPort):: new,
+        new:: new,
         newNamed(name, port, targetPort)::
           new(port, targetPort) + super.withName(name),
       },
@@ -60,10 +62,10 @@
         fromConfigMap(name, configMapName, configMapItems)::
           super.withName(name)
           + super.configMap.withName(configMapName) + super.configMap.withItems(configMapItems),
-        fromEmptyDir(name, emptyDir)::
+        fromEmptyDir(name, emptyDir={})::
           super.withName(name) + { emptyDir: emptyDir },
-        fromPersistentVolumeClaim(name, claimName)::
-          super.withName(name) + super.persistentVolumeClaim.withClaimName(claimName),
+        fromPersistentVolumeClaim(name, emptyDir)::  // <- emptyDir should be claimName, but ksonnet
+          super.withName(name) + super.persistentVolumeClaim.withClaimName(emptyDir),
         fromHostPath(name, hostPath)::
           super.withName(name) + super.hostPath.withPath(hostPath),
         fromSecret(name, secretName)::
