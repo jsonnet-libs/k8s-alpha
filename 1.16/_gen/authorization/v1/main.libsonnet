@@ -1,4 +1,6 @@
 {
+  local d = (import 'doc-util/main.libsonnet'),
+  '#': d.pkg(name='v1', url='', help=''),
   localSubjectAccessReview: (import 'localSubjectAccessReview.libsonnet'),
   nonResourceAttributes: (import 'nonResourceAttributes.libsonnet'),
   nonResourceRule: (import 'nonResourceRule.libsonnet'),

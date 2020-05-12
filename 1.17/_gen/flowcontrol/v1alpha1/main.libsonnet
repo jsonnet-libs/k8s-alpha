@@ -1,4 +1,6 @@
 {
+  local d = (import 'doc-util/main.libsonnet'),
+  '#': d.pkg(name='v1alpha1', url='', help=''),
   flowDistinguisherMethod: (import 'flowDistinguisherMethod.libsonnet'),
   flowSchema: (import 'flowSchema.libsonnet'),
   flowSchemaCondition: (import 'flowSchemaCondition.libsonnet'),

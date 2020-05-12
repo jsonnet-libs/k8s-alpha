@@ -1,4 +1,6 @@
 {
+  local d = (import 'doc-util/main.libsonnet'),
+  '#': d.pkg(name='v1beta1', url='', help=''),
   controllerRevision: (import 'controllerRevision.libsonnet'),
   deployment: (import 'deployment.libsonnet'),
   deploymentCondition: (import 'deploymentCondition.libsonnet'),

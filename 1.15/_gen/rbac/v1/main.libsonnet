@@ -1,4 +1,6 @@
 {
+  local d = (import 'doc-util/main.libsonnet'),
+  '#': d.pkg(name='v1', url='', help=''),
   aggregationRule: (import 'aggregationRule.libsonnet'),
   clusterRole: (import 'clusterRole.libsonnet'),
   clusterRoleBinding: (import 'clusterRoleBinding.libsonnet'),

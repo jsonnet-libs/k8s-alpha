@@ -1,4 +1,6 @@
 {
+  local d = (import 'doc-util/main.libsonnet'),
+  '#': d.pkg(name='k', url='github.com/jsonnet-libs/k8s-alpha/1.15/main.libsonnet', help='Generated Kubernetes library'),
   admissionregistration:: (import '_gen/admissionregistration/main.libsonnet'),
   apps:: (import '_gen/apps/main.libsonnet'),
   auditregistration:: (import '_gen/auditregistration/main.libsonnet'),

@@ -1,4 +1,6 @@
 {
+  local d = (import 'doc-util/main.libsonnet'),
+  '#': d.pkg(name='v1', url='', help=''),
   affinity: (import 'affinity.libsonnet'),
   attachedVolume: (import 'attachedVolume.libsonnet'),
   awsElasticBlockStoreVolumeSource: (import 'awsElasticBlockStoreVolumeSource.libsonnet'),
