@@ -227,7 +227,7 @@ ObjectMetricSource indicates how to scale on a metric describing a kubernetes ob
 
 ## obj object.describedObject
 
-
+CrossVersionObjectReference contains enough information to let you identify the referred resource.
 
 ### fn object.describedObject.withKind
 
@@ -259,7 +259,7 @@ name is the name of the given metric
 
 ## obj object.metric.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn object.metric.selector.withMatchExpressions
 
@@ -559,7 +559,7 @@ name is the name of the resource in question.
 
 ## obj resource.target
 
-MetricTarget defines the target value, average value, or average utilization of a specific metric
+
 
 ### fn resource.target.withAverageUtilization
 

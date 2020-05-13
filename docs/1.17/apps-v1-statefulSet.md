@@ -11,7 +11,9 @@ The StatefulSet guarantees that a given network identity will always map to the 
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-new)
+* [`fn mapContainers(f)`](#fn-mapcontainers)
+* [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -164,10 +166,33 @@ The StatefulSet guarantees that a given network identity will always map to the 
 ### fn new
 
 ```ts
-new(name)
+new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
 ```
 
 new returns an instance of Statefulset
+
+### fn mapContainers
+
+```ts
+mapContainers(f)
+```
+
+`mapContainers` applies the function f to each container.
+It works exactly as `std.map`, but on the containers of this object.
+
+**Signature of `f`**:
+```ts
+f(container: Object) Object
+```
+
+
+### fn mapContainersWithName
+
+```ts
+mapContainersWithName(names, f)
+```
+
+
 
 ## obj metadata
 
@@ -419,7 +444,7 @@ volumeClaimTemplates is a list of claims that pods are allowed to reference. The
 
 ## obj spec.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn spec.selector.withMatchExpressions
 
@@ -1019,7 +1044,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
@@ -1045,7 +1070,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1205,7 +1230,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1281,7 +1306,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 

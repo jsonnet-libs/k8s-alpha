@@ -394,7 +394,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj template.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn template.metadata.initializers.withPending
 
@@ -416,7 +416,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj template.metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn template.metadata.initializers.result.withCode
 
@@ -878,7 +878,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj template.spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -958,7 +958,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn template.spec.dnsConfig.withNameservers
 
@@ -1016,7 +1016,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn template.spec.securityContext.withFsGroup
 

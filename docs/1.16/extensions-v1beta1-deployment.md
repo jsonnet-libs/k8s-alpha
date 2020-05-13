@@ -408,7 +408,7 @@ The number of old ReplicaSets to retain to allow rollback. This is a pointer to 
 
 ## obj spec.rollbackTo
 
-DEPRECATED.
+
 
 ### fn spec.rollbackTo.withRevision
 
@@ -420,7 +420,7 @@ The revision to rollback to. If set to 0, rollback to the last revision.
 
 ## obj spec.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn spec.selector.withMatchExpressions
 
@@ -472,7 +472,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 
 ## obj spec.strategy.rollingUpdate
 
-Spec to control the desired behavior of rolling update.
+
 
 ### fn spec.strategy.rollingUpdate.withMaxSurge
 
@@ -1052,7 +1052,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
@@ -1180,7 +1180,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 

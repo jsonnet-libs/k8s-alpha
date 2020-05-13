@@ -221,7 +221,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj preStop.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn preStop.tcpSocket.withHost
 

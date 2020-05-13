@@ -8,11 +8,20 @@ Maps a string key to a path within a volume.
 
 ## Index
 
+* [`fn new(key, path)`](#fn-new)
 * [`fn withKey(key)`](#fn-withkey)
 * [`fn withMode(mode)`](#fn-withmode)
 * [`fn withPath(path)`](#fn-withpath)
 
 ## Fields
+
+### fn new
+
+```ts
+new(key, path)
+```
+
+new creates a new `keyToPath`
 
 ### fn withKey
 

@@ -8,7 +8,7 @@ ConfigMap holds configuration data for pods to consume.
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, data)`](#fn-new)
 * [`fn withBinaryData(binaryData)`](#fn-withbinarydata)
 * [`fn withBinaryDataMixin(binaryData)`](#fn-withbinarydatamixin)
 * [`fn withData(data)`](#fn-withdata)
@@ -58,10 +58,10 @@ ConfigMap holds configuration data for pods to consume.
 ### fn new
 
 ```ts
-new(name)
+new(name, data)
 ```
 
-new returns an instance of Configmap
+new creates a new `ConfigMap` of given `name` and `data`
 
 ### fn withBinaryData
 
@@ -297,7 +297,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 

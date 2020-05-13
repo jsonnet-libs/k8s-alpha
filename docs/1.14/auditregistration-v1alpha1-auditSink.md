@@ -273,7 +273,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -405,7 +405,7 @@ AuditSinkSpec holds the spec for the audit sink
 
 ## obj spec.policy
 
-Policy defines the configuration of how audit events are logged
+
 
 ### fn spec.policy.withLevel
 

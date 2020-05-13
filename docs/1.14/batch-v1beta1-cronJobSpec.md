@@ -237,7 +237,7 @@ JobTemplateSpec describes the data a Job should have when created from a templat
 
 ## obj jobTemplate.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn jobTemplate.metadata.withAnnotations
 
@@ -455,7 +455,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj jobTemplate.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn jobTemplate.metadata.initializers.result.withCode
 
@@ -499,7 +499,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj jobTemplate.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn jobTemplate.metadata.initializers.result.details.withCauses
 
@@ -561,7 +561,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj jobTemplate.spec
 
-JobSpec describes how the job execution will look like.
+
 
 ### fn jobTemplate.spec.withActiveDeadlineSeconds
 
@@ -613,7 +613,7 @@ ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
 
 ## obj jobTemplate.spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn jobTemplate.spec.selector.withMatchExpressions
 
@@ -653,11 +653,11 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj jobTemplate.spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj jobTemplate.spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn jobTemplate.spec.template.metadata.withAnnotations
 
@@ -853,7 +853,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj jobTemplate.spec.template.metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn jobTemplate.spec.template.metadata.initializers.withPending
 
@@ -875,7 +875,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj jobTemplate.spec.template.metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn jobTemplate.spec.template.metadata.initializers.result.withCode
 
@@ -1281,7 +1281,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj jobTemplate.spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj jobTemplate.spec.template.spec.affinity.nodeAffinity
 
@@ -1409,7 +1409,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj jobTemplate.spec.template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn jobTemplate.spec.template.spec.dnsConfig.withNameservers
 
@@ -1467,7 +1467,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj jobTemplate.spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn jobTemplate.spec.template.spec.securityContext.withFsGroup
 
@@ -1543,7 +1543,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 

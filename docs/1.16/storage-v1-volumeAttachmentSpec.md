@@ -312,9 +312,7 @@ volumeMode defines if a volume is intended to be used with a formatted filesyste
 
 ## obj source.inlineVolumeSpec.awsElasticBlockStore
 
-Represents a Persistent Disk resource in AWS.
 
-An AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.awsElasticBlockStore.withFsType
 
@@ -350,7 +348,7 @@ Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
 
 ## obj source.inlineVolumeSpec.azureDisk
 
-AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+
 
 ### fn source.inlineVolumeSpec.azureDisk.withCachingMode
 
@@ -492,7 +490,7 @@ Optional: User is the rados user name, default is admin More info: https://examp
 
 ## obj source.inlineVolumeSpec.cephfs.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn source.inlineVolumeSpec.cephfs.secretRef.withName
 
@@ -686,7 +684,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.csi.controllerPublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn source.inlineVolumeSpec.csi.controllerPublishSecretRef.withName
 
@@ -810,7 +808,7 @@ Optional: FC volume world wide identifiers (wwids) Either wwids or combination o
 
 ## obj source.inlineVolumeSpec.flexVolume
 
-FlexPersistentVolumeSource represents a generic persistent volume resource that is provisioned/attached using an exec based plugin.
+
 
 ### fn source.inlineVolumeSpec.flexVolume.withDriver
 
@@ -876,7 +874,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.flocker
 
-
+Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.flocker.withDatasetName
 
@@ -934,7 +932,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj source.inlineVolumeSpec.glusterfs
 
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.glusterfs.withEndpoints
 
@@ -970,7 +968,7 @@ ReadOnly here will force the Glusterfs volume to be mounted with read-only permi
 
 ## obj source.inlineVolumeSpec.hostPath
 
-
+Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.hostPath.withPath
 
@@ -990,7 +988,7 @@ Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/co
 
 ## obj source.inlineVolumeSpec.iscsi
 
-ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.iscsi.withChapAuthDiscovery
 
@@ -1084,7 +1082,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj source.inlineVolumeSpec.iscsi.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn source.inlineVolumeSpec.iscsi.secretRef.withName
 
@@ -1152,7 +1150,7 @@ Server is the hostname or IP address of the NFS server. More info: https://kuber
 
 ## obj source.inlineVolumeSpec.nodeAffinity
 
-VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed from.
+
 
 ## obj source.inlineVolumeSpec.nodeAffinity.required
 
@@ -1226,7 +1224,7 @@ VolumeID uniquely identifies a Portworx volume
 
 ## obj source.inlineVolumeSpec.quobyte
 
-
+Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.quobyte.withGroup
 

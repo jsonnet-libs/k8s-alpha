@@ -323,7 +323,7 @@ Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifier
 
 ## obj object.metric
 
-
+MetricIdentifier defines the name and optionally selector for a metric
 
 ### fn object.metric.withName
 
@@ -379,7 +379,7 @@ PodsMetricStatus indicates the current value of a metric describing each pod in 
 
 ## obj pods.current
 
-MetricValueStatus holds the current value for a metric
+
 
 ### fn pods.current.withAverageUtilization
 

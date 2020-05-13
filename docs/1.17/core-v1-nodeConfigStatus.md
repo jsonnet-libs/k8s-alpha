@@ -47,7 +47,7 @@ NodeConfigSource specifies a source of node configuration. Exactly one subfield 
 
 ## obj active.configMap
 
-
+ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
 
 ### fn active.configMap.withKubeletConfigKey
 
@@ -95,7 +95,7 @@ NodeConfigSource specifies a source of node configuration. Exactly one subfield 
 
 ## obj assigned.configMap
 
-ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
+
 
 ### fn assigned.configMap.withKubeletConfigKey
 

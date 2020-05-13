@@ -9,6 +9,8 @@ Job represents the configuration of a single job.
 ## Index
 
 * [`fn new(name)`](#fn-new)
+* [`fn mapContainers(f)`](#fn-mapcontainers)
+* [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -161,6 +163,29 @@ new(name)
 ```
 
 new returns an instance of Job
+
+### fn mapContainers
+
+```ts
+mapContainers(f)
+```
+
+`mapContainers` applies the function f to each container.
+It works exactly as `std.map`, but on the containers of this object.
+
+**Signature of `f`**:
+```ts
+f(container: Object) Object
+```
+
+
+### fn mapContainersWithName
+
+```ts
+mapContainersWithName(names, f)
+```
+
+
 
 ## obj metadata
 
@@ -410,7 +435,7 @@ ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
 
 ## obj spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.selector.withMatchExpressions
 
@@ -450,7 +475,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj spec.template.metadata
 
@@ -1010,11 +1035,11 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1058,7 +1083,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1272,7 +1297,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 

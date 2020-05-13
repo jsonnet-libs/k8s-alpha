@@ -8,6 +8,7 @@ A single application container that you want to run within a pod.
 
 ## Index
 
+* [`fn new(name, image)`](#fn-new)
 * [`fn withArgs(args)`](#fn-withargs)
 * [`fn withArgsMixin(args)`](#fn-withargsmixin)
 * [`fn withCommand(command)`](#fn-withcommand)
@@ -146,6 +147,14 @@ A single application container that you want to run within a pod.
     * [`fn withPort(port)`](#fn-startupprobetcpsocketwithport)
 
 ## Fields
+
+### fn new
+
+```ts
+new(name, image)
+```
+
+new returns a new `container` of given `name` and `image`
 
 ### fn withArgs
 
@@ -351,11 +360,11 @@ Lifecycle describes actions that the management system should take in response t
 
 ## obj lifecycle.postStart
 
-
+Handler defines a specific action that should be taken
 
 ## obj lifecycle.postStart.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn lifecycle.postStart.exec.withCommand
 
@@ -377,7 +386,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj lifecycle.postStart.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn lifecycle.postStart.httpGet.withHost
 
@@ -431,7 +440,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.postStart.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn lifecycle.postStart.tcpSocket.withHost
 
@@ -451,11 +460,11 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj lifecycle.preStop
 
-
+Handler defines a specific action that should be taken
 
 ## obj lifecycle.preStop.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn lifecycle.preStop.exec.withCommand
 
@@ -477,7 +486,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj lifecycle.preStop.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn lifecycle.preStop.httpGet.withHost
 
@@ -671,7 +680,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj livenessProbe.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn livenessProbe.tcpSocket.withHost
 
@@ -735,7 +744,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj readinessProbe.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn readinessProbe.exec.withCommand
 
@@ -1007,7 +1016,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn securityContext.windowsOptions.withGmsaCredentialSpec
 

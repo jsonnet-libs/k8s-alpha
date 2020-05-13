@@ -458,7 +458,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj template.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn template.metadata.initializers.result.withCode
 
@@ -872,11 +872,11 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1058,7 +1058,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn template.spec.securityContext.withFsGroup
 
@@ -1134,7 +1134,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1170,7 +1170,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

@@ -9,6 +9,8 @@ Pod is a collection of containers that can run on a host. This resource is creat
 ## Index
 
 * [`fn new(name)`](#fn-new)
+* [`fn mapContainers(f)`](#fn-mapcontainers)
+* [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -126,6 +128,29 @@ new(name)
 ```
 
 new returns an instance of Pod
+
+### fn mapContainers
+
+```ts
+mapContainers(f)
+```
+
+`mapContainers` applies the function f to each container.
+It works exactly as `std.map`, but on the containers of this object.
+
+**Signature of `f`**:
+```ts
+f(container: Object) Object
+```
+
+
+### fn mapContainersWithName
+
+```ts
+mapContainersWithName(names, f)
+```
+
+
 
 ## obj metadata
 
@@ -733,7 +758,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -983,7 +1008,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

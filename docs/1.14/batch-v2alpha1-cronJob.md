@@ -430,7 +430,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -452,7 +452,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -810,7 +810,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn spec.jobTemplate.metadata.initializers.withPending
 
@@ -832,7 +832,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.jobTemplate.metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn spec.jobTemplate.metadata.initializers.result.withCode
 
@@ -876,7 +876,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.jobTemplate.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn spec.jobTemplate.metadata.initializers.result.details.withCauses
 
@@ -1296,7 +1296,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.result.details.withCauses
 
@@ -1358,7 +1358,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj spec.jobTemplate.spec.template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn spec.jobTemplate.spec.template.spec.withActiveDeadlineSeconds
 
@@ -1658,7 +1658,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.jobTemplate.spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.nodeAffinity
 
@@ -1920,7 +1920,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 

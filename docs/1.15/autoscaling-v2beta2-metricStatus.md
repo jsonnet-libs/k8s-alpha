@@ -71,7 +71,7 @@ ExternalMetricStatus indicates the current value of a global metric not associat
 
 ## obj external.current
 
-MetricValueStatus holds the current value for a metric
+
 
 ### fn external.current.withAverageUtilization
 
@@ -171,7 +171,7 @@ name is the name of the given metric
 
 ## obj external.metric.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn external.metric.selector.withMatchExpressions
 
@@ -303,7 +303,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj object.describedObject
 
-
+CrossVersionObjectReference contains enough information to let you identify the referred resource.
 
 ### fn object.describedObject.withKind
 
@@ -335,7 +335,7 @@ name is the name of the given metric
 
 ## obj object.metric.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn object.metric.selector.withMatchExpressions
 
@@ -467,7 +467,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj pods.metric
 
-MetricIdentifier defines the name and optionally selector for a metric
+
 
 ### fn pods.metric.withName
 
@@ -479,7 +479,7 @@ name is the name of the given metric
 
 ## obj pods.metric.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn pods.metric.selector.withMatchExpressions
 
@@ -531,7 +531,7 @@ Name is the name of the resource in question.
 
 ## obj resource.current
 
-
+MetricValueStatus holds the current value for a metric
 
 ### fn resource.current.withAverageUtilization
 

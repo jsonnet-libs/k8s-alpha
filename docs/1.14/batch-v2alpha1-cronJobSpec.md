@@ -237,7 +237,7 @@ JobTemplateSpec describes the data a Job should have when created from a templat
 
 ## obj jobTemplate.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn jobTemplate.metadata.withAnnotations
 
@@ -455,7 +455,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj jobTemplate.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn jobTemplate.metadata.initializers.result.withCode
 
@@ -499,7 +499,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj jobTemplate.metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn jobTemplate.metadata.initializers.result.details.withCauses
 
@@ -653,7 +653,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj jobTemplate.spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj jobTemplate.spec.template.metadata
 
@@ -853,7 +853,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj jobTemplate.spec.template.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn jobTemplate.spec.template.metadata.initializers.withPending
 
@@ -1307,7 +1307,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1369,7 +1369,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj jobTemplate.spec.template.spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn jobTemplate.spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1467,7 +1467,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj jobTemplate.spec.template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn jobTemplate.spec.template.spec.securityContext.withFsGroup
 

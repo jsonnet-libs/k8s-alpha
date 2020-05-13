@@ -11,7 +11,9 @@ The StatefulSet guarantees that a given network identity will always map to the 
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-new)
+* [`fn mapContainers(f)`](#fn-mapcontainers)
+* [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -187,10 +189,33 @@ The StatefulSet guarantees that a given network identity will always map to the 
 ### fn new
 
 ```ts
-new(name)
+new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
 ```
 
 new returns an instance of Statefulset
+
+### fn mapContainers
+
+```ts
+mapContainers(f)
+```
+
+`mapContainers` applies the function f to each container.
+It works exactly as `std.map`, but on the containers of this object.
+
+**Signature of `f`**:
+```ts
+f(container: Object) Object
+```
+
+
+### fn mapContainersWithName
+
+```ts
+mapContainersWithName(names, f)
+```
+
+
 
 ## obj metadata
 
@@ -572,7 +597,7 @@ volumeClaimTemplates is a list of claims that pods are allowed to reference. The
 
 ## obj spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.selector.withMatchExpressions
 
@@ -612,7 +637,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj spec.template.metadata
 
@@ -812,7 +837,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn spec.template.metadata.initializers.withPending
 
@@ -878,7 +903,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.template.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn spec.template.metadata.initializers.result.details.withCauses
 
@@ -1240,7 +1265,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
@@ -1426,7 +1451,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn spec.template.spec.securityContext.withFsGroup
 

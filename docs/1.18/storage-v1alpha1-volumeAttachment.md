@@ -450,7 +450,7 @@ The node that the volume should be attached to.
 
 ## obj spec.source
 
-VolumeAttachmentSource represents a volume that should be attached. Right now only PersistenVolumes can be attached via external attacher, in future we may allow also inline volumes in pods. Exactly one member can be set.
+
 
 ### fn spec.source.withPersistentVolumeName
 
@@ -582,7 +582,7 @@ Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
 
 ## obj spec.source.inlineVolumeSpec.azureDisk
 
-AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+
 
 ### fn spec.source.inlineVolumeSpec.azureDisk.withCachingMode
 
@@ -634,7 +634,7 @@ Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
 
 ## obj spec.source.inlineVolumeSpec.azureFile
 
-AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+
 
 ### fn spec.source.inlineVolumeSpec.azureFile.withReadOnly
 
@@ -744,7 +744,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.source.inlineVolumeSpec.cinder
 
-
+Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.cinder.withFsType
 
@@ -792,7 +792,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.source.inlineVolumeSpec.claimRef
 
-ObjectReference contains enough information to let you inspect or modify the referred object.
+
 
 ### fn spec.source.inlineVolumeSpec.claimRef.withFieldPath
 
@@ -844,7 +844,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.source.inlineVolumeSpec.csi
 
-
+Represents storage that is managed by an external CSI volume driver (Beta feature)
 
 ### fn spec.source.inlineVolumeSpec.csi.withDriver
 
@@ -898,7 +898,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj spec.source.inlineVolumeSpec.csi.controllerExpandSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.source.inlineVolumeSpec.csi.controllerExpandSecretRef.withName
 
@@ -1042,7 +1042,7 @@ Optional: FC volume world wide identifiers (wwids) Either wwids or combination o
 
 ## obj spec.source.inlineVolumeSpec.flexVolume
 
-FlexPersistentVolumeSource represents a generic persistent volume resource that is provisioned/attached using an exec based plugin.
+
 
 ### fn spec.source.inlineVolumeSpec.flexVolume.withDriver
 
@@ -1108,7 +1108,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.source.inlineVolumeSpec.flocker
 
-
+Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.flocker.withDatasetName
 
@@ -1166,7 +1166,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.source.inlineVolumeSpec.glusterfs
 
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.source.inlineVolumeSpec.glusterfs.withEndpoints
 
@@ -1202,7 +1202,7 @@ ReadOnly here will force the Glusterfs volume to be mounted with read-only permi
 
 ## obj spec.source.inlineVolumeSpec.hostPath
 
-Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.source.inlineVolumeSpec.hostPath.withPath
 
@@ -1222,7 +1222,7 @@ Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/co
 
 ## obj spec.source.inlineVolumeSpec.iscsi
 
-
+ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.iscsi.withChapAuthDiscovery
 
@@ -1316,7 +1316,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj spec.source.inlineVolumeSpec.iscsi.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.source.inlineVolumeSpec.iscsi.secretRef.withName
 
@@ -1356,7 +1356,7 @@ The full path to the volume on the node. It can be either a directory or block d
 
 ## obj spec.source.inlineVolumeSpec.nfs
 
-
+Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.nfs.withPath
 
@@ -1458,7 +1458,7 @@ VolumeID uniquely identifies a Portworx volume
 
 ## obj spec.source.inlineVolumeSpec.quobyte
 
-Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.source.inlineVolumeSpec.quobyte.withGroup
 
@@ -1510,7 +1510,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj spec.source.inlineVolumeSpec.rbd
 
-
+Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.rbd.withFsType
 
@@ -1696,7 +1696,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.source.inlineVolumeSpec.storageos
 
-Represents a StorageOS persistent volume resource.
+
 
 ### fn spec.source.inlineVolumeSpec.storageos.withFsType
 
@@ -1732,7 +1732,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj spec.source.inlineVolumeSpec.storageos.secretRef
 
-
+ObjectReference contains enough information to let you inspect or modify the referred object.
 
 ### fn spec.source.inlineVolumeSpec.storageos.secretRef.withFieldPath
 

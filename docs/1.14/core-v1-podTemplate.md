@@ -9,6 +9,8 @@ PodTemplate describes a template for creating copies of a predefined pod.
 ## Index
 
 * [`fn new(name)`](#fn-new)
+* [`fn mapContainers(f)`](#fn-mapcontainers)
+* [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -172,6 +174,29 @@ new(name)
 ```
 
 new returns an instance of Podtemplate
+
+### fn mapContainers
+
+```ts
+mapContainers(f)
+```
+
+`mapContainers` applies the function f to each container.
+It works exactly as `std.map`, but on the containers of this object.
+
+**Signature of `f`**:
+```ts
+f(container: Object) Object
+```
+
+
+### fn mapContainersWithName
+
+```ts
+mapContainersWithName(names, f)
+```
+
+
 
 ## obj metadata
 
@@ -393,7 +418,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -699,7 +724,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj template.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn template.metadata.initializers.withPending
 
@@ -827,7 +852,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn template.spec.withActiveDeadlineSeconds
 
@@ -1127,7 +1152,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj template.spec.affinity.nodeAffinity
 
@@ -1175,7 +1200,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1215,7 +1240,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj template.spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1313,7 +1338,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn template.spec.securityContext.withFsGroup
 

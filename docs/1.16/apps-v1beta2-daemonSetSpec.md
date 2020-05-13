@@ -752,7 +752,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -796,7 +796,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -836,7 +836,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj template.spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1010,7 +1010,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1046,7 +1046,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -1086,7 +1086,7 @@ Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is Roll
 
 ## obj updateStrategy.rollingUpdate
 
-
+Spec to control the desired behavior of daemon set rolling update.
 
 ### fn updateStrategy.rollingUpdate.withMaxUnavailable
 

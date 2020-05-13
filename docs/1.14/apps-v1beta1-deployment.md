@@ -8,7 +8,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, replicas=1, containers, podLabels={app: 'name'})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -186,7 +186,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 ### fn new
 
 ```ts
-new(name)
+new(name, replicas=1, containers, podLabels={app: 'name'})
 ```
 
 new returns an instance of Deployment
@@ -389,7 +389,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -411,7 +411,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -561,7 +561,7 @@ The number of old ReplicaSets to retain to allow rollback. This is a pointer to 
 
 ## obj spec.rollbackTo
 
-
+DEPRECATED.
 
 ### fn spec.rollbackTo.withRevision
 
@@ -613,7 +613,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.strategy
 
-DeploymentStrategy describes how to replace existing pods with new ones.
+
 
 ### fn spec.strategy.withType
 
@@ -645,11 +645,11 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj spec.template.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -845,7 +845,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn spec.template.metadata.initializers.withPending
 
@@ -1273,7 +1273,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
@@ -1401,7 +1401,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1535,7 +1535,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 

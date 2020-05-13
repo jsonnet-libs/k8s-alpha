@@ -790,7 +790,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -914,7 +914,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn template.spec.dnsConfig.withNameservers
 
@@ -1048,7 +1048,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1124,7 +1124,7 @@ Type indicates the type of the StatefulSetUpdateStrategy.
 
 ## obj updateStrategy.rollingUpdate
 
-RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
+
 
 ### fn updateStrategy.rollingUpdate.withPartition
 

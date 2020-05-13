@@ -651,7 +651,7 @@ rule is the strategy that will dictate the allowable RunAsUser values that may b
 
 ## obj spec.runtimeClass
 
-RuntimeClassStrategyOptions define the strategy that will dictate the allowable RuntimeClasses for a pod.
+
 
 ### fn spec.runtimeClass.withAllowedRuntimeClassNames
 
@@ -693,7 +693,7 @@ rule is the strategy that will dictate the allowable labels that may be set.
 
 ## obj spec.seLinux.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.seLinux.seLinuxOptions.withLevel
 

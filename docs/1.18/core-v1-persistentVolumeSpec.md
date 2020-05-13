@@ -455,7 +455,7 @@ Optional: User is the rados user name, default is admin More info: https://examp
 
 ## obj cephfs.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn cephfs.secretRef.withName
 
@@ -629,7 +629,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj csi.controllerExpandSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.controllerExpandSecretRef.withName
 
@@ -649,7 +649,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.controllerPublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.controllerPublishSecretRef.withName
 
@@ -669,7 +669,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.nodePublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn csi.nodePublishSecretRef.withName
 
@@ -689,7 +689,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.nodeStageSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn csi.nodeStageSecretRef.withName
 

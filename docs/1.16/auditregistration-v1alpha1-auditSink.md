@@ -323,7 +323,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
 ## obj spec.webhook.clientConfig.service
 
-
+ServiceReference holds a reference to Service.legacy.k8s.io
 
 ### fn spec.webhook.clientConfig.service.withName
 

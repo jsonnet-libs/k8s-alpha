@@ -336,7 +336,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -708,7 +708,7 @@ volumes is a white list of allowed volume plugins. Empty indicates that no volum
 
 ## obj spec.fsGroup
 
-FSGroupStrategyOptions defines the strategy type and options used to create the strategy.
+
 
 ### fn spec.fsGroup.withRanges
 
@@ -738,7 +738,7 @@ rule is the strategy that will dictate what FSGroup is used in the SecurityConte
 
 ## obj spec.runAsGroup
 
-RunAsGroupStrategyOptions defines the strategy type and any options used to create the strategy.
+
 
 ### fn spec.runAsGroup.withRanges
 
@@ -768,7 +768,7 @@ rule is the strategy that will dictate the allowable RunAsGroup values that may 
 
 ## obj spec.runAsUser
 
-
+RunAsUserStrategyOptions defines the strategy type and any options used to create the strategy.
 
 ### fn spec.runAsUser.withRanges
 
@@ -798,7 +798,7 @@ rule is the strategy that will dictate the allowable RunAsUser values that may b
 
 ## obj spec.runtimeClass
 
-RuntimeClassStrategyOptions define the strategy that will dictate the allowable RuntimeClasses for a pod.
+
 
 ### fn spec.runtimeClass.withAllowedRuntimeClassNames
 
@@ -876,7 +876,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.supplementalGroups
 
-
+SupplementalGroupsStrategyOptions defines the strategy type and options used to create the strategy.
 
 ### fn spec.supplementalGroups.withRanges
 

@@ -8,6 +8,9 @@ EnvVar represents an environment variable present in a Container.
 
 ## Index
 
+* [`fn new(name, value)`](#fn-new)
+* [`fn fromFieldPath(name, fieldPath)`](#fn-fromfieldpath)
+* [`fn fromSecretRef(name, secretRefName, secretRefKey)`](#fn-fromsecretref)
 * [`fn withName(name)`](#fn-withname)
 * [`fn withValue(value)`](#fn-withvalue)
 * [`obj valueFrom`](#obj-valuefrom)
@@ -27,6 +30,30 @@ EnvVar represents an environment variable present in a Container.
     * [`fn withOptional(optional)`](#fn-valuefromsecretkeyrefwithoptional)
 
 ## Fields
+
+### fn new
+
+```ts
+new(name, value)
+```
+
+new returns a new `envVar` of given `name` and `value`
+
+### fn fromFieldPath
+
+```ts
+fromFieldPath(name, fieldPath)
+```
+
+fromFieldPath creates a `envVar` from a field path
+
+### fn fromSecretRef
+
+```ts
+fromSecretRef(name, secretRefName, secretRefKey)
+```
+
+fromSecretRef creates a `envVar` from a secret reference
 
 ### fn withName
 
@@ -50,7 +77,7 @@ EnvVarSource represents a source for the value of an EnvVar.
 
 ## obj valueFrom.configMapKeyRef
 
-
+Selects a key from a ConfigMap.
 
 ### fn valueFrom.configMapKeyRef.withKey
 
@@ -148,7 +175,7 @@ Required: resource to select
 
 ## obj valueFrom.secretKeyRef
 
-SecretKeySelector selects a key of a Secret.
+
 
 ### fn valueFrom.secretKeyRef.withKey
 

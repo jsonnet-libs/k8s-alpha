@@ -621,7 +621,7 @@ rule is the strategy that will dictate the allowable RunAsGroup values that may 
 
 ## obj spec.runAsUser
 
-RunAsUserStrategyOptions defines the strategy type and any options used to create the strategy.
+
 
 ### fn spec.runAsUser.withRanges
 
@@ -729,7 +729,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.supplementalGroups
 
-SupplementalGroupsStrategyOptions defines the strategy type and options used to create the strategy.
+
 
 ### fn spec.supplementalGroups.withRanges
 

@@ -8,6 +8,8 @@ ServicePort contains information on service's port.
 
 ## Index
 
+* [`fn new(port, targetPort)`](#fn-new)
+* [`fn newNamed(name, port, targetPort)`](#fn-newnamed)
 * [`fn withName(name)`](#fn-withname)
 * [`fn withNodePort(nodePort)`](#fn-withnodeport)
 * [`fn withPort(port)`](#fn-withport)
@@ -15,6 +17,22 @@ ServicePort contains information on service's port.
 * [`fn withTargetPort(targetPort)`](#fn-withtargetport)
 
 ## Fields
+
+### fn new
+
+```ts
+new(port, targetPort)
+```
+
+new returns a new `servicePort`
+
+### fn newNamed
+
+```ts
+newNamed(name, port, targetPort)
+```
+
+newNamed works like `new`, but also sets the `name`
 
 ### fn withName
 

@@ -252,7 +252,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn template.metadata.withAnnotations
 
@@ -446,7 +446,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn template.spec.withActiveDeadlineSeconds
 
@@ -896,7 +896,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj template.spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -994,7 +994,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn template.spec.securityContext.withFsGroup
 

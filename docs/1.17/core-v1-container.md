@@ -8,6 +8,7 @@ A single application container that you want to run within a pod.
 
 ## Index
 
+* [`fn new(name, image)`](#fn-new)
 * [`fn withArgs(args)`](#fn-withargs)
 * [`fn withArgsMixin(args)`](#fn-withargsmixin)
 * [`fn withCommand(command)`](#fn-withcommand)
@@ -146,6 +147,14 @@ A single application container that you want to run within a pod.
     * [`fn withPort(port)`](#fn-startupprobetcpsocketwithport)
 
 ## Fields
+
+### fn new
+
+```ts
+new(name, image)
+```
+
+new returns a new `container` of given `name` and `image`
 
 ### fn withArgs
 
@@ -355,7 +364,7 @@ Lifecycle describes actions that the management system should take in response t
 
 ## obj lifecycle.postStart.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn lifecycle.postStart.exec.withCommand
 
@@ -811,7 +820,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj readinessProbe.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn readinessProbe.tcpSocket.withHost
 
@@ -931,7 +940,7 @@ The UID to run the entrypoint of the container process. Defaults to user specifi
 
 ## obj securityContext.capabilities
 
-
+Adds and removes POSIX capabilities from running containers.
 
 ### fn securityContext.capabilities.withAdd
 
@@ -1101,7 +1110,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj startupProbe.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn startupProbe.httpGet.withHost
 
@@ -1155,7 +1164,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj startupProbe.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn startupProbe.tcpSocket.withHost
 

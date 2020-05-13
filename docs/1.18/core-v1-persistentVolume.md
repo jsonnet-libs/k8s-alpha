@@ -541,7 +541,7 @@ Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
 
 ## obj spec.azureDisk
 
-AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+
 
 ### fn spec.azureDisk.withCachingMode
 
@@ -593,7 +593,7 @@ Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
 
 ## obj spec.azureFile
 
-AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+
 
 ### fn spec.azureFile.withReadOnly
 
@@ -731,7 +731,7 @@ volume id used to identify the volume in cinder. More info: https://examples.k8s
 
 ## obj spec.cinder.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.cinder.secretRef.withName
 
@@ -751,7 +751,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.claimRef
 
-ObjectReference contains enough information to let you inspect or modify the referred object.
+
 
 ### fn spec.claimRef.withFieldPath
 
@@ -803,7 +803,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.csi
 
-Represents storage that is managed by an external CSI volume driver (Beta feature)
+
 
 ### fn spec.csi.withDriver
 
@@ -897,7 +897,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.csi.nodePublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.csi.nodePublishSecretRef.withName
 
@@ -1067,7 +1067,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.flocker
 
-
+Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.flocker.withDatasetName
 
@@ -1125,7 +1125,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.glusterfs
 
-
+Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.glusterfs.withEndpoints
 
@@ -1161,7 +1161,7 @@ ReadOnly here will force the Glusterfs volume to be mounted with read-only permi
 
 ## obj spec.hostPath
 
-Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.hostPath.withPath
 
@@ -1295,7 +1295,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.local
 
-Local represents directly-attached storage with node affinity (Beta feature)
+
 
 ### fn spec.local.withFsType
 
@@ -1315,7 +1315,7 @@ The full path to the volume on the node. It can be either a directory or block d
 
 ## obj spec.nfs
 
-
+Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.nfs.withPath
 
@@ -1347,7 +1347,7 @@ VolumeNodeAffinity defines constraints that limit what nodes this volume can be 
 
 ## obj spec.nodeAffinity.required
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn spec.nodeAffinity.required.withNodeSelectorTerms
 
@@ -1389,7 +1389,7 @@ ID that identifies Photon Controller persistent disk
 
 ## obj spec.portworxVolume
 
-
+PortworxVolumeSource represents a Portworx volume resource.
 
 ### fn spec.portworxVolume.withFsType
 
@@ -1417,7 +1417,7 @@ VolumeID uniquely identifies a Portworx volume
 
 ## obj spec.quobyte
 
-
+Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.quobyte.withGroup
 
@@ -1469,7 +1469,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj spec.rbd
 
-Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
+
 
 ### fn spec.rbd.withFsType
 
@@ -1539,7 +1539,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj spec.rbd.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.rbd.secretRef.withName
 
@@ -1743,7 +1743,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.vsphereVolume
 
-Represents a vSphere volume resource.
+
 
 ### fn spec.vsphereVolume.withFsType
 

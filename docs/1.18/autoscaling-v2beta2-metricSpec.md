@@ -75,7 +75,7 @@ ExternalMetricSource indicates how to scale on a metric not associated with any 
 
 ## obj external.metric
 
-
+MetricIdentifier defines the name and optionally selector for a metric
 
 ### fn external.metric.withName
 
@@ -299,7 +299,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj object.target
 
-MetricTarget defines the target value, average value, or average utilization of a specific metric
+
 
 ### fn object.target.withAverageUtilization
 
@@ -399,7 +399,7 @@ PodsMetricSource indicates how to scale on a metric describing each pod in the c
 
 ## obj pods.metric
 
-
+MetricIdentifier defines the name and optionally selector for a metric
 
 ### fn pods.metric.withName
 

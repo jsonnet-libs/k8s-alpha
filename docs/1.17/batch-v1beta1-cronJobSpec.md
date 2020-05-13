@@ -500,7 +500,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj jobTemplate.spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj jobTemplate.spec.template.metadata
 
@@ -1108,7 +1108,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj jobTemplate.spec.template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn jobTemplate.spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1246,7 +1246,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj jobTemplate.spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn jobTemplate.spec.template.spec.securityContext.withFsGroup
 
@@ -1322,7 +1322,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 

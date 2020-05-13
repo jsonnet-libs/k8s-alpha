@@ -240,7 +240,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn template.metadata.withAnnotations
 
@@ -458,7 +458,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj template.metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn template.metadata.initializers.result.withCode
 
@@ -502,7 +502,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj template.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn template.metadata.initializers.result.details.withCauses
 
@@ -564,7 +564,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn template.spec.withActiveDeadlineSeconds
 
@@ -876,7 +876,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -920,7 +920,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj template.spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1134,7 +1134,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1170,7 +1170,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -1202,7 +1202,7 @@ Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpda
 
 ## obj updateStrategy.rollingUpdate
 
-
+RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
 
 ### fn updateStrategy.rollingUpdate.withPartition
 

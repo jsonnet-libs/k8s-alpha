@@ -276,7 +276,7 @@ withRulesMixin(rules)
 
 ## obj spec.distinguisherMethod
 
-FlowDistinguisherMethod specifies the method of a flow distinguisher.
+
 
 ### fn spec.distinguisherMethod.withType
 
@@ -288,7 +288,7 @@ withType(type)
 
 ## obj spec.priorityLevelConfiguration
 
-PriorityLevelConfigurationReference contains information that points to the "request-priority" being used.
+
 
 ### fn spec.priorityLevelConfiguration.withName
 

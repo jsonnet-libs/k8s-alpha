@@ -439,7 +439,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -461,7 +461,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -649,9 +649,7 @@ volumeMode defines if a volume is intended to be used with a formatted filesyste
 
 ## obj spec.awsElasticBlockStore
 
-Represents a Persistent Disk resource in AWS.
 
-An AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.
 
 ### fn spec.awsElasticBlockStore.withFsType
 
@@ -687,7 +685,7 @@ Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
 
 ## obj spec.azureDisk
 
-
+AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
 
 ### fn spec.azureDisk.withCachingMode
 
@@ -739,7 +737,7 @@ Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
 
 ## obj spec.azureFile
 
-AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+
 
 ### fn spec.azureFile.withReadOnly
 
@@ -849,7 +847,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.cinder
 
-
+Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
 
 ### fn spec.cinder.withFsType
 
@@ -897,7 +895,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.claimRef
 
-
+ObjectReference contains enough information to let you inspect or modify the referred object.
 
 ### fn spec.claimRef.withFieldPath
 
@@ -949,7 +947,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.csi
 
-Represents storage that is managed by an external CSI volume driver (Beta feature)
+
 
 ### fn spec.csi.withDriver
 
@@ -1003,7 +1001,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj spec.csi.controllerPublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.csi.controllerPublishSecretRef.withName
 
@@ -1023,7 +1021,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.csi.nodePublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.csi.nodePublishSecretRef.withName
 
@@ -1127,7 +1125,7 @@ Optional: FC volume world wide identifiers (wwids) Either wwids or combination o
 
 ## obj spec.flexVolume
 
-FlexPersistentVolumeSource represents a generic persistent volume resource that is provisioned/attached using an exec based plugin.
+
 
 ### fn spec.flexVolume.withDriver
 
@@ -1249,7 +1247,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.glusterfs
 
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.glusterfs.withEndpoints
 
@@ -1285,7 +1283,7 @@ ReadOnly here will force the Glusterfs volume to be mounted with read-only permi
 
 ## obj spec.hostPath
 
-Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.hostPath.withPath
 
@@ -1305,7 +1303,7 @@ Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/co
 
 ## obj spec.iscsi
 
-ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
+
 
 ### fn spec.iscsi.withChapAuthDiscovery
 
@@ -1467,7 +1465,7 @@ Server is the hostname or IP address of the NFS server. More info: https://kuber
 
 ## obj spec.nodeAffinity
 
-
+VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed from.
 
 ## obj spec.nodeAffinity.required
 
@@ -1493,7 +1491,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.photonPersistentDisk
 
-Represents a Photon Controller persistent disk resource.
+
 
 ### fn spec.photonPersistentDisk.withFsType
 
@@ -1593,7 +1591,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj spec.rbd
 
-Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
+
 
 ### fn spec.rbd.withFsType
 
@@ -1663,7 +1661,7 @@ The rados user name. Default is admin. More info: https://releases.k8s.io/HEAD/e
 
 ## obj spec.rbd.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.rbd.secretRef.withName
 
@@ -1683,7 +1681,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.scaleIO
 
-ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
+
 
 ### fn spec.scaleIO.withFsType
 
@@ -1759,7 +1757,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj spec.scaleIO.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.scaleIO.secretRef.withName
 
@@ -1779,7 +1777,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.storageos
 
-Represents a StorageOS persistent volume resource.
+
 
 ### fn spec.storageos.withFsType
 
@@ -1815,7 +1813,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj spec.storageos.secretRef
 
-ObjectReference contains enough information to let you inspect or modify the referred object.
+
 
 ### fn spec.storageos.secretRef.withFieldPath
 
@@ -1867,7 +1865,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.vsphereVolume
 
-
+Represents a vSphere volume resource.
 
 ### fn spec.vsphereVolume.withFsType
 

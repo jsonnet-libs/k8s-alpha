@@ -299,7 +299,7 @@ TLS configuration. Currently the Ingress only supports a single TLS port, 443. I
 
 ## obj spec.backend
 
-
+IngressBackend describes all endpoints for a given service and port.
 
 ### fn spec.backend.withServiceName
 

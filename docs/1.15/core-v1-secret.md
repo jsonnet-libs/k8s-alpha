@@ -8,7 +8,7 @@ Secret holds secret data of a certain type. The total bytes of the values in the
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, data, type='Opaque')`](#fn-new)
 * [`fn withData(data)`](#fn-withdata)
 * [`fn withDataMixin(data)`](#fn-withdatamixin)
 * [`fn withStringData(stringData)`](#fn-withstringdata)
@@ -59,7 +59,7 @@ Secret holds secret data of a certain type. The total bytes of the values in the
 ### fn new
 
 ```ts
-new(name)
+new(name, data, type='Opaque')
 ```
 
 new returns an instance of Secret

@@ -387,7 +387,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn template.spec.withActiveDeadlineSeconds
 
@@ -877,7 +877,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn template.spec.dnsConfig.withNameservers
 
@@ -935,7 +935,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn template.spec.securityContext.withFsGroup
 
@@ -1055,7 +1055,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -1095,7 +1095,7 @@ Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is Roll
 
 ## obj updateStrategy.rollingUpdate
 
-Spec to control the desired behavior of daemon set rolling update.
+
 
 ### fn updateStrategy.rollingUpdate.withMaxUnavailable
 

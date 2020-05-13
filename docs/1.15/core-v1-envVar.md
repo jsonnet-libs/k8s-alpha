@@ -8,6 +8,9 @@ EnvVar represents an environment variable present in a Container.
 
 ## Index
 
+* [`fn new(name, value)`](#fn-new)
+* [`fn fromFieldPath(name, fieldPath)`](#fn-fromfieldpath)
+* [`fn fromSecretRef(name, secretRefName, secretRefKey)`](#fn-fromsecretref)
 * [`fn withName(name)`](#fn-withname)
 * [`fn withValue(value)`](#fn-withvalue)
 * [`obj valueFrom`](#obj-valuefrom)
@@ -27,6 +30,30 @@ EnvVar represents an environment variable present in a Container.
     * [`fn withOptional(optional)`](#fn-valuefromsecretkeyrefwithoptional)
 
 ## Fields
+
+### fn new
+
+```ts
+new(name, value)
+```
+
+new returns a new `envVar` of given `name` and `value`
+
+### fn fromFieldPath
+
+```ts
+fromFieldPath(name, fieldPath)
+```
+
+fromFieldPath creates a `envVar` from a field path
+
+### fn fromSecretRef
+
+```ts
+fromSecretRef(name, secretRefName, secretRefKey)
+```
+
+fromSecretRef creates a `envVar` from a secret reference
 
 ### fn withName
 
@@ -78,7 +105,7 @@ Specify whether the ConfigMap or its key must be defined
 
 ## obj valueFrom.fieldRef
 
-
+ObjectFieldSelector selects an APIVersioned field of an object.
 
 ### fn valueFrom.fieldRef.withFieldPath
 
@@ -90,7 +117,7 @@ Path of the field to select in the specified API version.
 
 ## obj valueFrom.resourceFieldRef
 
-
+ResourceFieldSelector represents container resources (cpu, memory) and their output format
 
 ### fn valueFrom.resourceFieldRef.withContainerName
 
@@ -148,7 +175,7 @@ Required: resource to select
 
 ## obj valueFrom.secretKeyRef
 
-
+SecretKeySelector selects a key of a Secret.
 
 ### fn valueFrom.secretKeyRef.withKey
 

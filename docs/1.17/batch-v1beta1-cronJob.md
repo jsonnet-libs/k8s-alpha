@@ -690,7 +690,7 @@ ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
 
 ## obj spec.jobTemplate.spec.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn spec.jobTemplate.spec.selector.withMatchExpressions
 
@@ -730,11 +730,11 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.jobTemplate.spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj spec.jobTemplate.spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.jobTemplate.spec.template.metadata.withAnnotations
 
@@ -928,7 +928,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.spec.template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn spec.jobTemplate.spec.template.spec.withActiveDeadlineSeconds
 
@@ -1294,7 +1294,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.jobTemplate.spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1338,7 +1338,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn spec.jobTemplate.spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1418,7 +1418,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.jobTemplate.spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.jobTemplate.spec.template.spec.dnsConfig.withNameservers
 
@@ -1588,7 +1588,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

@@ -8,6 +8,8 @@ ContainerPort represents a network port in a single container.
 
 ## Index
 
+* [`fn new(containerPort)`](#fn-new)
+* [`fn newNamed(containerPort, name)`](#fn-newnamed)
 * [`fn withContainerPort(containerPort)`](#fn-withcontainerport)
 * [`fn withHostIP(hostIP)`](#fn-withhostip)
 * [`fn withHostPort(hostPort)`](#fn-withhostport)
@@ -15,6 +17,22 @@ ContainerPort represents a network port in a single container.
 * [`fn withProtocol(protocol)`](#fn-withprotocol)
 
 ## Fields
+
+### fn new
+
+```ts
+new(containerPort)
+```
+
+new returns a new `containerPort`
+
+### fn newNamed
+
+```ts
+newNamed(containerPort, name)
+```
+
+newNamed works like `new`, but also sets the `name`
 
 ### fn withContainerPort
 

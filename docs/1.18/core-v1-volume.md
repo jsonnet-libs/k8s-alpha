@@ -8,6 +8,11 @@ Volume represents a named volume in a pod that may be accessed by any container 
 
 ## Index
 
+* [`fn fromConfigMap(name, configMapName, configMapItems)`](#fn-fromconfigmap)
+* [`fn fromEmptyDir(name, emptyDir={})`](#fn-fromemptydir)
+* [`fn fromHostPath(name, hostPath)`](#fn-fromhostpath)
+* [`fn fromPersistentVolumeClaim(name, emptyDir)`](#fn-frompersistentvolumeclaim)
+* [`fn fromSecret(name, secretName)`](#fn-fromsecret)
 * [`fn withName(name)`](#fn-withname)
 * [`obj awsElasticBlockStore`](#obj-awselasticblockstore)
   * [`fn withFsType(fsType)`](#fn-awselasticblockstorewithfstype)
@@ -178,6 +183,48 @@ Volume represents a named volume in a pod that may be accessed by any container 
   * [`fn withVolumePath(volumePath)`](#fn-vspherevolumewithvolumepath)
 
 ## Fields
+
+### fn fromConfigMap
+
+```ts
+fromConfigMap(name, configMapName, configMapItems)
+```
+
+Creates a new volume from a `ConfigMap`
+
+### fn fromEmptyDir
+
+```ts
+fromEmptyDir(name, emptyDir={})
+```
+
+Creates a new volume of type `emptyDir`
+
+### fn fromHostPath
+
+```ts
+fromHostPath(name, hostPath)
+```
+
+Creates a new volume using a `hostPath`
+
+### fn fromPersistentVolumeClaim
+
+```ts
+fromPersistentVolumeClaim(name, emptyDir)
+```
+
+Creates a new volume using a `PersistentVolumeClaim`.
+
+**Note**: `emptyDir` should be `claimName`, but this is inherited from `ksonnet-lib`
+
+### fn fromSecret
+
+```ts
+fromSecret(name, secretName)
+```
+
+Creates a new volume from a `Secret`
 
 ### fn withName
 
@@ -951,7 +998,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj iscsi.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn iscsi.secretRef.withName
 
@@ -1211,7 +1258,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj rbd.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn rbd.secretRef.withName
 
@@ -1299,7 +1346,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj scaleIO.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn scaleIO.secretRef.withName
 
@@ -1395,7 +1442,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj storageos.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn storageos.secretRef.withName
 

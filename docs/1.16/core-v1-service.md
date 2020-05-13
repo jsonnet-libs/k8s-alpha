@@ -8,7 +8,7 @@ Service is a named abstraction of software service (for example, mysql) consisti
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, selector, ports)`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -58,7 +58,7 @@ Service is a named abstraction of software service (for example, mysql) consisti
 ### fn new
 
 ```ts
-new(name)
+new(name, selector, ports)
 ```
 
 new returns an instance of Service
@@ -407,7 +407,7 @@ type determines how the Service is exposed. Defaults to ClusterIP. Valid options
 
 ## obj spec.sessionAffinityConfig
 
-SessionAffinityConfig represents the configurations of session affinity.
+
 
 ## obj spec.sessionAffinityConfig.clientIP
 

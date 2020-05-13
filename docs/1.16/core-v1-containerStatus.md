@@ -108,7 +108,7 @@ ContainerState holds a possible state of container. Only one of its members may 
 
 ## obj lastState.running
 
-
+ContainerStateRunning is a running state of a container.
 
 ### fn lastState.running.withStartedAt
 
@@ -204,7 +204,7 @@ ContainerState holds a possible state of container. Only one of its members may 
 
 ## obj state.running
 
-
+ContainerStateRunning is a running state of a container.
 
 ### fn state.running.withStartedAt
 
@@ -216,7 +216,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 
 ## obj state.terminated
 
-
+ContainerStateTerminated is a terminated state of a container.
 
 ### fn state.terminated.withContainerID
 

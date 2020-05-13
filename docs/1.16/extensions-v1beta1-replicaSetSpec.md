@@ -748,7 +748,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -872,7 +872,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn template.spec.dnsConfig.withNameservers
 
@@ -1042,7 +1042,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

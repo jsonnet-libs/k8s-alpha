@@ -430,7 +430,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -610,11 +610,11 @@ This flag tells the controller to suspend subsequent executions, it does not app
 
 ## obj spec.jobTemplate
 
-JobTemplateSpec describes the data a Job should have when created from a template
+
 
 ## obj spec.jobTemplate.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.jobTemplate.metadata.withAnnotations
 
@@ -938,7 +938,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj spec.jobTemplate.spec
 
-JobSpec describes how the job execution will look like.
+
 
 ### fn spec.jobTemplate.spec.withActiveDeadlineSeconds
 
@@ -990,7 +990,7 @@ ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
 
 ## obj spec.jobTemplate.spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.jobTemplate.spec.selector.withMatchExpressions
 
@@ -1030,7 +1030,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.jobTemplate.spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj spec.jobTemplate.spec.template.metadata
 
@@ -1230,7 +1230,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.withPending
 
@@ -1252,7 +1252,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.result.withCode
 
@@ -1706,7 +1706,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn spec.jobTemplate.spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1746,7 +1746,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn spec.jobTemplate.spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1920,7 +1920,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 

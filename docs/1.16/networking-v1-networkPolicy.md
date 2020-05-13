@@ -308,7 +308,7 @@ List of rule types that the NetworkPolicy relates to. Valid options are "Ingress
 
 ## obj spec.podSelector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.podSelector.withMatchExpressions
 

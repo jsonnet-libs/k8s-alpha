@@ -8,6 +8,7 @@ VolumeMount describes a mounting of a Volume within a container.
 
 ## Index
 
+* [`fn new(name, mountPath, readOnly)`](#fn-new)
 * [`fn withMountPath(mountPath)`](#fn-withmountpath)
 * [`fn withMountPropagation(mountPropagation)`](#fn-withmountpropagation)
 * [`fn withName(name)`](#fn-withname)
@@ -16,6 +17,14 @@ VolumeMount describes a mounting of a Volume within a container.
 * [`fn withSubPathExpr(subPathExpr)`](#fn-withsubpathexpr)
 
 ## Fields
+
+### fn new
+
+```ts
+new(name, mountPath, readOnly)
+```
+
+new creates a new `volumeMount`
 
 ### fn withMountPath
 

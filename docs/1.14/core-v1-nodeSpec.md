@@ -80,7 +80,7 @@ NodeConfigSource specifies a source of node configuration. Exactly one subfield 
 
 ## obj configSource.configMap
 
-ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
+
 
 ### fn configSource.configMap.withKubeletConfigKey
 

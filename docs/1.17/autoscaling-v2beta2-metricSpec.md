@@ -127,7 +127,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj external.target
 
-
+MetricTarget defines the target value, average value, or average utilization of a specific metric
 
 ### fn external.target.withAverageUtilization
 
@@ -299,7 +299,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj object.target
 
-MetricTarget defines the target value, average value, or average utilization of a specific metric
+
 
 ### fn object.target.withAverageUtilization
 

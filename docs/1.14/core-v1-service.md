@@ -8,7 +8,7 @@ Service is a named abstraction of software service (for example, mysql) consisti
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, selector, ports)`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -74,7 +74,7 @@ Service is a named abstraction of software service (for example, mysql) consisti
 ### fn new
 
 ```ts
-new(name)
+new(name, selector, ports)
 ```
 
 new returns an instance of Service
@@ -343,7 +343,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn metadata.initializers.result.details.withCauses
 

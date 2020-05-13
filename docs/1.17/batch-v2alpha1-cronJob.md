@@ -638,7 +638,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.spec
 
-JobSpec describes how the job execution will look like.
+
 
 ### fn spec.jobTemplate.spec.withActiveDeadlineSeconds
 
@@ -730,7 +730,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.jobTemplate.spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj spec.jobTemplate.spec.template.metadata
 
@@ -928,7 +928,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.spec.template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn spec.jobTemplate.spec.template.spec.withActiveDeadlineSeconds
 
@@ -1316,7 +1316,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn spec.jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1418,7 +1418,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.jobTemplate.spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.jobTemplate.spec.template.spec.dnsConfig.withNameservers
 
@@ -1588,7 +1588,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

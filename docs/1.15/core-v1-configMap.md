@@ -8,7 +8,7 @@ ConfigMap holds configuration data for pods to consume.
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, data)`](#fn-new)
 * [`fn withBinaryData(binaryData)`](#fn-withbinarydata)
 * [`fn withBinaryDataMixin(binaryData)`](#fn-withbinarydatamixin)
 * [`fn withData(data)`](#fn-withdata)
@@ -58,10 +58,10 @@ ConfigMap holds configuration data for pods to consume.
 ### fn new
 
 ```ts
-new(name)
+new(name, data)
 ```
 
-new returns an instance of Configmap
+new creates a new `ConfigMap` of given `name` and `data`
 
 ### fn withBinaryData
 
@@ -363,7 +363,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn metadata.initializers.result.details.withCauses
 

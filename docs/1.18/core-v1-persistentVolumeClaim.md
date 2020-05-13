@@ -332,7 +332,7 @@ Name is the name of resource being referenced
 
 ## obj spec.resources
 
-
+ResourceRequirements describes the compute resource requirements.
 
 ### fn spec.resources.withLimits
 

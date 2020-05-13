@@ -8,7 +8,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, replicas=1, containers, podLabels={app: 'name'})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -163,7 +163,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 ### fn new
 
 ```ts
-new(name)
+new(name, replicas=1, containers, podLabels={app: 'name'})
 ```
 
 new returns an instance of Deployment
@@ -472,7 +472,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 
 ## obj spec.strategy.rollingUpdate
 
-
+Spec to control the desired behavior of rolling update.
 
 ### fn spec.strategy.rollingUpdate.withMaxSurge
 
@@ -492,7 +492,7 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj spec.template.metadata
 
@@ -1056,7 +1056,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1100,7 +1100,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.template.spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1350,7 +1350,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

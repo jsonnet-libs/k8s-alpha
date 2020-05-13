@@ -9,6 +9,8 @@ Pod is a collection of containers that can run on a host. This resource is creat
 ## Index
 
 * [`fn new(name)`](#fn-new)
+* [`fn mapContainers(f)`](#fn-mapcontainers)
+* [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -126,6 +128,29 @@ new(name)
 ```
 
 new returns an instance of Pod
+
+### fn mapContainers
+
+```ts
+mapContainers(f)
+```
+
+`mapContainers` applies the function f to each container.
+It works exactly as `std.map`, but on the containers of this object.
+
+**Signature of `f`**:
+```ts
+f(container: Object) Object
+```
+
+
+### fn mapContainersWithName
+
+```ts
+mapContainersWithName(names, f)
+```
+
+
 
 ## obj metadata
 
@@ -685,7 +710,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.affinity.nodeAffinity
 
@@ -773,7 +798,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -813,7 +838,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.dnsConfig.withNameservers
 
@@ -871,7 +896,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.securityContext.withFsGroup
 

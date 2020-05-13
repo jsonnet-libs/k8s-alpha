@@ -248,7 +248,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 
 ## obj strategy.rollingUpdate
 
-Spec to control the desired behavior of rolling update.
+
 
 ### fn strategy.rollingUpdate.withMaxSurge
 
@@ -490,7 +490,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj template.metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn template.metadata.initializers.result.withCode
 
@@ -534,7 +534,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj template.metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn template.metadata.initializers.result.details.withCauses
 
@@ -984,7 +984,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj template.spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 

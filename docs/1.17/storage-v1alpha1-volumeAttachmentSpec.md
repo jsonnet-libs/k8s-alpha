@@ -230,7 +230,7 @@ Name of the persistent volume to attach.
 
 ## obj source.inlineVolumeSpec
 
-
+PersistentVolumeSpec is the specification of a persistent volume.
 
 ### fn source.inlineVolumeSpec.withAccessModes
 
@@ -312,7 +312,9 @@ volumeMode defines if a volume is intended to be used with a formatted filesyste
 
 ## obj source.inlineVolumeSpec.awsElasticBlockStore
 
+Represents a Persistent Disk resource in AWS.
 
+An AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.awsElasticBlockStore.withFsType
 
@@ -400,7 +402,7 @@ Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
 
 ## obj source.inlineVolumeSpec.azureFile
 
-
+AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
 
 ### fn source.inlineVolumeSpec.azureFile.withReadOnly
 
@@ -510,7 +512,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.cinder
 
-
+Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.cinder.withFsType
 
@@ -610,7 +612,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj source.inlineVolumeSpec.csi
 
-Represents storage that is managed by an external CSI volume driver (Beta feature)
+
 
 ### fn source.inlineVolumeSpec.csi.withDriver
 
@@ -704,7 +706,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.csi.nodePublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn source.inlineVolumeSpec.csi.nodePublishSecretRef.withName
 
@@ -724,7 +726,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.csi.nodeStageSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn source.inlineVolumeSpec.csi.nodeStageSecretRef.withName
 
@@ -744,7 +746,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.fc
 
-
+Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.fc.withFsType
 
@@ -808,7 +810,7 @@ Optional: FC volume world wide identifiers (wwids) Either wwids or combination o
 
 ## obj source.inlineVolumeSpec.flexVolume
 
-FlexPersistentVolumeSource represents a generic persistent volume resource that is provisioned/attached using an exec based plugin.
+
 
 ### fn source.inlineVolumeSpec.flexVolume.withDriver
 
@@ -854,7 +856,7 @@ Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly 
 
 ## obj source.inlineVolumeSpec.flexVolume.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn source.inlineVolumeSpec.flexVolume.secretRef.withName
 
@@ -874,7 +876,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.flocker
 
-Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.flocker.withDatasetName
 
@@ -932,7 +934,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj source.inlineVolumeSpec.glusterfs
 
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.glusterfs.withEndpoints
 
@@ -1102,7 +1104,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.local
 
-
+Local represents directly-attached storage with node affinity (Beta feature)
 
 ### fn source.inlineVolumeSpec.local.withFsType
 
@@ -1196,7 +1198,7 @@ ID that identifies Photon Controller persistent disk
 
 ## obj source.inlineVolumeSpec.portworxVolume
 
-PortworxVolumeSource represents a Portworx volume resource.
+
 
 ### fn source.inlineVolumeSpec.portworxVolume.withFsType
 
@@ -1276,7 +1278,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj source.inlineVolumeSpec.rbd
 
-Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.rbd.withFsType
 
@@ -1346,7 +1348,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj source.inlineVolumeSpec.rbd.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn source.inlineVolumeSpec.rbd.secretRef.withName
 
@@ -1366,7 +1368,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.scaleIO
 
-
+ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
 
 ### fn source.inlineVolumeSpec.scaleIO.withFsType
 
@@ -1462,7 +1464,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.storageos
 
-
+Represents a StorageOS persistent volume resource.
 
 ### fn source.inlineVolumeSpec.storageos.withFsType
 
@@ -1550,7 +1552,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj source.inlineVolumeSpec.vsphereVolume
 
-Represents a vSphere volume resource.
+
 
 ### fn source.inlineVolumeSpec.vsphereVolume.withFsType
 

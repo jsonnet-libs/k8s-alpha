@@ -8,6 +8,7 @@ A single application container that you want to run within a pod.
 
 ## Index
 
+* [`fn new(name, image)`](#fn-new)
 * [`fn withArgs(args)`](#fn-withargs)
 * [`fn withArgsMixin(args)`](#fn-withargsmixin)
 * [`fn withCommand(command)`](#fn-withcommand)
@@ -126,6 +127,14 @@ A single application container that you want to run within a pod.
     * [`fn withGmsaCredentialSpecName(gmsaCredentialSpecName)`](#fn-securitycontextwindowsoptionswithgmsacredentialspecname)
 
 ## Fields
+
+### fn new
+
+```ts
+new(name, image)
+```
+
+new returns a new `container` of given `name` and `image`
 
 ### fn withArgs
 
@@ -357,7 +366,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj lifecycle.postStart.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn lifecycle.postStart.httpGet.withHost
 
@@ -411,7 +420,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.postStart.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn lifecycle.postStart.tcpSocket.withHost
 
@@ -715,7 +724,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj readinessProbe.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn readinessProbe.exec.withCommand
 
@@ -737,7 +746,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj readinessProbe.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn readinessProbe.httpGet.withHost
 
@@ -791,7 +800,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj readinessProbe.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn readinessProbe.tcpSocket.withHost
 
@@ -951,7 +960,7 @@ Removed capabilities
 
 ## obj securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn securityContext.seLinuxOptions.withLevel
 
