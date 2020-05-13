@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#': d.pkg(name='v1', url='', help=''),
+  '#':: d.pkg(name='v1', url='', help=''),
   csiNode: (import 'csiNode.libsonnet'),
   csiNodeDriver: (import 'csiNodeDriver.libsonnet'),
   csiNodeSpec: (import 'csiNodeSpec.libsonnet'),

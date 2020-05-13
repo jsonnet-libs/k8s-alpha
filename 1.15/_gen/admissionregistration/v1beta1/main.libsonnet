@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#': d.pkg(name='v1beta1', url='', help=''),
+  '#':: d.pkg(name='v1beta1', url='', help=''),
   mutatingWebhook: (import 'mutatingWebhook.libsonnet'),
   mutatingWebhookConfiguration: (import 'mutatingWebhookConfiguration.libsonnet'),
   ruleWithOperations: (import 'ruleWithOperations.libsonnet'),

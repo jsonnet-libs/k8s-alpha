@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#': d.pkg(name='v2beta2', url='', help=''),
+  '#':: d.pkg(name='v2beta2', url='', help=''),
   crossVersionObjectReference: (import 'crossVersionObjectReference.libsonnet'),
   externalMetricSource: (import 'externalMetricSource.libsonnet'),
   externalMetricStatus: (import 'externalMetricStatus.libsonnet'),

@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#': d.pkg(name='v1', url='', help=''),
+  '#':: d.pkg(name='v1', url='', help=''),
   ipBlock: (import 'ipBlock.libsonnet'),
   networkPolicy: (import 'networkPolicy.libsonnet'),
   networkPolicyEgressRule: (import 'networkPolicyEgressRule.libsonnet'),

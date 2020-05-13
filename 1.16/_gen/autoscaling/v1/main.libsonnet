@@ -1,6 +1,6 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
-  '#': d.pkg(name='v1', url='', help=''),
+  '#':: d.pkg(name='v1', url='', help=''),
   crossVersionObjectReference: (import 'crossVersionObjectReference.libsonnet'),
   horizontalPodAutoscaler: (import 'horizontalPodAutoscaler.libsonnet'),
   horizontalPodAutoscalerSpec: (import 'horizontalPodAutoscalerSpec.libsonnet'),
