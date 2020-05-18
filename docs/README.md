@@ -19,10 +19,10 @@ Currently, artifacts for the following Kubernetes versions are provided:
 
 ### What is this?
 
-This is a [Jsonnet](https://jsonnet.org) library to create Kubernetes objects
-like `Deployment` with as quickly as possible.
+This is a [Jsonnet](https://jsonnet.org) library that helps the Jsonnet user
+create Kubernetes objects such as `Deployment` as concisely as possible.
 
-This YAML:
+For example, this YAML:
 
 ```yaml
 apiVersion: apps/v1
@@ -41,7 +41,7 @@ spec:
           name: foo
 ```
 
-Can become as short as:
+can be rendered with this jsonnet:
 
 ```jsonnet
 {
@@ -52,17 +52,16 @@ Can become as short as:
 }
 ```
 
-Especially [Grafana Tanka](https://tanka.dev) makes this easy in particular.
+This library works particularly well with [Grafana Tanka](https://tanka.dev), as Tanka is
+designed to ease the use of Jsonnet with Kubernetes clusters.
 
 ### Relationship to [ksonnet-lib](https://github.com/ksonnet/ksonnet-lib)
 
-The [ksonnet-lib](https://github.com/ksonnet/ksonnet-lib) was a similar tool.
-
-Being part of the [deprecated ksonnet
-project](https://github.com/ksonnet/ksonnet#ksonnet), that library has not seen
-much love in the recent days unfortunately.
+[ksonnet-lib](https://github.com/ksonnet/ksonnet-lib) was a similar library to this. However,
+as a part of the [now deprecated ksonnet project](https://github.com/ksonnet/ksonnet#ksonnet),
+it has not seen much love in recent days.
 
 To continue the success story, community members (especially teams of [Grafana
 Labs](https://grafana.com) and [RedHat OpenShift](https://www.openshift.com/)) decided to
-pick up the challenge of creating a fresh, more modern and future proof
-successor: This project.
+pick up the challenge of creating this fresh, more modern and future proof replacement for
+ksonnet-lib.
