@@ -77,3 +77,11 @@ efforts to rewriting it from scratch.
 The result of that is https://github.com/jsonnet-libs/k8s and expected to
 replace both, https://github.com/ksonnet/ksonnet-gen and
 https://github.com/kube-jsonnet/k as soon as possible.
+
+#### Where can I find documentation?
+
+The generated docs can be found here: https://jsonnet-libs.github.io/k8s-alpha/.
+
+#### I found a bug, where can I report this?
+
+Great, let's try and fix that, please report issues in https://github.com/jsonnet-libs/k8s.
