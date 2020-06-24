@@ -80,7 +80,7 @@ https://github.com/kube-jsonnet/k as soon as possible.
 
 #### Where can I find documentation?
 
-[Here](https://jsonnet-libs.github.io/k8s-alpha/)
+The generated docs can be found here: https://jsonnet-libs.github.io/k8s-alpha/.
 
 #### I found a bug, where can I report this?
 
