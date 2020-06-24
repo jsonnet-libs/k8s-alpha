@@ -81,3 +81,7 @@ https://github.com/kube-jsonnet/k as soon as possible.
 #### Where can I find documentation?
 
 [Here](https://jsonnet-libs.github.io/k8s-alpha/)
+
+#### I found a bug, where can I report this?
+
+Great, let's try and fix that, please report issues in https://github.com/jsonnet-libs/k8s.
