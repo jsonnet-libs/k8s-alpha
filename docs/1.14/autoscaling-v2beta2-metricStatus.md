@@ -71,7 +71,7 @@ ExternalMetricStatus indicates the current value of a global metric not associat
 
 ## obj external.current
 
-
+MetricValueStatus holds the current value for a metric
 
 ### fn external.current.withAverageUtilization
 
@@ -303,7 +303,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj object.describedObject
 
-
+CrossVersionObjectReference contains enough information to let you identify the referred resource.
 
 ### fn object.describedObject.withKind
 
@@ -323,7 +323,7 @@ Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifier
 
 ## obj object.metric
 
-
+MetricIdentifier defines the name and optionally selector for a metric
 
 ### fn object.metric.withName
 
@@ -335,7 +335,7 @@ name is the name of the given metric
 
 ## obj object.metric.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn object.metric.selector.withMatchExpressions
 
@@ -379,7 +379,7 @@ PodsMetricStatus indicates the current value of a metric describing each pod in 
 
 ## obj pods.current
 
-
+MetricValueStatus holds the current value for a metric
 
 ### fn pods.current.withAverageUtilization
 
@@ -479,7 +479,7 @@ name is the name of the given metric
 
 ## obj pods.metric.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn pods.metric.selector.withMatchExpressions
 

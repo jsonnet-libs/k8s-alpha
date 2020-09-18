@@ -8,7 +8,7 @@ CronJob represents the configuration of a single cron job.
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, schedule, containers)`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -231,7 +231,7 @@ CronJob represents the configuration of a single cron job.
 ### fn new
 
 ```ts
-new(name)
+new(name, schedule, containers)
 ```
 
 new returns an instance of Cronjob
@@ -434,7 +434,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -456,7 +456,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -500,7 +500,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn metadata.initializers.result.details.withCauses
 
@@ -836,7 +836,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.jobTemplate.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn spec.jobTemplate.metadata.initializers.result.withCode
 
@@ -880,7 +880,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.jobTemplate.metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn spec.jobTemplate.metadata.initializers.result.details.withCauses
 
@@ -1038,7 +1038,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.jobTemplate.spec.template.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.jobTemplate.spec.template.metadata.withAnnotations
 
@@ -1256,7 +1256,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.result.withCode
 
@@ -1300,7 +1300,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.result.details.withCauses
 
@@ -1674,7 +1674,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn spec.jobTemplate.spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1718,7 +1718,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn spec.jobTemplate.spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1856,7 +1856,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.withFsGroup
 
@@ -1932,7 +1932,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1968,7 +1968,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

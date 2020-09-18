@@ -8,7 +8,7 @@ DEPRECATED - This group version of DaemonSet is deprecated by apps/v1/DaemonSet.
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, containers, podLabels)`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -184,7 +184,7 @@ DEPRECATED - This group version of DaemonSet is deprecated by apps/v1/DaemonSet.
 ### fn new
 
 ```ts
-new(name)
+new(name, containers, podLabels)
 ```
 
 new returns an instance of Daemonset
@@ -579,7 +579,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -1339,7 +1339,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1473,7 +1473,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 

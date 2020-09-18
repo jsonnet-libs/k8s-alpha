@@ -16,6 +16,7 @@ A single application container that you want to run within a pod.
 * [`fn withEnv(env)`](#fn-withenv)
 * [`fn withEnvFrom(envFrom)`](#fn-withenvfrom)
 * [`fn withEnvFromMixin(envFrom)`](#fn-withenvfrommixin)
+* [`fn withEnvMap(env)`](#fn-withenvmap)
 * [`fn withEnvMixin(env)`](#fn-withenvmixin)
 * [`fn withImage(image)`](#fn-withimage)
 * [`fn withImagePullPolicy(imagePullPolicy)`](#fn-withimagepullpolicy)
@@ -218,6 +219,14 @@ List of sources to populate environment variables in the container. The keys def
 
 **Note:** This function appends passed data to existing values
 
+### fn withEnvMap
+
+```ts
+withEnvMap(env)
+```
+
+`withEnvMap` works like `withEnvMixin` but accepts a key/value map, this map is converted a list of core.v1.envVar(key, value)`
+
 ### fn withEnvMixin
 
 ```ts
@@ -364,7 +373,7 @@ Handler defines a specific action that should be taken
 
 ## obj lifecycle.postStart.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn lifecycle.postStart.exec.withCommand
 
@@ -386,7 +395,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj lifecycle.postStart.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn lifecycle.postStart.httpGet.withHost
 
@@ -440,7 +449,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.postStart.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn lifecycle.postStart.tcpSocket.withHost
 
@@ -460,11 +469,11 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj lifecycle.preStop
 
-Handler defines a specific action that should be taken
+
 
 ## obj lifecycle.preStop.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn lifecycle.preStop.exec.withCommand
 
@@ -540,7 +549,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.preStop.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn lifecycle.preStop.tcpSocket.withHost
 
@@ -680,7 +689,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj livenessProbe.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn livenessProbe.tcpSocket.withHost
 
@@ -744,7 +753,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj readinessProbe.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn readinessProbe.exec.withCommand
 
@@ -980,7 +989,7 @@ Removed capabilities
 
 ## obj securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn securityContext.seLinuxOptions.withLevel
 
@@ -1164,7 +1173,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj startupProbe.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn startupProbe.tcpSocket.withHost
 

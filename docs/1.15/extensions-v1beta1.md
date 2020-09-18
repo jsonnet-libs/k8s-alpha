@@ -57,3 +57,21 @@ permalink: /1.15/extensions/v1beta1/
 * [scaleStatus](extensions-v1beta1-scaleStatus.md)
 * [seLinuxStrategyOptions](extensions-v1beta1-seLinuxStrategyOptions.md)
 * [supplementalGroupsStrategyOptions](extensions-v1beta1-supplementalGroupsStrategyOptions.md)
+
+## Index
+
+* [`obj statefulSet`](#obj-statefulset)
+  * [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-statefulsetnew)
+
+## Fields
+
+## obj statefulSet
+
+
+
+### fn statefulSet.new
+
+```ts
+new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+```
+

@@ -360,11 +360,11 @@ Lifecycle describes actions that the management system should take in response t
 
 ## obj lifecycle.postStart
 
-
+Handler defines a specific action that should be taken
 
 ## obj lifecycle.postStart.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn lifecycle.postStart.exec.withCommand
 
@@ -626,7 +626,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj livenessProbe.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn livenessProbe.httpGet.withHost
 
@@ -680,7 +680,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj livenessProbe.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn livenessProbe.tcpSocket.withHost
 
@@ -766,7 +766,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj readinessProbe.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn readinessProbe.httpGet.withHost
 
@@ -940,7 +940,7 @@ The UID to run the entrypoint of the container process. Defaults to user specifi
 
 ## obj securityContext.capabilities
 
-Adds and removes POSIX capabilities from running containers.
+
 
 ### fn securityContext.capabilities.withAdd
 
@@ -980,7 +980,7 @@ Removed capabilities
 
 ## obj securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn securityContext.seLinuxOptions.withLevel
 
@@ -1016,7 +1016,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn securityContext.windowsOptions.withGmsaCredentialSpec
 

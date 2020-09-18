@@ -442,7 +442,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -464,7 +464,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -688,7 +688,7 @@ Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
 
 ## obj spec.azureDisk
 
-AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+
 
 ### fn spec.azureDisk.withCachingMode
 
@@ -776,7 +776,7 @@ Share Name
 
 ## obj spec.cephfs
 
-Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.cephfs.withMonitors
 
@@ -878,7 +878,7 @@ volume id used to identify the volume in cinder More info: https://releases.k8s.
 
 ## obj spec.cinder.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.cinder.secretRef.withName
 
@@ -1044,7 +1044,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.csi.nodePublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.csi.nodePublishSecretRef.withName
 
@@ -1148,7 +1148,7 @@ Optional: FC volume world wide identifiers (wwids) Either wwids or combination o
 
 ## obj spec.flexVolume
 
-FlexPersistentVolumeSource represents a generic persistent volume resource that is provisioned/attached using an exec based plugin.
+
 
 ### fn spec.flexVolume.withDriver
 
@@ -1194,7 +1194,7 @@ Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly 
 
 ## obj spec.flexVolume.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.flexVolume.secretRef.withName
 
@@ -1234,7 +1234,9 @@ UUID of the dataset. This is unique identifier of a Flocker dataset
 
 ## obj spec.gcePersistentDisk
 
+Represents a Persistent Disk resource in Google Compute Engine.
 
+A GCE PD must exist before mounting to a container. The disk must also be in the same GCE project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only many times. GCE PDs support ownership management and SELinux relabeling.
 
 ### fn spec.gcePersistentDisk.withFsType
 
@@ -1270,7 +1272,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.glusterfs
 
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.glusterfs.withEndpoints
 
@@ -1306,7 +1308,7 @@ ReadOnly here will force the Glusterfs volume to be mounted with read-only permi
 
 ## obj spec.hostPath
 
-
+Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.hostPath.withPath
 
@@ -1326,7 +1328,7 @@ Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/co
 
 ## obj spec.iscsi
 
-ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
+
 
 ### fn spec.iscsi.withChapAuthDiscovery
 
@@ -1420,7 +1422,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj spec.iscsi.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.iscsi.secretRef.withName
 
@@ -1440,7 +1442,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.local
 
-Local represents directly-attached storage with node affinity (Beta feature)
+
 
 ### fn spec.local.withFsType
 
@@ -1534,7 +1536,7 @@ ID that identifies Photon Controller persistent disk
 
 ## obj spec.portworxVolume
 
-
+PortworxVolumeSource represents a Portworx volume resource.
 
 ### fn spec.portworxVolume.withFsType
 
@@ -1614,7 +1616,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj spec.rbd
 
-Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
+
 
 ### fn spec.rbd.withFsType
 
@@ -1704,7 +1706,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.scaleIO
 
-ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
+
 
 ### fn spec.scaleIO.withFsType
 
@@ -1800,7 +1802,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.storageos
 
-
+Represents a StorageOS persistent volume resource.
 
 ### fn spec.storageos.withFsType
 

@@ -260,7 +260,7 @@ RuntimeHandler specifies the underlying runtime and configuration that the CRI i
 
 ## obj spec.overhead
 
-Overhead structure represents the resource overhead associated with running a pod.
+
 
 ### fn spec.overhead.withPodFixed
 
@@ -282,7 +282,7 @@ PodFixed represents the fixed resource overhead associated with running a pod.
 
 ## obj spec.scheduling
 
-Scheduling specifies the scheduling constraints for nodes supporting a RuntimeClass.
+
 
 ### fn spec.scheduling.withNodeSelector
 

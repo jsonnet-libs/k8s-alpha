@@ -408,7 +408,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj jobTemplate.spec
 
-
+JobSpec describes how the job execution will look like.
 
 ### fn jobTemplate.spec.withActiveDeadlineSeconds
 
@@ -1086,7 +1086,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1358,7 +1358,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj jobTemplate.spec.template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn jobTemplate.spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

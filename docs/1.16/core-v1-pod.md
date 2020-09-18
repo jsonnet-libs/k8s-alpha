@@ -150,7 +150,7 @@ f(container: Object) Object
 mapContainersWithName(names, f)
 ```
 
-
+`mapContainersWithName` is like `mapContainers`, but only applies to those containers in the `names` array
 
 ## obj metadata
 
@@ -714,7 +714,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -896,7 +896,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.securityContext.withFsGroup
 
@@ -972,7 +972,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.securityContext.seLinuxOptions.withLevel
 
@@ -1008,7 +1008,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

@@ -459,7 +459,7 @@ User is the user you're testing for. If you specify 'User' but not 'Group', then
 
 ## obj spec.nonResourceAttributes
 
-
+NonResourceAttributes includes the authorization attributes available for non-resource requests to the Authorizer interface
 
 ### fn spec.nonResourceAttributes.withPath
 
@@ -479,7 +479,7 @@ Verb is the standard HTTP verb
 
 ## obj spec.resourceAttributes
 
-
+ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface
 
 ### fn spec.resourceAttributes.withGroup
 

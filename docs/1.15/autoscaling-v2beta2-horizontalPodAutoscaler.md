@@ -431,7 +431,7 @@ minReplicas is the lower limit for the number of replicas to which the autoscale
 
 ## obj spec.scaleTargetRef
 
-
+CrossVersionObjectReference contains enough information to let you identify the referred resource.
 
 ### fn spec.scaleTargetRef.withKind
 

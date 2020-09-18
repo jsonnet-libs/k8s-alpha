@@ -629,7 +629,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj csi.controllerExpandSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.controllerExpandSecretRef.withName
 
@@ -649,7 +649,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.controllerPublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn csi.controllerPublishSecretRef.withName
 
@@ -1119,7 +1119,7 @@ VolumeNodeAffinity defines constraints that limit what nodes this volume can be 
 
 ## obj nodeAffinity.required
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn nodeAffinity.required.withNodeSelectorTerms
 

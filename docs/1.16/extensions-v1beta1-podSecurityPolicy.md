@@ -561,7 +561,7 @@ volumes is a white list of allowed volume plugins. Empty indicates that no volum
 
 ## obj spec.fsGroup
 
-FSGroupStrategyOptions defines the strategy type and options used to create the strategy. Deprecated: use FSGroupStrategyOptions from policy API Group instead.
+
 
 ### fn spec.fsGroup.withRanges
 
@@ -681,7 +681,7 @@ defaultRuntimeClassName is the default RuntimeClassName to set on the pod. The d
 
 ## obj spec.seLinux
 
-
+SELinuxStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use SELinuxStrategyOptions from policy API Group instead.
 
 ### fn spec.seLinux.withRule
 

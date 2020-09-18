@@ -92,7 +92,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
 ## obj webhook.clientConfig.service
 
-
+ServiceReference holds a reference to Service.legacy.k8s.io
 
 ### fn webhook.clientConfig.service.withName
 
@@ -120,7 +120,7 @@ withPath(path)
 
 ## obj webhook.throttle
 
-
+WebhookThrottleConfig holds the configuration for throttling events
 
 ### fn webhook.throttle.withBurst
 

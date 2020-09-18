@@ -8,7 +8,7 @@ DaemonSet represents the configuration of a daemon set.
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, containers, podLabels)`](#fn-new)
 * [`fn mapContainers(f)`](#fn-mapcontainers)
 * [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
@@ -160,7 +160,7 @@ DaemonSet represents the configuration of a daemon set.
 ### fn new
 
 ```ts
-new(name)
+new(name, containers, podLabels)
 ```
 
 new returns an instance of Daemonset
@@ -186,7 +186,7 @@ f(container: Object) Object
 mapContainersWithName(names, f)
 ```
 
-
+`mapContainersWithName` is like `mapContainers`, but only applies to those containers in the `names` array
 
 ## obj metadata
 
@@ -642,7 +642,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -1004,7 +1004,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
@@ -1350,7 +1350,7 @@ Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is Roll
 
 ## obj spec.updateStrategy.rollingUpdate
 
-Spec to control the desired behavior of daemon set rolling update.
+
 
 ### fn spec.updateStrategy.rollingUpdate.withMaxUnavailable
 

@@ -629,7 +629,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj csi.controllerExpandSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.controllerExpandSecretRef.withName
 
@@ -669,7 +669,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.nodePublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn csi.nodePublishSecretRef.withName
 
@@ -689,7 +689,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.nodeStageSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.nodeStageSecretRef.withName
 
@@ -1311,7 +1311,7 @@ The rados user name. Default is admin. More info: https://releases.k8s.io/HEAD/e
 
 ## obj rbd.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn rbd.secretRef.withName
 
@@ -1407,7 +1407,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj scaleIO.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn scaleIO.secretRef.withName
 
@@ -1463,7 +1463,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj storageos.secretRef
 
-
+ObjectReference contains enough information to let you inspect or modify the referred object.
 
 ### fn storageos.secretRef.withFieldPath
 

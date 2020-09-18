@@ -247,7 +247,7 @@ Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifier
 
 ## obj object.metric
 
-MetricIdentifier defines the name and optionally selector for a metric
+
 
 ### fn object.metric.withName
 
@@ -299,7 +299,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj object.target
 
-MetricTarget defines the target value, average value, or average utilization of a specific metric
+
 
 ### fn object.target.withAverageUtilization
 
@@ -559,7 +559,7 @@ name is the name of the resource in question.
 
 ## obj resource.target
 
-MetricTarget defines the target value, average value, or average utilization of a specific metric
+
 
 ### fn resource.target.withAverageUtilization
 

@@ -151,7 +151,7 @@ f(container: Object) Object
 mapContainersWithName(names, f)
 ```
 
-
+`mapContainersWithName` is like `mapContainers`, but only applies to those containers in the `names` array
 
 ## obj metadata
 
@@ -839,7 +839,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn spec.dnsConfig.withNameservers
 
@@ -897,7 +897,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.securityContext.withFsGroup
 
@@ -1017,7 +1017,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

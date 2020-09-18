@@ -505,7 +505,9 @@ volumeMode defines if a volume is intended to be used with a formatted filesyste
 
 ## obj spec.awsElasticBlockStore
 
+Represents a Persistent Disk resource in AWS.
 
+An AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.
 
 ### fn spec.awsElasticBlockStore.withFsType
 
@@ -541,7 +543,7 @@ Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
 
 ## obj spec.azureDisk
 
-
+AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
 
 ### fn spec.azureDisk.withCachingMode
 
@@ -593,7 +595,7 @@ Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
 
 ## obj spec.azureFile
 
-
+AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
 
 ### fn spec.azureFile.withReadOnly
 
@@ -629,7 +631,7 @@ Share Name
 
 ## obj spec.cephfs
 
-
+Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.cephfs.withMonitors
 
@@ -703,7 +705,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.cinder
 
-
+Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
 
 ### fn spec.cinder.withFsType
 
@@ -857,7 +859,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj spec.csi.controllerExpandSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.csi.controllerExpandSecretRef.withName
 
@@ -897,7 +899,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.csi.nodePublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.csi.nodePublishSecretRef.withName
 
@@ -937,7 +939,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.fc
 
-
+Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.
 
 ### fn spec.fc.withFsType
 
@@ -1067,7 +1069,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.flocker
 
-Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.flocker.withDatasetName
 
@@ -1125,7 +1127,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.glusterfs
 
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.glusterfs.withEndpoints
 
@@ -1161,7 +1163,7 @@ ReadOnly here will force the Glusterfs volume to be mounted with read-only permi
 
 ## obj spec.hostPath
 
-
+Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.hostPath.withPath
 
@@ -1275,7 +1277,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj spec.iscsi.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.iscsi.secretRef.withName
 
@@ -1295,7 +1297,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.local
 
-
+Local represents directly-attached storage with node affinity (Beta feature)
 
 ### fn spec.local.withFsType
 
@@ -1369,7 +1371,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.photonPersistentDisk
 
-Represents a Photon Controller persistent disk resource.
+
 
 ### fn spec.photonPersistentDisk.withFsType
 
@@ -1389,7 +1391,7 @@ ID that identifies Photon Controller persistent disk
 
 ## obj spec.portworxVolume
 
-PortworxVolumeSource represents a Portworx volume resource.
+
 
 ### fn spec.portworxVolume.withFsType
 
@@ -1469,7 +1471,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj spec.rbd
 
-
+Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
 
 ### fn spec.rbd.withFsType
 
@@ -1655,7 +1657,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.storageos
 
-Represents a StorageOS persistent volume resource.
+
 
 ### fn spec.storageos.withFsType
 
@@ -1691,7 +1693,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj spec.storageos.secretRef
 
-ObjectReference contains enough information to let you inspect or modify the referred object.
+
 
 ### fn spec.storageos.secretRef.withFieldPath
 
@@ -1743,7 +1745,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.vsphereVolume
 
-
+Represents a vSphere volume resource.
 
 ### fn spec.vsphereVolume.withFsType
 

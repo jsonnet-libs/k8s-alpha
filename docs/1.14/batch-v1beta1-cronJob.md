@@ -8,7 +8,9 @@ CronJob represents the configuration of a single cron job.
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, schedule, containers)`](#fn-new)
+* [`fn mapContainers(f)`](#fn-mapcontainers)
+* [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -227,10 +229,33 @@ CronJob represents the configuration of a single cron job.
 ### fn new
 
 ```ts
-new(name)
+new(name, schedule, containers)
 ```
 
 new returns an instance of Cronjob
+
+### fn mapContainers
+
+```ts
+mapContainers(f)
+```
+
+`mapContainers` applies the function f to each container.
+It works exactly as `std.map`, but on the containers of this object.
+
+**Signature of `f`**:
+```ts
+f(container: Object) Object
+```
+
+
+### fn mapContainersWithName
+
+```ts
+mapContainersWithName(names, f)
+```
+
+`mapContainersWithName` is like `mapContainers`, but only applies to those containers in the `names` array
 
 ## obj metadata
 
@@ -430,7 +455,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -610,7 +635,7 @@ This flag tells the controller to suspend subsequent executions, it does not app
 
 ## obj spec.jobTemplate
 
-
+JobTemplateSpec describes the data a Job should have when created from a template
 
 ## obj spec.jobTemplate.metadata
 
@@ -810,7 +835,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn spec.jobTemplate.metadata.initializers.withPending
 
@@ -990,7 +1015,7 @@ ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
 
 ## obj spec.jobTemplate.spec.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn spec.jobTemplate.spec.selector.withMatchExpressions
 
@@ -1230,7 +1255,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.withPending
 
@@ -1252,7 +1277,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.result.withCode
 
@@ -1844,7 +1869,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.withFsGroup
 
@@ -1920,7 +1945,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 

@@ -500,7 +500,7 @@ volume id used to identify the volume in cinder More info: https://releases.k8s.
 
 ## obj cinder.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn cinder.secretRef.withName
 
@@ -626,7 +626,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj csi.controllerPublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn csi.controllerPublishSecretRef.withName
 
@@ -646,7 +646,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.nodePublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn csi.nodePublishSecretRef.withName
 
@@ -796,7 +796,7 @@ Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly 
 
 ## obj flexVolume.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn flexVolume.secretRef.withName
 
@@ -1024,7 +1024,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj iscsi.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn iscsi.secretRef.withName
 

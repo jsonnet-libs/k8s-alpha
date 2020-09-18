@@ -287,7 +287,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -433,7 +433,7 @@ A collection of filters that must match each object tracked by a quota. If not s
 
 ## obj spec.scopeSelector
 
-
+A scope selector represents the AND of the selectors represented by the scoped-resource selector requirements.
 
 ### fn spec.scopeSelector.withMatchExpressions
 

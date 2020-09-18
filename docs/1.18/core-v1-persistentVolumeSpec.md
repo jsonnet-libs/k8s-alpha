@@ -649,7 +649,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.controllerPublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn csi.controllerPublishSecretRef.withName
 
@@ -1047,7 +1047,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj iscsi.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn iscsi.secretRef.withName
 
@@ -1463,7 +1463,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj storageos.secretRef
 
-ObjectReference contains enough information to let you inspect or modify the referred object.
+
 
 ### fn storageos.secretRef.withFieldPath
 

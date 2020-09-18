@@ -360,7 +360,7 @@ Lifecycle describes actions that the management system should take in response t
 
 ## obj lifecycle.postStart
 
-
+Handler defines a specific action that should be taken
 
 ## obj lifecycle.postStart.exec
 
@@ -464,7 +464,7 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj lifecycle.preStop.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn lifecycle.preStop.exec.withCommand
 
@@ -940,7 +940,7 @@ The UID to run the entrypoint of the container process. Defaults to user specifi
 
 ## obj securityContext.capabilities
 
-
+Adds and removes POSIX capabilities from running containers.
 
 ### fn securityContext.capabilities.withAdd
 
@@ -1088,7 +1088,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj startupProbe.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn startupProbe.exec.withCommand
 
@@ -1110,7 +1110,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj startupProbe.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn startupProbe.httpGet.withHost
 

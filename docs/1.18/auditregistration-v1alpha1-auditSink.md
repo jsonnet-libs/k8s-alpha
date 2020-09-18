@@ -259,7 +259,7 @@ AuditSinkSpec holds the spec for the audit sink
 
 ## obj spec.policy
 
-Policy defines the configuration of how audit events are logged
+
 
 ### fn spec.policy.withLevel
 
@@ -289,7 +289,7 @@ Stages is a list of stages for which events are created.
 
 ## obj spec.webhook
 
-
+Webhook holds the configuration of the webhook
 
 ## obj spec.webhook.clientConfig
 

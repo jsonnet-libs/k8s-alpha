@@ -332,7 +332,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -376,7 +376,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn metadata.initializers.result.details.withCauses
 
@@ -704,7 +704,7 @@ volumes is a white list of allowed volume plugins. Empty indicates that no volum
 
 ## obj spec.fsGroup
 
-
+FSGroupStrategyOptions defines the strategy type and options used to create the strategy.
 
 ### fn spec.fsGroup.withRanges
 
@@ -764,7 +764,7 @@ rule is the strategy that will dictate the allowable RunAsGroup values that may 
 
 ## obj spec.runAsUser
 
-
+RunAsUserStrategyOptions defines the strategy type and any options used to create the strategy.
 
 ### fn spec.runAsUser.withRanges
 
@@ -794,7 +794,7 @@ rule is the strategy that will dictate the allowable RunAsUser values that may b
 
 ## obj spec.seLinux
 
-
+SELinuxStrategyOptions defines the strategy type and any options used to create the strategy.
 
 ### fn spec.seLinux.withRule
 

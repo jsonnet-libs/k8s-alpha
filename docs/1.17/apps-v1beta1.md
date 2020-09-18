@@ -26,3 +26,21 @@ permalink: /1.17/apps/v1beta1/
 * [statefulSetSpec](apps-v1beta1-statefulSetSpec.md)
 * [statefulSetStatus](apps-v1beta1-statefulSetStatus.md)
 * [statefulSetUpdateStrategy](apps-v1beta1-statefulSetUpdateStrategy.md)
+
+## Index
+
+* [`obj daemonSet`](#obj-daemonset)
+  * [`fn new(name, containers, podLabels)`](#fn-daemonsetnew)
+
+## Fields
+
+## obj daemonSet
+
+
+
+### fn daemonSet.new
+
+```ts
+new(name, containers, podLabels)
+```
+

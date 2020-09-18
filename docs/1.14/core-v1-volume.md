@@ -11,7 +11,7 @@ Volume represents a named volume in a pod that may be accessed by any container 
 * [`fn fromConfigMap(name, configMapName, configMapItems)`](#fn-fromconfigmap)
 * [`fn fromEmptyDir(name, emptyDir={})`](#fn-fromemptydir)
 * [`fn fromHostPath(name, hostPath)`](#fn-fromhostpath)
-* [`fn fromPersistentVolumeClaim(name, emptyDir)`](#fn-frompersistentvolumeclaim)
+* [`fn fromPersistentVolumeClaim(name, claimName)`](#fn-frompersistentvolumeclaim)
 * [`fn fromSecret(name, secretName)`](#fn-fromsecret)
 * [`fn withName(name)`](#fn-withname)
 * [`obj awsElasticBlockStore`](#obj-awselasticblockstore)
@@ -211,12 +211,10 @@ Creates a new volume using a `hostPath`
 ### fn fromPersistentVolumeClaim
 
 ```ts
-fromPersistentVolumeClaim(name, emptyDir)
+fromPersistentVolumeClaim(name, claimName)
 ```
 
 Creates a new volume using a `PersistentVolumeClaim`.
-
-**Note**: `emptyDir` should be `claimName`, but this is inherited from `ksonnet-lib`
 
 ### fn fromSecret
 
@@ -408,7 +406,7 @@ Optional: User is the rados user name, default is admin More info: https://relea
 
 ## obj cephfs.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn cephfs.secretRef.withName
 
@@ -448,7 +446,7 @@ volume id used to identify the volume in cinder More info: https://releases.k8s.
 
 ## obj cinder.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn cinder.secretRef.withName
 
@@ -1258,7 +1256,7 @@ The rados user name. Default is admin. More info: https://releases.k8s.io/HEAD/e
 
 ## obj rbd.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn rbd.secretRef.withName
 

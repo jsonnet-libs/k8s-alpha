@@ -561,7 +561,7 @@ volumes is a white list of allowed volume plugins. Empty indicates that no volum
 
 ## obj spec.fsGroup
 
-
+FSGroupStrategyOptions defines the strategy type and options used to create the strategy.
 
 ### fn spec.fsGroup.withRanges
 
@@ -591,7 +591,7 @@ rule is the strategy that will dictate what FSGroup is used in the SecurityConte
 
 ## obj spec.runAsGroup
 
-RunAsGroupStrategyOptions defines the strategy type and any options used to create the strategy.
+
 
 ### fn spec.runAsGroup.withRanges
 
@@ -621,7 +621,7 @@ rule is the strategy that will dictate the allowable RunAsGroup values that may 
 
 ## obj spec.runAsUser
 
-RunAsUserStrategyOptions defines the strategy type and any options used to create the strategy.
+
 
 ### fn spec.runAsUser.withRanges
 
@@ -681,7 +681,7 @@ defaultRuntimeClassName is the default RuntimeClassName to set on the pod. The d
 
 ## obj spec.seLinux
 
-
+SELinuxStrategyOptions defines the strategy type and any options used to create the strategy.
 
 ### fn spec.seLinux.withRule
 
@@ -729,7 +729,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.supplementalGroups
 
-SupplementalGroupsStrategyOptions defines the strategy type and options used to create the strategy.
+
 
 ### fn spec.supplementalGroups.withRanges
 

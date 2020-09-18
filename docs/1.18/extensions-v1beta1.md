@@ -16,3 +16,49 @@ permalink: /1.18/extensions/v1beta1/
 * [ingressSpec](extensions-v1beta1-ingressSpec.md)
 * [ingressStatus](extensions-v1beta1-ingressStatus.md)
 * [ingressTLS](extensions-v1beta1-ingressTLS.md)
+
+## Index
+
+* [`obj daemonSet`](#obj-daemonset)
+  * [`fn new(name, containers, podLabels)`](#fn-daemonsetnew)
+* [`obj deployment`](#obj-deployment)
+  * [`fn new(name, replicas=1, containers, podLabels={app: 'name'})`](#fn-deploymentnew)
+* [`obj statefulSet`](#obj-statefulset)
+  * [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-statefulsetnew)
+
+## Fields
+
+## obj daemonSet
+
+
+
+### fn daemonSet.new
+
+```ts
+new(name, containers, podLabels)
+```
+
+
+
+## obj deployment
+
+
+
+### fn deployment.new
+
+```ts
+new(name, replicas=1, containers, podLabels={app: 'name'})
+```
+
+
+
+## obj statefulSet
+
+
+
+### fn statefulSet.new
+
+```ts
+new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+```
+

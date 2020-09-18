@@ -463,7 +463,7 @@ rule is the strategy that will dictate the allowable labels that may be set.
 
 ## obj seLinux.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn seLinux.seLinuxOptions.withLevel
 

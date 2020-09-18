@@ -704,7 +704,7 @@ volumes is a white list of allowed volume plugins. Empty indicates that no volum
 
 ## obj spec.fsGroup
 
-FSGroupStrategyOptions defines the strategy type and options used to create the strategy. Deprecated: use FSGroupStrategyOptions from policy API Group instead.
+
 
 ### fn spec.fsGroup.withRanges
 
@@ -764,7 +764,7 @@ rule is the strategy that will dictate the allowable RunAsGroup values that may 
 
 ## obj spec.runAsUser
 
-RunAsUserStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use RunAsUserStrategyOptions from policy API Group instead.
+
 
 ### fn spec.runAsUser.withRanges
 
@@ -806,7 +806,7 @@ rule is the strategy that will dictate the allowable labels that may be set.
 
 ## obj spec.seLinux.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.seLinux.seLinuxOptions.withLevel
 
@@ -842,7 +842,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.supplementalGroups
 
-SupplementalGroupsStrategyOptions defines the strategy type and options used to create the strategy. Deprecated: use SupplementalGroupsStrategyOptions from policy API Group instead.
+
 
 ### fn spec.supplementalGroups.withRanges
 

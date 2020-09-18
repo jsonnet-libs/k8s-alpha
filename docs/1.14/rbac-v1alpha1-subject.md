@@ -8,11 +8,20 @@ Subject contains a reference to the object or user identities a role binding app
 
 ## Index
 
+* [`fn fromServiceAccount(service_account)`](#fn-fromserviceaccount)
 * [`fn withKind(kind)`](#fn-withkind)
 * [`fn withName(name)`](#fn-withname)
 * [`fn withNamespace(namespace)`](#fn-withnamespace)
 
 ## Fields
+
+### fn fromServiceAccount
+
+```ts
+fromServiceAccount(service_account)
+```
+
+`fromServiceAccount` returns a subject for a service account.
 
 ### fn withKind
 

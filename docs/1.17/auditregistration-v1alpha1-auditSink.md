@@ -259,7 +259,7 @@ AuditSinkSpec holds the spec for the audit sink
 
 ## obj spec.policy
 
-Policy defines the configuration of how audit events are logged
+
 
 ### fn spec.policy.withLevel
 
@@ -359,7 +359,7 @@ If specified, the port on the service that hosting webhook. Default to 443 for b
 
 ## obj spec.webhook.throttle
 
-
+WebhookThrottleConfig holds the configuration for throttling events
 
 ### fn spec.webhook.throttle.withBurst
 

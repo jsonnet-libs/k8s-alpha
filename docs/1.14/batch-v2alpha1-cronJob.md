@@ -8,7 +8,7 @@ CronJob represents the configuration of a single cron job.
 
 ## Index
 
-* [`fn new(name)`](#fn-new)
+* [`fn new(name, schedule, containers)`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -227,7 +227,7 @@ CronJob represents the configuration of a single cron job.
 ### fn new
 
 ```ts
-new(name)
+new(name, schedule, containers)
 ```
 
 new returns an instance of Cronjob
@@ -832,7 +832,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.jobTemplate.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn spec.jobTemplate.metadata.initializers.result.withCode
 
@@ -1034,7 +1034,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj spec.jobTemplate.spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.jobTemplate.spec.template.metadata.withAnnotations
 
@@ -1230,7 +1230,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.withPending
 
@@ -1252,7 +1252,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.result.withCode
 
@@ -1296,7 +1296,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.jobTemplate.spec.template.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn spec.jobTemplate.spec.template.metadata.initializers.result.details.withCauses
 
@@ -1358,7 +1358,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj spec.jobTemplate.spec.template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn spec.jobTemplate.spec.template.spec.withActiveDeadlineSeconds
 
@@ -1684,7 +1684,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn spec.jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1786,7 +1786,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.jobTemplate.spec.template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn spec.jobTemplate.spec.template.spec.dnsConfig.withNameservers
 
@@ -1920,7 +1920,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 

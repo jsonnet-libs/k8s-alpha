@@ -282,7 +282,7 @@ PodFixed represents the fixed resource overhead associated with running a pod.
 
 ## obj spec.scheduling
 
-
+Scheduling specifies the scheduling constraints for nodes supporting a RuntimeClass.
 
 ### fn spec.scheduling.withNodeSelector
 

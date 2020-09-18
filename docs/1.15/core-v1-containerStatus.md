@@ -99,7 +99,7 @@ ContainerState holds a possible state of container. Only one of its members may 
 
 ## obj lastState.running
 
-ContainerStateRunning is a running state of a container.
+
 
 ### fn lastState.running.withStartedAt
 

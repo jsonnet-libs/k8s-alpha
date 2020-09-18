@@ -10,6 +10,8 @@ ContainerPort represents a network port in a single container.
 
 * [`fn new(containerPort)`](#fn-new)
 * [`fn newNamed(containerPort, name)`](#fn-newnamed)
+* [`fn newNamedUDP(containerPort, name)`](#fn-newnamedudp)
+* [`fn newUDP(containerPort)`](#fn-newudp)
 * [`fn withContainerPort(containerPort)`](#fn-withcontainerport)
 * [`fn withHostIP(hostIP)`](#fn-withhostip)
 * [`fn withHostPort(hostPort)`](#fn-withhostport)
@@ -33,6 +35,22 @@ newNamed(containerPort, name)
 ```
 
 newNamed works like `new`, but also sets the `name`
+
+### fn newNamedUDP
+
+```ts
+newNamedUDP(containerPort, name)
+```
+
+newNamedUDP works like `newNamed`, but also sets protocal to UDP
+
+### fn newUDP
+
+```ts
+newUDP(containerPort)
+```
+
+newUDP works like `new`, but also sets protocal to UDP
 
 ### fn withContainerPort
 

@@ -117,7 +117,7 @@ Path of the field to select in the specified API version.
 
 ## obj valueFrom.resourceFieldRef
 
-
+ResourceFieldSelector represents container resources (cpu, memory) and their output format
 
 ### fn valueFrom.resourceFieldRef.withContainerName
 

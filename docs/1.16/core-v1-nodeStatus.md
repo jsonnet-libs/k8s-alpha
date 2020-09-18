@@ -311,7 +311,7 @@ NodeConfigSource specifies a source of node configuration. Exactly one subfield 
 
 ## obj config.lastKnownGood.configMap
 
-
+ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
 
 ### fn config.lastKnownGood.configMap.withKubeletConfigKey
 
@@ -359,7 +359,7 @@ NodeDaemonEndpoints lists ports opened by daemons running on the Node.
 
 ## obj daemonEndpoints.kubeletEndpoint
 
-DaemonEndpoint contains information about a single Daemon endpoint.
+
 
 ### fn daemonEndpoints.kubeletEndpoint.withPort
 

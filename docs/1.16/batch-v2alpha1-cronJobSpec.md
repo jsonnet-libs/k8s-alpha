@@ -504,7 +504,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj jobTemplate.spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn jobTemplate.spec.template.metadata.withAnnotations
 
@@ -698,7 +698,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj jobTemplate.spec.template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn jobTemplate.spec.template.spec.withActiveDeadlineSeconds
 
@@ -1188,7 +1188,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj jobTemplate.spec.template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn jobTemplate.spec.template.spec.dnsConfig.withNameservers
 
@@ -1358,7 +1358,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj jobTemplate.spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn jobTemplate.spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
