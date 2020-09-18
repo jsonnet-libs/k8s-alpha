@@ -400,7 +400,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -558,7 +558,7 @@ ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
 
 ## obj spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.selector.withMatchExpressions
 
@@ -798,7 +798,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn spec.template.metadata.initializers.withPending
 
@@ -926,7 +926,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj spec.template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -1238,7 +1238,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1260,7 +1260,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1420,7 +1420,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1496,7 +1496,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1532,7 +1532,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

@@ -692,7 +692,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn securityContext.windowsOptions.withGmsaCredentialSpec
 

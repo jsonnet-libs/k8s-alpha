@@ -11,7 +11,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -164,7 +164,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+new(name, replicas=1, containers, volumeClaims=[], podLabels={})
 ```
 
 new returns an instance of Statefulset
@@ -419,7 +419,7 @@ volumeClaimTemplates is a list of claims that pods are allowed to reference. The
 
 ## obj spec.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn spec.selector.withMatchExpressions
 
@@ -1023,7 +1023,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1045,7 +1045,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1147,7 +1147,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1205,7 +1205,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1357,7 +1357,7 @@ Type indicates the type of the StatefulSetUpdateStrategy.
 
 ## obj spec.updateStrategy.rollingUpdate
 
-RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
+
 
 ### fn spec.updateStrategy.rollingUpdate.withPartition
 

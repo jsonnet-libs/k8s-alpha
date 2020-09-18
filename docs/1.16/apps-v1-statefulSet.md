@@ -11,7 +11,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={})`](#fn-new)
 * [`fn mapContainers(f)`](#fn-mapcontainers)
 * [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
@@ -166,7 +166,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+new(name, replicas=1, containers, volumeClaims=[], podLabels={})
 ```
 
 new returns an instance of Statefulset
@@ -484,7 +484,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj spec.template.metadata
 
@@ -1132,7 +1132,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj spec.template.spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1172,7 +1172,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1230,7 +1230,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1370,7 +1370,7 @@ The UserName in Windows to run the entrypoint of the container process. Defaults
 
 ## obj spec.updateStrategy
 
-StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.
+
 
 ### fn spec.updateStrategy.withType
 
@@ -1382,7 +1382,7 @@ Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpda
 
 ## obj spec.updateStrategy.rollingUpdate
 
-
+RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
 
 ### fn spec.updateStrategy.rollingUpdate.withPartition
 

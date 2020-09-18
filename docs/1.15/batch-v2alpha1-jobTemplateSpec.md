@@ -378,7 +378,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -400,7 +400,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -558,7 +558,7 @@ ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
 
 ## obj spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.selector.withMatchExpressions
 
@@ -598,11 +598,11 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj spec.template.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -926,7 +926,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj spec.template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -1238,7 +1238,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1362,7 +1362,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1496,7 +1496,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1532,7 +1532,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

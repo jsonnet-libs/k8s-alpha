@@ -61,7 +61,7 @@ permalink: /1.15/extensions/v1beta1/
 ## Index
 
 * [`obj statefulSet`](#obj-statefulset)
-  * [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-statefulsetnew)
+  * [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={})`](#fn-statefulsetnew)
 
 ## Fields
 
@@ -72,6 +72,6 @@ permalink: /1.15/extensions/v1beta1/
 ### fn statefulSet.new
 
 ```ts
-new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+new(name, replicas=1, containers, volumeClaims=[], podLabels={})
 ```
 

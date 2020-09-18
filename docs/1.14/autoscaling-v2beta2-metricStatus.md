@@ -71,7 +71,7 @@ ExternalMetricStatus indicates the current value of a global metric not associat
 
 ## obj external.current
 
-MetricValueStatus holds the current value for a metric
+
 
 ### fn external.current.withAverageUtilization
 
@@ -215,7 +215,7 @@ ObjectMetricStatus indicates the current value of a metric describing a kubernet
 
 ## obj object.current
 
-MetricValueStatus holds the current value for a metric
+
 
 ### fn object.current.withAverageUtilization
 
@@ -379,7 +379,7 @@ PodsMetricStatus indicates the current value of a metric describing each pod in 
 
 ## obj pods.current
 
-MetricValueStatus holds the current value for a metric
+
 
 ### fn pods.current.withAverageUtilization
 
@@ -479,7 +479,7 @@ name is the name of the given metric
 
 ## obj pods.metric.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn pods.metric.selector.withMatchExpressions
 
@@ -531,7 +531,7 @@ Name is the name of the resource in question.
 
 ## obj resource.current
 
-MetricValueStatus holds the current value for a metric
+
 
 ### fn resource.current.withAverageUtilization
 

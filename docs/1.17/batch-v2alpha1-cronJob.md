@@ -444,7 +444,7 @@ JobTemplateSpec describes the data a Job should have when created from a templat
 
 ## obj spec.jobTemplate.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.jobTemplate.metadata.withAnnotations
 
@@ -734,7 +734,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj spec.jobTemplate.spec.template.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.jobTemplate.spec.template.metadata.withAnnotations
 
@@ -928,7 +928,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.spec.template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn spec.jobTemplate.spec.template.spec.withActiveDeadlineSeconds
 
@@ -1290,7 +1290,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.jobTemplate.spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.nodeAffinity
 
@@ -1552,7 +1552,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 

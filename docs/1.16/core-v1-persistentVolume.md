@@ -543,7 +543,7 @@ Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
 
 ## obj spec.azureDisk
 
-AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+
 
 ### fn spec.azureDisk.withCachingMode
 
@@ -595,7 +595,7 @@ Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
 
 ## obj spec.azureFile
 
-
+AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
 
 ### fn spec.azureFile.withReadOnly
 
@@ -705,7 +705,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.cinder
 
-Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
+
 
 ### fn spec.cinder.withFsType
 
@@ -805,7 +805,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.csi
 
-
+Represents storage that is managed by an external CSI volume driver (Beta feature)
 
 ### fn spec.csi.withDriver
 
@@ -919,7 +919,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.csi.nodeStageSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.csi.nodeStageSecretRef.withName
 
@@ -1183,7 +1183,7 @@ Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/co
 
 ## obj spec.iscsi
 
-
+ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
 
 ### fn spec.iscsi.withChapAuthDiscovery
 
@@ -1277,7 +1277,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj spec.iscsi.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.iscsi.secretRef.withName
 
@@ -1317,7 +1317,7 @@ The full path to the volume on the node. It can be either a directory or block d
 
 ## obj spec.nfs
 
-
+Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.nfs.withPath
 
@@ -1419,7 +1419,7 @@ VolumeID uniquely identifies a Portworx volume
 
 ## obj spec.quobyte
 
-
+Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.quobyte.withGroup
 
@@ -1471,7 +1471,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj spec.rbd
 
-
+Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
 
 ### fn spec.rbd.withFsType
 
@@ -1541,7 +1541,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj spec.rbd.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.rbd.secretRef.withName
 
@@ -1561,7 +1561,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.scaleIO
 
-
+ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
 
 ### fn spec.scaleIO.withFsType
 

@@ -121,7 +121,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj postStart.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn postStart.tcpSocket.withHost
 
@@ -145,7 +145,7 @@ Handler defines a specific action that should be taken
 
 ## obj preStop.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn preStop.exec.withCommand
 

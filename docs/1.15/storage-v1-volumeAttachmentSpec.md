@@ -438,7 +438,7 @@ Share Name
 
 ## obj source.inlineVolumeSpec.cephfs
 
-Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.cephfs.withMonitors
 
@@ -492,7 +492,7 @@ Optional: User is the rados user name, default is admin More info: https://relea
 
 ## obj source.inlineVolumeSpec.cephfs.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn source.inlineVolumeSpec.cephfs.secretRef.withName
 
@@ -512,7 +512,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.cinder
 
-Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.cinder.withFsType
 
@@ -612,7 +612,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj source.inlineVolumeSpec.csi
 
-Represents storage that is managed by an external CSI volume driver (Beta feature)
+
 
 ### fn source.inlineVolumeSpec.csi.withDriver
 
@@ -666,7 +666,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj source.inlineVolumeSpec.csi.controllerExpandSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn source.inlineVolumeSpec.csi.controllerExpandSecretRef.withName
 
@@ -1154,7 +1154,7 @@ VolumeNodeAffinity defines constraints that limit what nodes this volume can be 
 
 ## obj source.inlineVolumeSpec.nodeAffinity.required
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn source.inlineVolumeSpec.nodeAffinity.required.withNodeSelectorTerms
 
@@ -1176,7 +1176,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj source.inlineVolumeSpec.photonPersistentDisk
 
-
+Represents a Photon Controller persistent disk resource.
 
 ### fn source.inlineVolumeSpec.photonPersistentDisk.withFsType
 
@@ -1276,7 +1276,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj source.inlineVolumeSpec.rbd
 
-
+Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.rbd.withFsType
 
@@ -1442,7 +1442,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj source.inlineVolumeSpec.scaleIO.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn source.inlineVolumeSpec.scaleIO.secretRef.withName
 
@@ -1462,7 +1462,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.storageos
 
-Represents a StorageOS persistent volume resource.
+
 
 ### fn source.inlineVolumeSpec.storageos.withFsType
 
@@ -1498,7 +1498,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj source.inlineVolumeSpec.storageos.secretRef
 
-ObjectReference contains enough information to let you inspect or modify the referred object.
+
 
 ### fn source.inlineVolumeSpec.storageos.secretRef.withFieldPath
 
@@ -1550,7 +1550,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj source.inlineVolumeSpec.vsphereVolume
 
-
+Represents a vSphere volume resource.
 
 ### fn source.inlineVolumeSpec.vsphereVolume.withFsType
 

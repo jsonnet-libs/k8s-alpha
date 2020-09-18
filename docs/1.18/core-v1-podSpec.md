@@ -460,7 +460,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -544,7 +544,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -726,7 +726,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn securityContext.seLinuxOptions.withLevel
 
@@ -762,7 +762,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn securityContext.windowsOptions.withGmsaCredentialSpec
 

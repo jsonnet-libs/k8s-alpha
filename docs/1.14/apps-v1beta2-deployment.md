@@ -8,7 +8,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1/Deploymen
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -184,7 +184,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1/Deploymen
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, podLabels={app: 'name'})
+new(name, replicas=1, containers, podLabels={})
 ```
 
 new returns an instance of Deployment
@@ -387,7 +387,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -453,7 +453,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn metadata.initializers.result.details.withCauses
 
@@ -611,7 +611,7 @@ Type of deployment. Can be "Recreate" or "RollingUpdate". Default is RollingUpda
 
 ## obj spec.strategy.rollingUpdate
 
-Spec to control the desired behavior of rolling update.
+
 
 ### fn spec.strategy.rollingUpdate.withMaxSurge
 
@@ -635,7 +635,7 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj spec.template.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -831,7 +831,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn spec.template.metadata.initializers.withPending
 
@@ -1263,7 +1263,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1387,7 +1387,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 

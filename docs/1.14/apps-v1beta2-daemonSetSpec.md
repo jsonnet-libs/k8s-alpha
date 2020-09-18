@@ -198,7 +198,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn template.metadata.withAnnotations
 
@@ -394,7 +394,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj template.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn template.metadata.initializers.withPending
 
@@ -822,7 +822,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj template.spec.affinity.nodeAffinity
 

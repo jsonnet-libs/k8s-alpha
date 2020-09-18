@@ -8,7 +8,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1/Deploymen
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -161,7 +161,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1/Deploymen
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, podLabels={app: 'name'})
+new(name, replicas=1, containers, podLabels={})
 ```
 
 new returns an instance of Deployment
@@ -446,7 +446,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.strategy
 
-DeploymentStrategy describes how to replace existing pods with new ones.
+
 
 ### fn spec.strategy.withType
 
@@ -482,7 +482,7 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj spec.template.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -1042,7 +1042,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1126,7 +1126,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj spec.template.spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1166,7 +1166,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 

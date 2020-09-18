@@ -8,7 +8,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -163,7 +163,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, podLabels={app: 'name'})
+new(name, replicas=1, containers, podLabels={})
 ```
 
 new returns an instance of Deployment
@@ -408,7 +408,7 @@ The number of old ReplicaSets to retain to allow rollback. This is a pointer to 
 
 ## obj spec.rollbackTo
 
-
+DEPRECATED.
 
 ### fn spec.rollbackTo.withRevision
 
@@ -460,7 +460,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.strategy
 
-DeploymentStrategy describes how to replace existing pods with new ones.
+
 
 ### fn spec.strategy.withType
 
@@ -1078,7 +1078,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1350,7 +1350,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

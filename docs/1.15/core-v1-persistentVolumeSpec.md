@@ -503,7 +503,7 @@ volume id used to identify the volume in cinder More info: https://releases.k8s.
 
 ## obj cinder.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn cinder.secretRef.withName
 

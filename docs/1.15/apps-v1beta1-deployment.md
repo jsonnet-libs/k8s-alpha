@@ -8,7 +8,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -190,7 +190,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, podLabels={app: 'name'})
+new(name, replicas=1, containers, podLabels={})
 ```
 
 new returns an instance of Deployment
@@ -393,7 +393,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -415,7 +415,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -577,7 +577,7 @@ The revision to rollback to. If set to 0, rollback to the last revision.
 
 ## obj spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.selector.withMatchExpressions
 
@@ -871,7 +871,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.template.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn spec.template.metadata.initializers.result.withCode
 
@@ -915,7 +915,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.template.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn spec.template.metadata.initializers.result.details.withCauses
 
@@ -1285,11 +1285,11 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1373,7 +1373,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj spec.template.spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1583,7 +1583,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

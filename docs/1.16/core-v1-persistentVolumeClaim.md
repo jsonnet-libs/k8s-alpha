@@ -304,7 +304,7 @@ VolumeName is the binding reference to the PersistentVolume backing this claim.
 
 ## obj spec.dataSource
 
-TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.
+
 
 ### fn spec.dataSource.withApiGroup
 

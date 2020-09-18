@@ -500,7 +500,7 @@ volume id used to identify the volume in cinder More info: https://releases.k8s.
 
 ## obj cinder.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn cinder.secretRef.withName
 
@@ -626,7 +626,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj csi.controllerPublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.controllerPublishSecretRef.withName
 
@@ -646,7 +646,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.nodePublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.nodePublishSecretRef.withName
 
@@ -666,7 +666,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.nodeStageSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.nodeStageSecretRef.withName
 
@@ -1384,7 +1384,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj scaleIO.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn scaleIO.secretRef.withName
 

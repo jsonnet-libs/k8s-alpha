@@ -20,11 +20,11 @@ permalink: /1.18/extensions/v1beta1/
 ## Index
 
 * [`obj daemonSet`](#obj-daemonset)
-  * [`fn new(name, containers, podLabels)`](#fn-daemonsetnew)
+  * [`fn new(name, containers, podLabels={})`](#fn-daemonsetnew)
 * [`obj deployment`](#obj-deployment)
-  * [`fn new(name, replicas=1, containers, podLabels={app: 'name'})`](#fn-deploymentnew)
+  * [`fn new(name, replicas=1, containers, podLabels={})`](#fn-deploymentnew)
 * [`obj statefulSet`](#obj-statefulset)
-  * [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-statefulsetnew)
+  * [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={})`](#fn-statefulsetnew)
 
 ## Fields
 
@@ -35,7 +35,7 @@ permalink: /1.18/extensions/v1beta1/
 ### fn daemonSet.new
 
 ```ts
-new(name, containers, podLabels)
+new(name, containers, podLabels={})
 ```
 
 
@@ -47,7 +47,7 @@ new(name, containers, podLabels)
 ### fn deployment.new
 
 ```ts
-new(name, replicas=1, containers, podLabels={app: 'name'})
+new(name, replicas=1, containers, podLabels={})
 ```
 
 
@@ -59,6 +59,6 @@ new(name, replicas=1, containers, podLabels={app: 'name'})
 ### fn statefulSet.new
 
 ```ts
-new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+new(name, replicas=1, containers, volumeClaims=[], podLabels={})
 ```
 

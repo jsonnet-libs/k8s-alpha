@@ -11,7 +11,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -164,7 +164,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+new(name, replicas=1, containers, volumeClaims=[], podLabels={})
 ```
 
 new returns an instance of Statefulset
@@ -657,7 +657,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -1147,7 +1147,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1205,7 +1205,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.template.spec.securityContext.withFsGroup
 

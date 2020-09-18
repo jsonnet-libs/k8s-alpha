@@ -450,7 +450,7 @@ The node that the volume should be attached to.
 
 ## obj spec.source
 
-
+VolumeAttachmentSource represents a volume that should be attached. Right now only PersistenVolumes can be attached via external attacher, in future we may allow also inline volumes in pods. Exactly one member can be set.
 
 ### fn spec.source.withPersistentVolumeName
 
@@ -632,7 +632,7 @@ Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
 
 ## obj spec.source.inlineVolumeSpec.azureFile
 
-AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+
 
 ### fn spec.source.inlineVolumeSpec.azureFile.withReadOnly
 
@@ -668,7 +668,7 @@ Share Name
 
 ## obj spec.source.inlineVolumeSpec.cephfs
 
-Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.source.inlineVolumeSpec.cephfs.withMonitors
 
@@ -770,7 +770,7 @@ volume id used to identify the volume in cinder. More info: https://examples.k8s
 
 ## obj spec.source.inlineVolumeSpec.cinder.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.source.inlineVolumeSpec.cinder.secretRef.withName
 
@@ -842,7 +842,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.source.inlineVolumeSpec.csi
 
-Represents storage that is managed by an external CSI volume driver (Beta feature)
+
 
 ### fn spec.source.inlineVolumeSpec.csi.withDriver
 
@@ -896,7 +896,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj spec.source.inlineVolumeSpec.csi.controllerExpandSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.source.inlineVolumeSpec.csi.controllerExpandSecretRef.withName
 
@@ -936,7 +936,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.source.inlineVolumeSpec.csi.nodePublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.source.inlineVolumeSpec.csi.nodePublishSecretRef.withName
 
@@ -956,7 +956,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.source.inlineVolumeSpec.csi.nodeStageSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.source.inlineVolumeSpec.csi.nodeStageSecretRef.withName
 
@@ -1106,7 +1106,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.source.inlineVolumeSpec.flocker
 
-Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.source.inlineVolumeSpec.flocker.withDatasetName
 
@@ -1126,7 +1126,9 @@ UUID of the dataset. This is unique identifier of a Flocker dataset
 
 ## obj spec.source.inlineVolumeSpec.gcePersistentDisk
 
+Represents a Persistent Disk resource in Google Compute Engine.
 
+A GCE PD must exist before mounting to a container. The disk must also be in the same GCE project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only many times. GCE PDs support ownership management and SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.gcePersistentDisk.withFsType
 
@@ -1162,7 +1164,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.source.inlineVolumeSpec.glusterfs
 
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.source.inlineVolumeSpec.glusterfs.withEndpoints
 
@@ -1198,7 +1200,7 @@ ReadOnly here will force the Glusterfs volume to be mounted with read-only permi
 
 ## obj spec.source.inlineVolumeSpec.hostPath
 
-
+Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.hostPath.withPath
 
@@ -1218,7 +1220,7 @@ Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/co
 
 ## obj spec.source.inlineVolumeSpec.iscsi
 
-
+ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.iscsi.withChapAuthDiscovery
 
@@ -1312,7 +1314,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj spec.source.inlineVolumeSpec.iscsi.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.source.inlineVolumeSpec.iscsi.secretRef.withName
 
@@ -1352,7 +1354,7 @@ The full path to the volume on the node. It can be either a directory or block d
 
 ## obj spec.source.inlineVolumeSpec.nfs
 
-Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.source.inlineVolumeSpec.nfs.withPath
 
@@ -1384,7 +1386,7 @@ VolumeNodeAffinity defines constraints that limit what nodes this volume can be 
 
 ## obj spec.source.inlineVolumeSpec.nodeAffinity.required
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn spec.source.inlineVolumeSpec.nodeAffinity.required.withNodeSelectorTerms
 
@@ -1406,7 +1408,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.source.inlineVolumeSpec.photonPersistentDisk
 
-Represents a Photon Controller persistent disk resource.
+
 
 ### fn spec.source.inlineVolumeSpec.photonPersistentDisk.withFsType
 
@@ -1506,7 +1508,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj spec.source.inlineVolumeSpec.rbd
 
-
+Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.rbd.withFsType
 
@@ -1576,7 +1578,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj spec.source.inlineVolumeSpec.rbd.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.source.inlineVolumeSpec.rbd.secretRef.withName
 
@@ -1596,7 +1598,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.source.inlineVolumeSpec.scaleIO
 
-ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
+
 
 ### fn spec.source.inlineVolumeSpec.scaleIO.withFsType
 
@@ -1692,7 +1694,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.source.inlineVolumeSpec.storageos
 
-Represents a StorageOS persistent volume resource.
+
 
 ### fn spec.source.inlineVolumeSpec.storageos.withFsType
 
@@ -1780,7 +1782,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.source.inlineVolumeSpec.vsphereVolume
 
-
+Represents a vSphere volume resource.
 
 ### fn spec.source.inlineVolumeSpec.vsphereVolume.withFsType
 

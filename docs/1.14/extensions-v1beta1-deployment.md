@@ -8,7 +8,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -186,7 +186,7 @@ DEPRECATED - This group version of Deployment is deprecated by apps/v1beta2/Depl
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, podLabels={app: 'name'})
+new(name, replicas=1, containers, podLabels={})
 ```
 
 new returns an instance of Deployment
@@ -389,7 +389,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -561,7 +561,7 @@ The number of old ReplicaSets to retain to allow rollback. This is a pointer to 
 
 ## obj spec.rollbackTo
 
-
+DEPRECATED.
 
 ### fn spec.rollbackTo.withRevision
 
@@ -573,7 +573,7 @@ The revision to rollback to. If set to 0, rollback to the last revision.
 
 ## obj spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.selector.withMatchExpressions
 
@@ -645,11 +645,11 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -845,7 +845,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn spec.template.metadata.initializers.withPending
 
@@ -973,7 +973,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj spec.template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -1273,11 +1273,11 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1321,7 +1321,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.template.spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1535,7 +1535,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 

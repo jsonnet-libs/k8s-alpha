@@ -263,7 +263,7 @@ UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in 
 
 ## obj config.assigned.configMap
 
-ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
+
 
 ### fn config.assigned.configMap.withKubeletConfigKey
 
@@ -307,7 +307,7 @@ UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in 
 
 ## obj config.lastKnownGood
 
-
+NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.
 
 ## obj config.lastKnownGood.configMap
 

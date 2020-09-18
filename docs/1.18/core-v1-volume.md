@@ -446,7 +446,7 @@ volume id used to identify the volume in cinder. More info: https://examples.k8s
 
 ## obj cinder.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn cinder.secretRef.withName
 
@@ -996,7 +996,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj iscsi.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn iscsi.secretRef.withName
 
@@ -1256,7 +1256,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj rbd.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn rbd.secretRef.withName
 

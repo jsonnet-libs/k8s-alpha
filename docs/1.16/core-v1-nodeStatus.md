@@ -211,11 +211,11 @@ Error describes any problems reconciling the Spec.ConfigSource to the Active con
 
 ## obj config.active
 
-NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.
+
 
 ## obj config.active.configMap
 
-
+ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
 
 ### fn config.active.configMap.withKubeletConfigKey
 
@@ -259,7 +259,7 @@ UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in 
 
 ## obj config.assigned
 
-NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.
+
 
 ## obj config.assigned.configMap
 
@@ -307,11 +307,11 @@ UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in 
 
 ## obj config.lastKnownGood
 
-NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.
+
 
 ## obj config.lastKnownGood.configMap
 
-ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
+
 
 ### fn config.lastKnownGood.configMap.withKubeletConfigKey
 

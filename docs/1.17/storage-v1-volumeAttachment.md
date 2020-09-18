@@ -450,7 +450,7 @@ The node that the volume should be attached to.
 
 ## obj spec.source
 
-
+VolumeAttachmentSource represents a volume that should be attached. Right now only PersistenVolumes can be attached via external attacher, in future we may allow also inline volumes in pods. Exactly one member can be set.
 
 ### fn spec.source.withPersistentVolumeName
 
@@ -544,9 +544,7 @@ volumeMode defines if a volume is intended to be used with a formatted filesyste
 
 ## obj spec.source.inlineVolumeSpec.awsElasticBlockStore
 
-Represents a Persistent Disk resource in AWS.
 
-An AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.awsElasticBlockStore.withFsType
 
@@ -670,7 +668,7 @@ Share Name
 
 ## obj spec.source.inlineVolumeSpec.cephfs
 
-
+Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.cephfs.withMonitors
 
@@ -724,7 +722,7 @@ Optional: User is the rados user name, default is admin More info: https://examp
 
 ## obj spec.source.inlineVolumeSpec.cephfs.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.source.inlineVolumeSpec.cephfs.secretRef.withName
 
@@ -844,7 +842,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.source.inlineVolumeSpec.csi
 
-
+Represents storage that is managed by an external CSI volume driver (Beta feature)
 
 ### fn spec.source.inlineVolumeSpec.csi.withDriver
 
@@ -898,7 +896,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj spec.source.inlineVolumeSpec.csi.controllerExpandSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.source.inlineVolumeSpec.csi.controllerExpandSecretRef.withName
 
@@ -1088,7 +1086,7 @@ Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly 
 
 ## obj spec.source.inlineVolumeSpec.flexVolume.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.source.inlineVolumeSpec.flexVolume.secretRef.withName
 
@@ -1164,7 +1162,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.source.inlineVolumeSpec.glusterfs
 
-
+Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.glusterfs.withEndpoints
 
@@ -1220,7 +1218,7 @@ Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/co
 
 ## obj spec.source.inlineVolumeSpec.iscsi
 
-
+ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.iscsi.withChapAuthDiscovery
 
@@ -1456,7 +1454,7 @@ VolumeID uniquely identifies a Portworx volume
 
 ## obj spec.source.inlineVolumeSpec.quobyte
 
-
+Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.source.inlineVolumeSpec.quobyte.withGroup
 
@@ -1730,7 +1728,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj spec.source.inlineVolumeSpec.storageos.secretRef
 
-
+ObjectReference contains enough information to let you inspect or modify the referred object.
 
 ### fn spec.source.inlineVolumeSpec.storageos.secretRef.withFieldPath
 

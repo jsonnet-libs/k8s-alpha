@@ -274,7 +274,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -440,7 +440,7 @@ Stages is a list of stages for which events are created.
 
 ## obj spec.webhook.clientConfig
 
-
+WebhookClientConfig contains the information to make a connection with the webhook
 
 ### fn spec.webhook.clientConfig.withCaBundle
 
@@ -506,7 +506,7 @@ If specified, the port on the service that hosting webhook. Default to 443 for b
 
 ## obj spec.webhook.throttle
 
-
+WebhookThrottleConfig holds the configuration for throttling events
 
 ### fn spec.webhook.throttle.withBurst
 

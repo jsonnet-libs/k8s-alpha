@@ -481,7 +481,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -503,7 +503,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -543,7 +543,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -753,7 +753,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn securityContext.windowsOptions.withGmsaCredentialSpec
 

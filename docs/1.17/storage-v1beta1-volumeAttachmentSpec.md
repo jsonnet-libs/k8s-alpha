@@ -312,7 +312,9 @@ volumeMode defines if a volume is intended to be used with a formatted filesyste
 
 ## obj source.inlineVolumeSpec.awsElasticBlockStore
 
+Represents a Persistent Disk resource in AWS.
 
+An AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.awsElasticBlockStore.withFsType
 
@@ -538,7 +540,7 @@ volume id used to identify the volume in cinder. More info: https://examples.k8s
 
 ## obj source.inlineVolumeSpec.cinder.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn source.inlineVolumeSpec.cinder.secretRef.withName
 
@@ -610,7 +612,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj source.inlineVolumeSpec.csi
 
-Represents storage that is managed by an external CSI volume driver (Beta feature)
+
 
 ### fn source.inlineVolumeSpec.csi.withDriver
 
@@ -684,7 +686,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.csi.controllerPublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn source.inlineVolumeSpec.csi.controllerPublishSecretRef.withName
 
@@ -704,7 +706,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.csi.nodePublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn source.inlineVolumeSpec.csi.nodePublishSecretRef.withName
 
@@ -744,7 +746,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.fc
 
-Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.fc.withFsType
 
@@ -808,7 +810,7 @@ Optional: FC volume world wide identifiers (wwids) Either wwids or combination o
 
 ## obj source.inlineVolumeSpec.flexVolume
 
-FlexPersistentVolumeSource represents a generic persistent volume resource that is provisioned/attached using an exec based plugin.
+
 
 ### fn source.inlineVolumeSpec.flexVolume.withDriver
 
@@ -986,7 +988,7 @@ Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/co
 
 ## obj source.inlineVolumeSpec.iscsi
 
-ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.iscsi.withChapAuthDiscovery
 
@@ -1080,7 +1082,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj source.inlineVolumeSpec.iscsi.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn source.inlineVolumeSpec.iscsi.secretRef.withName
 
@@ -1100,7 +1102,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.local
 
-Local represents directly-attached storage with node affinity (Beta feature)
+
 
 ### fn source.inlineVolumeSpec.local.withFsType
 
@@ -1174,7 +1176,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj source.inlineVolumeSpec.photonPersistentDisk
 
-Represents a Photon Controller persistent disk resource.
+
 
 ### fn source.inlineVolumeSpec.photonPersistentDisk.withFsType
 
@@ -1194,7 +1196,7 @@ ID that identifies Photon Controller persistent disk
 
 ## obj source.inlineVolumeSpec.portworxVolume
 
-PortworxVolumeSource represents a Portworx volume resource.
+
 
 ### fn source.inlineVolumeSpec.portworxVolume.withFsType
 
@@ -1222,7 +1224,7 @@ VolumeID uniquely identifies a Portworx volume
 
 ## obj source.inlineVolumeSpec.quobyte
 
-
+Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
 
 ### fn source.inlineVolumeSpec.quobyte.withGroup
 
@@ -1274,7 +1276,7 @@ Volume is a string that references an already created Quobyte volume by name.
 
 ## obj source.inlineVolumeSpec.rbd
 
-Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.
+
 
 ### fn source.inlineVolumeSpec.rbd.withFsType
 
@@ -1344,7 +1346,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj source.inlineVolumeSpec.rbd.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn source.inlineVolumeSpec.rbd.secretRef.withName
 
@@ -1364,7 +1366,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.scaleIO
 
-ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
+
 
 ### fn source.inlineVolumeSpec.scaleIO.withFsType
 
@@ -1440,7 +1442,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj source.inlineVolumeSpec.scaleIO.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn source.inlineVolumeSpec.scaleIO.secretRef.withName
 
@@ -1460,7 +1462,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj source.inlineVolumeSpec.storageos
 
-Represents a StorageOS persistent volume resource.
+
 
 ### fn source.inlineVolumeSpec.storageos.withFsType
 
@@ -1496,7 +1498,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj source.inlineVolumeSpec.storageos.secretRef
 
-
+ObjectReference contains enough information to let you inspect or modify the referred object.
 
 ### fn source.inlineVolumeSpec.storageos.secretRef.withFieldPath
 
@@ -1548,7 +1550,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj source.inlineVolumeSpec.vsphereVolume
 
-Represents a vSphere volume resource.
+
 
 ### fn source.inlineVolumeSpec.vsphereVolume.withFsType
 

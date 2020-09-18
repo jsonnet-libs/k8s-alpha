@@ -595,7 +595,7 @@ Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in
 
 ## obj spec.azureFile
 
-AzureFile represents an Azure File Service mount on the host and bind mount to the pod.
+
 
 ### fn spec.azureFile.withReadOnly
 
@@ -631,7 +631,7 @@ Share Name
 
 ## obj spec.cephfs
 
-Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.cephfs.withMonitors
 
@@ -753,7 +753,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.claimRef
 
-
+ObjectReference contains enough information to let you inspect or modify the referred object.
 
 ### fn spec.claimRef.withFieldPath
 
@@ -879,7 +879,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.csi.controllerPublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.csi.controllerPublishSecretRef.withName
 
@@ -1069,7 +1069,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.flocker
 
-
+Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.flocker.withDatasetName
 
@@ -1089,9 +1089,7 @@ UUID of the dataset. This is unique identifier of a Flocker dataset
 
 ## obj spec.gcePersistentDisk
 
-Represents a Persistent Disk resource in Google Compute Engine.
 
-A GCE PD must exist before mounting to a container. The disk must also be in the same GCE project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only many times. GCE PDs support ownership management and SELinux relabeling.
 
 ### fn spec.gcePersistentDisk.withFsType
 
@@ -1127,7 +1125,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.glusterfs
 
-
+Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.glusterfs.withEndpoints
 
@@ -1297,7 +1295,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.local
 
-Local represents directly-attached storage with node affinity (Beta feature)
+
 
 ### fn spec.local.withFsType
 
@@ -1317,7 +1315,7 @@ The full path to the volume on the node. It can be either a directory or block d
 
 ## obj spec.nfs
 
-Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.nfs.withPath
 
@@ -1345,7 +1343,7 @@ Server is the hostname or IP address of the NFS server. More info: https://kuber
 
 ## obj spec.nodeAffinity
 
-VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed from.
+
 
 ## obj spec.nodeAffinity.required
 
@@ -1371,7 +1369,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.photonPersistentDisk
 
-
+Represents a Photon Controller persistent disk resource.
 
 ### fn spec.photonPersistentDisk.withFsType
 
@@ -1391,7 +1389,7 @@ ID that identifies Photon Controller persistent disk
 
 ## obj spec.portworxVolume
 
-
+PortworxVolumeSource represents a Portworx volume resource.
 
 ### fn spec.portworxVolume.withFsType
 
@@ -1419,7 +1417,7 @@ VolumeID uniquely identifies a Portworx volume
 
 ## obj spec.quobyte
 
-Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.quobyte.withGroup
 
@@ -1657,7 +1655,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.storageos
 
-
+Represents a StorageOS persistent volume resource.
 
 ### fn spec.storageos.withFsType
 
@@ -1693,7 +1691,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj spec.storageos.secretRef
 
-
+ObjectReference contains enough information to let you inspect or modify the referred object.
 
 ### fn spec.storageos.secretRef.withFieldPath
 
@@ -1745,7 +1743,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.vsphereVolume
 
-Represents a vSphere volume resource.
+
 
 ### fn spec.vsphereVolume.withFsType
 

@@ -344,7 +344,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -754,7 +754,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -798,7 +798,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -838,7 +838,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -878,7 +878,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.dnsConfig.withNameservers
 

@@ -265,7 +265,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -433,7 +433,7 @@ A collection of filters that must match each object tracked by a quota. If not s
 
 ## obj spec.scopeSelector
 
-A scope selector represents the AND of the selectors represented by the scoped-resource selector requirements.
+
 
 ### fn spec.scopeSelector.withMatchExpressions
 

@@ -8,7 +8,7 @@ DEPRECATED - This group version of DaemonSet is deprecated by apps/v1beta2/Daemo
 
 ## Index
 
-* [`fn new(name, containers, podLabels)`](#fn-new)
+* [`fn new(name, containers, podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -185,7 +185,7 @@ DEPRECATED - This group version of DaemonSet is deprecated by apps/v1beta2/Daemo
 ### fn new
 
 ```ts
-new(name, containers, podLabels)
+new(name, containers, podLabels={})
 ```
 
 new returns an instance of Daemonset
@@ -410,7 +410,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -588,7 +588,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -1220,7 +1220,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
@@ -1268,7 +1268,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.template.spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1308,7 +1308,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj spec.template.spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1348,7 +1348,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1406,7 +1406,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1482,7 +1482,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1518,7 +1518,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -1550,7 +1550,7 @@ Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is OnDe
 
 ## obj spec.updateStrategy.rollingUpdate
 
-Spec to control the desired behavior of daemon set rolling update.
+
 
 ### fn spec.updateStrategy.rollingUpdate.withMaxUnavailable
 

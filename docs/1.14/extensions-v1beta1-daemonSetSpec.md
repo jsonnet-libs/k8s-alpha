@@ -207,7 +207,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn template.metadata.withAnnotations
 
@@ -403,7 +403,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj template.metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn template.metadata.initializers.withPending
 
@@ -425,7 +425,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj template.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn template.metadata.initializers.result.withCode
 
@@ -469,7 +469,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj template.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn template.metadata.initializers.result.details.withCauses
 
@@ -857,7 +857,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -919,7 +919,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj template.spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1141,7 +1141,7 @@ Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is OnDe
 
 ## obj updateStrategy.rollingUpdate
 
-
+Spec to control the desired behavior of daemon set rolling update.
 
 ### fn updateStrategy.rollingUpdate.withMaxUnavailable
 

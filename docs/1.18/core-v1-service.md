@@ -427,7 +427,7 @@ type determines how the Service is exposed. Defaults to ClusterIP. Valid options
 
 ## obj spec.sessionAffinityConfig
 
-SessionAffinityConfig represents the configurations of session affinity.
+
 
 ## obj spec.sessionAffinityConfig.clientIP
 

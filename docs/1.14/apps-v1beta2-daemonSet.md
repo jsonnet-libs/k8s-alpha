@@ -8,7 +8,7 @@ DEPRECATED - This group version of DaemonSet is deprecated by apps/v1/DaemonSet.
 
 ## Index
 
-* [`fn new(name, containers, podLabels)`](#fn-new)
+* [`fn new(name, containers, podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -180,7 +180,7 @@ DEPRECATED - This group version of DaemonSet is deprecated by apps/v1/DaemonSet.
 ### fn new
 
 ```ts
-new(name, containers, podLabels)
+new(name, containers, podLabels={})
 ```
 
 new returns an instance of Daemonset
@@ -531,7 +531,7 @@ The number of old history to retain to allow rollback. This is a pointer to dist
 
 ## obj spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.selector.withMatchExpressions
 
@@ -571,11 +571,11 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -1461,7 +1461,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1497,7 +1497,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.updateStrategy
 
-
+DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.
 
 ### fn spec.updateStrategy.withType
 
@@ -1509,7 +1509,7 @@ Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is Roll
 
 ## obj spec.updateStrategy.rollingUpdate
 
-Spec to control the desired behavior of daemon set rolling update.
+
 
 ### fn spec.updateStrategy.rollingUpdate.withMaxUnavailable
 

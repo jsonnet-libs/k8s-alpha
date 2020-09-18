@@ -426,7 +426,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -470,7 +470,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn metadata.initializers.result.details.withCauses
 
@@ -814,7 +814,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.template.metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn spec.template.metadata.initializers.result.withCode
 
@@ -1224,7 +1224,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1482,7 +1482,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 

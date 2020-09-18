@@ -11,7 +11,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -187,7 +187,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+new(name, replicas=1, containers, volumeClaims=[], podLabels={})
 ```
 
 new returns an instance of Statefulset
@@ -390,7 +390,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -412,7 +412,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -456,7 +456,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn metadata.initializers.result.details.withCauses
 
@@ -616,7 +616,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -1240,11 +1240,11 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1288,7 +1288,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1538,7 +1538,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.updateStrategy
 
-StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.
+
 
 ### fn spec.updateStrategy.withType
 

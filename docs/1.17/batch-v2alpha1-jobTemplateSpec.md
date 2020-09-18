@@ -445,7 +445,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -1001,11 +1001,11 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1089,7 +1089,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj spec.template.spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1129,7 +1129,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1187,7 +1187,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1299,7 +1299,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

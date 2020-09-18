@@ -159,7 +159,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj external.metric
 
-MetricIdentifier defines the name and optionally selector for a metric
+
 
 ### fn external.metric.withName
 
@@ -215,7 +215,7 @@ ObjectMetricStatus indicates the current value of a metric describing a kubernet
 
 ## obj object.current
 
-
+MetricValueStatus holds the current value for a metric
 
 ### fn object.current.withAverageUtilization
 
@@ -303,7 +303,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj object.describedObject
 
-
+CrossVersionObjectReference contains enough information to let you identify the referred resource.
 
 ### fn object.describedObject.withKind
 
@@ -379,7 +379,7 @@ PodsMetricStatus indicates the current value of a metric describing each pod in 
 
 ## obj pods.current
 
-
+MetricValueStatus holds the current value for a metric
 
 ### fn pods.current.withAverageUtilization
 
@@ -467,7 +467,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj pods.metric
 
-MetricIdentifier defines the name and optionally selector for a metric
+
 
 ### fn pods.metric.withName
 

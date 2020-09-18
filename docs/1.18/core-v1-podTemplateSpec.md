@@ -703,7 +703,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -805,7 +805,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn spec.dnsConfig.withNameservers
 
@@ -947,7 +947,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.securityContext.seLinuxOptions.withLevel
 

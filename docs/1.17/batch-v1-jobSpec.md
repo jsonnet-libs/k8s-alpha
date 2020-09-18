@@ -784,7 +784,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -828,7 +828,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -966,7 +966,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn template.spec.securityContext.withFsGroup
 

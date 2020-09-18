@@ -591,7 +591,7 @@ rule is the strategy that will dictate what FSGroup is used in the SecurityConte
 
 ## obj spec.runAsGroup
 
-RunAsGroupStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use RunAsGroupStrategyOptions from policy API Group instead.
+
 
 ### fn spec.runAsGroup.withRanges
 
@@ -621,7 +621,7 @@ rule is the strategy that will dictate the allowable RunAsGroup values that may 
 
 ## obj spec.runAsUser
 
-
+RunAsUserStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use RunAsUserStrategyOptions from policy API Group instead.
 
 ### fn spec.runAsUser.withRanges
 
@@ -681,7 +681,7 @@ defaultRuntimeClassName is the default RuntimeClassName to set on the pod. The d
 
 ## obj spec.seLinux
 
-SELinuxStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use SELinuxStrategyOptions from policy API Group instead.
+
 
 ### fn spec.seLinux.withRule
 

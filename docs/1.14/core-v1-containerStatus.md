@@ -171,7 +171,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 
 ## obj lastState.waiting
 
-ContainerStateWaiting is a waiting state of a container.
+
 
 ### fn lastState.waiting.withMessage
 
@@ -195,7 +195,7 @@ ContainerState holds a possible state of container. Only one of its members may 
 
 ## obj state.running
 
-
+ContainerStateRunning is a running state of a container.
 
 ### fn state.running.withStartedAt
 
@@ -267,7 +267,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 
 ## obj state.waiting
 
-ContainerStateWaiting is a waiting state of a container.
+
 
 ### fn state.waiting.withMessage
 

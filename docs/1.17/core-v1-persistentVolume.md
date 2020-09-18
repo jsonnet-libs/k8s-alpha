@@ -505,9 +505,7 @@ volumeMode defines if a volume is intended to be used with a formatted filesyste
 
 ## obj spec.awsElasticBlockStore
 
-Represents a Persistent Disk resource in AWS.
 
-An AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.
 
 ### fn spec.awsElasticBlockStore.withFsType
 
@@ -543,7 +541,7 @@ Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
 
 ## obj spec.azureDisk
 
-
+AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
 
 ### fn spec.azureDisk.withCachingMode
 
@@ -753,7 +751,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.claimRef
 
-
+ObjectReference contains enough information to let you inspect or modify the referred object.
 
 ### fn spec.claimRef.withFieldPath
 
@@ -805,7 +803,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.csi
 
-
+Represents storage that is managed by an external CSI volume driver (Beta feature)
 
 ### fn spec.csi.withDriver
 
@@ -879,7 +877,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.csi.controllerPublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.csi.controllerPublishSecretRef.withName
 
@@ -1069,7 +1067,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.flocker
 
-Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.flocker.withDatasetName
 
@@ -1089,7 +1087,9 @@ UUID of the dataset. This is unique identifier of a Flocker dataset
 
 ## obj spec.gcePersistentDisk
 
+Represents a Persistent Disk resource in Google Compute Engine.
 
+A GCE PD must exist before mounting to a container. The disk must also be in the same GCE project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only many times. GCE PDs support ownership management and SELinux relabeling.
 
 ### fn spec.gcePersistentDisk.withFsType
 
@@ -1125,7 +1125,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.glusterfs
 
-
+Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.glusterfs.withEndpoints
 
@@ -1161,7 +1161,7 @@ ReadOnly here will force the Glusterfs volume to be mounted with read-only permi
 
 ## obj spec.hostPath
 
-
+Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.hostPath.withPath
 
@@ -1275,7 +1275,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj spec.iscsi.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.iscsi.secretRef.withName
 
@@ -1295,7 +1295,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.local
 
-
+Local represents directly-attached storage with node affinity (Beta feature)
 
 ### fn spec.local.withFsType
 
@@ -1315,7 +1315,7 @@ The full path to the volume on the node. It can be either a directory or block d
 
 ## obj spec.nfs
 
-
+Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.nfs.withPath
 
@@ -1369,7 +1369,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.photonPersistentDisk
 
-
+Represents a Photon Controller persistent disk resource.
 
 ### fn spec.photonPersistentDisk.withFsType
 
@@ -1389,7 +1389,7 @@ ID that identifies Photon Controller persistent disk
 
 ## obj spec.portworxVolume
 
-PortworxVolumeSource represents a Portworx volume resource.
+
 
 ### fn spec.portworxVolume.withFsType
 
@@ -1417,7 +1417,7 @@ VolumeID uniquely identifies a Portworx volume
 
 ## obj spec.quobyte
 
-Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.quobyte.withGroup
 
@@ -1539,7 +1539,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj spec.rbd.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.rbd.secretRef.withName
 
@@ -1559,7 +1559,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.scaleIO
 
-
+ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume
 
 ### fn spec.scaleIO.withFsType
 
@@ -1635,7 +1635,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj spec.scaleIO.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.scaleIO.secretRef.withName
 
@@ -1691,7 +1691,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj spec.storageos.secretRef
 
-
+ObjectReference contains enough information to let you inspect or modify the referred object.
 
 ### fn spec.storageos.secretRef.withFieldPath
 

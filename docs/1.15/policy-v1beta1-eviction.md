@@ -125,7 +125,7 @@ Whether and how garbage collection will be performed. Either this field or Orpha
 
 ## obj deleteOptions.preconditions
 
-
+Preconditions must be fulfilled before an operation (update, delete, etc.) is carried out.
 
 ### fn deleteOptions.preconditions.withResourceVersion
 
@@ -341,7 +341,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -363,7 +363,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 

@@ -252,7 +252,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn template.metadata.withAnnotations
 
@@ -446,7 +446,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn template.spec.withActiveDeadlineSeconds
 
@@ -896,7 +896,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj template.spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -936,7 +936,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn template.spec.dnsConfig.withNameservers
 
@@ -1070,7 +1070,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1106,7 +1106,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

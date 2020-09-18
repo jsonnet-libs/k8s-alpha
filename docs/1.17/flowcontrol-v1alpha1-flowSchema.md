@@ -288,7 +288,7 @@ withType(type)
 
 ## obj spec.priorityLevelConfiguration
 
-
+PriorityLevelConfigurationReference contains information that points to the "request-priority" being used.
 
 ### fn spec.priorityLevelConfiguration.withName
 

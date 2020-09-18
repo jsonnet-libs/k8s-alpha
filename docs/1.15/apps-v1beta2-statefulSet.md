@@ -11,7 +11,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -191,7 +191,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+new(name, replicas=1, containers, volumeClaims=[], podLabels={})
 ```
 
 new returns an instance of Statefulset
@@ -416,7 +416,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -460,7 +460,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn metadata.initializers.result.details.withCauses
 
@@ -616,11 +616,11 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -816,7 +816,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn spec.template.metadata.initializers.withPending
 
@@ -944,7 +944,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj spec.template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -1256,7 +1256,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1300,7 +1300,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.template.spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1380,7 +1380,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 

@@ -8,7 +8,7 @@ DaemonSet represents the configuration of a daemon set.
 
 ## Index
 
-* [`fn new(name, containers, podLabels)`](#fn-new)
+* [`fn new(name, containers, podLabels={})`](#fn-new)
 * [`fn mapContainers(f)`](#fn-mapcontainers)
 * [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
@@ -186,7 +186,7 @@ DaemonSet represents the configuration of a daemon set.
 ### fn new
 
 ```ts
-new(name, containers, podLabels)
+new(name, containers, podLabels={})
 ```
 
 new returns an instance of Daemonset
@@ -412,7 +412,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -478,7 +478,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn metadata.initializers.result.details.withCauses
 
@@ -866,7 +866,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.template.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn spec.template.metadata.initializers.result.details.withCauses
 
@@ -1240,7 +1240,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1422,7 +1422,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1554,7 +1554,7 @@ GMSACredentialSpecName is the name of the GMSA credential spec to use. This fiel
 
 ## obj spec.updateStrategy
 
-DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.
+
 
 ### fn spec.updateStrategy.withType
 

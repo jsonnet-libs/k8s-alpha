@@ -61,7 +61,7 @@ This pod should be co-located (affinity) or not co-located (anti-affinity) with 
 
 ## obj podAffinityTerm.labelSelector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn podAffinityTerm.labelSelector.withMatchExpressions
 

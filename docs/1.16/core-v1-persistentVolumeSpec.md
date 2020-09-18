@@ -503,7 +503,7 @@ volume id used to identify the volume in cinder. More info: https://examples.k8s
 
 ## obj cinder.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn cinder.secretRef.withName
 
@@ -649,7 +649,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.controllerPublishSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.controllerPublishSecretRef.withName
 
@@ -689,7 +689,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj csi.nodeStageSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn csi.nodeStageSecretRef.withName
 
@@ -1311,7 +1311,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj rbd.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn rbd.secretRef.withName
 
@@ -1463,7 +1463,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj storageos.secretRef
 
-ObjectReference contains enough information to let you inspect or modify the referred object.
+
 
 ### fn storageos.secretRef.withFieldPath
 

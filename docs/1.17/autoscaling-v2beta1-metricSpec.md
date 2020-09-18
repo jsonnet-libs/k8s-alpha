@@ -143,7 +143,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj external.metricSelector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn external.metricSelector.withMatchExpressions
 
@@ -271,7 +271,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj object.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn object.selector.withMatchExpressions
 
@@ -311,7 +311,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj object.target
 
-
+CrossVersionObjectReference contains enough information to let you identify the referred resource.
 
 ### fn object.target.withKind
 

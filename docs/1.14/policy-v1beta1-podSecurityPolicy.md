@@ -310,7 +310,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -764,7 +764,7 @@ rule is the strategy that will dictate the allowable RunAsGroup values that may 
 
 ## obj spec.runAsUser
 
-RunAsUserStrategyOptions defines the strategy type and any options used to create the strategy.
+
 
 ### fn spec.runAsUser.withRanges
 
@@ -794,7 +794,7 @@ rule is the strategy that will dictate the allowable RunAsUser values that may b
 
 ## obj spec.seLinux
 
-SELinuxStrategyOptions defines the strategy type and any options used to create the strategy.
+
 
 ### fn spec.seLinux.withRule
 
@@ -806,7 +806,7 @@ rule is the strategy that will dictate the allowable labels that may be set.
 
 ## obj spec.seLinux.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.seLinux.seLinuxOptions.withLevel
 

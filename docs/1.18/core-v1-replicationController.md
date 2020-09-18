@@ -613,7 +613,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -975,7 +975,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
@@ -1281,7 +1281,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

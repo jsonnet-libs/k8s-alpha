@@ -376,7 +376,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn template.metadata.withAnnotations
 
@@ -1020,7 +1020,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj template.spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1202,7 +1202,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn template.spec.securityContext.seLinuxOptions.withLevel
 

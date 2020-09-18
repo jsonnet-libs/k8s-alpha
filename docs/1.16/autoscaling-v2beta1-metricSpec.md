@@ -311,7 +311,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj object.target
 
-CrossVersionObjectReference contains enough information to let you identify the referred resource.
+
 
 ### fn object.target.withKind
 

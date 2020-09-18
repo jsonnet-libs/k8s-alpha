@@ -11,7 +11,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={})`](#fn-new)
 * [`fn mapContainers(f)`](#fn-mapcontainers)
 * [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
 * [`obj metadata`](#obj-metadata)
@@ -193,7 +193,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+new(name, replicas=1, containers, volumeClaims=[], podLabels={})
 ```
 
 new returns an instance of Statefulset
@@ -441,7 +441,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -641,11 +641,11 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template
 
-PodTemplateSpec describes the data a pod should have when created from a template
+
 
 ## obj spec.template.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -863,7 +863,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.template.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn spec.template.metadata.initializers.result.withCode
 
@@ -907,7 +907,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.template.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn spec.template.metadata.initializers.result.details.withCauses
 
@@ -1277,11 +1277,11 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1539,7 +1539,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1575,7 +1575,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -1607,7 +1607,7 @@ Type indicates the type of the StatefulSetUpdateStrategy. Default is RollingUpda
 
 ## obj spec.updateStrategy.rollingUpdate
 
-RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
+
 
 ### fn spec.updateStrategy.rollingUpdate.withPartition
 

@@ -30,7 +30,7 @@ permalink: /1.16/apps/v1beta1/
 ## Index
 
 * [`obj daemonSet`](#obj-daemonset)
-  * [`fn new(name, containers, podLabels)`](#fn-daemonsetnew)
+  * [`fn new(name, containers, podLabels={})`](#fn-daemonsetnew)
 
 ## Fields
 
@@ -41,6 +41,6 @@ permalink: /1.16/apps/v1beta1/
 ### fn daemonSet.new
 
 ```ts
-new(name, containers, podLabels)
+new(name, containers, podLabels={})
 ```
 

@@ -278,7 +278,7 @@ bigger numbers of ACS mean more reserved concurrent requests (at the expense of 
 
 ## obj spec.limited.limitResponse
 
-
+LimitResponse defines how to handle requests that can not be executed right now.
 
 ### fn spec.limited.limitResponse.withType
 
@@ -290,7 +290,7 @@ withType(type)
 
 ## obj spec.limited.limitResponse.queuing
 
-QueuingConfiguration holds the configuration parameters for queuing
+
 
 ### fn spec.limited.limitResponse.queuing.withHandSize
 

@@ -405,7 +405,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn metadata.initializers.withPending
 
@@ -571,11 +571,11 @@ Selector is a label query over pods that should match the Replicas count. If Sel
 
 ## obj spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -793,7 +793,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.template.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn spec.template.metadata.initializers.result.withCode
 
@@ -837,7 +837,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.template.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn spec.template.metadata.initializers.result.details.withCauses
 
@@ -1207,11 +1207,11 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1233,7 +1233,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1255,7 +1255,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1469,7 +1469,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1505,7 +1505,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

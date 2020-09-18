@@ -286,7 +286,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -420,7 +420,7 @@ target average CPU utilization (represented as a percentage of requested CPU) ov
 
 ## obj spec.scaleTargetRef
 
-
+CrossVersionObjectReference contains enough information to let you identify the referred resource.
 
 ### fn spec.scaleTargetRef.withKind
 

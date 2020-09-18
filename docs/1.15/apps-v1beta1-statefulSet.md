@@ -11,7 +11,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 
 ## Index
 
-* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})`](#fn-new)
+* [`fn new(name, replicas=1, containers, volumeClaims=[], podLabels={})`](#fn-new)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -191,7 +191,7 @@ The StatefulSet guarantees that a given network identity will always map to the 
 ### fn new
 
 ```ts
-new(name, replicas=1, containers, volumeClaims=[], podLabels={app: 'name'})
+new(name, replicas=1, containers, volumeClaims=[], podLabels={})
 ```
 
 new returns an instance of Statefulset
@@ -460,7 +460,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn metadata.initializers.result.details.withCauses
 
@@ -838,7 +838,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj spec.template.metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn spec.template.metadata.initializers.result.withCode
 
@@ -882,7 +882,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj spec.template.metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn spec.template.metadata.initializers.result.details.withCauses
 
@@ -944,7 +944,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj spec.template.spec
 
-
+PodSpec is a description of a pod.
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -1300,7 +1300,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1340,7 +1340,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj spec.template.spec.affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1380,7 +1380,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1438,7 +1438,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1550,7 +1550,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -1570,7 +1570,7 @@ GMSACredentialSpecName is the name of the GMSA credential spec to use. This fiel
 
 ## obj spec.updateStrategy
 
-StatefulSetUpdateStrategy indicates the strategy that the StatefulSet controller will use to perform updates. It includes any additional parameters necessary to perform the update for the indicated strategy.
+
 
 ### fn spec.updateStrategy.withType
 
@@ -1582,7 +1582,7 @@ Type indicates the type of the StatefulSetUpdateStrategy.
 
 ## obj spec.updateStrategy.rollingUpdate
 
-RollingUpdateStatefulSetStrategy is used to communicate parameter for RollingUpdateStatefulSetStrategyType.
+
 
 ### fn spec.updateStrategy.rollingUpdate.withPartition
 

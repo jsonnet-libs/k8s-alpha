@@ -375,7 +375,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj template.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn template.metadata.withAnnotations
 
@@ -935,7 +935,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj template.spec.affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -957,7 +957,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
