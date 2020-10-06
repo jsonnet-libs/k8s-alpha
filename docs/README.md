@@ -46,7 +46,7 @@ can be rendered with this jsonnet:
 ```jsonnet
 {
   local k = (import "github.com/jsonnet-libs/k8s-alpha/1.18/main.libsonnet"),
-  foo: k.apps.deployment.new(name"foo", containers=[
+  foo: k.apps.deployment.new(name="foo", containers=[
     k.core.v1.container.new(name="foo", image="foo/bar")
   ])
 }
