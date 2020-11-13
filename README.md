@@ -32,6 +32,7 @@ Then put the following into `lib/k.libsonnet`:
 
 ```bash
 $ jb install github.com/jsonnet-libs/k8s-alpha/1.18
+$ jb install github.com/jsonnet-libs/docsonnet/doc-util
 ```
 
 Then import it in your project:
