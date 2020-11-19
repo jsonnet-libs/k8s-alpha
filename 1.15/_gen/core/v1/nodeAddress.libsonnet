@@ -6,5 +6,5 @@
   '#withType':: d.fn(help='Node address type, one of Hostname, ExternalIP or InternalIP.', args=[d.arg(name='type', type=d.T.string)]),
   withType(type): { type: type },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -8,7 +8,7 @@
     '#withKind':: d.fn(help='Kind is the type of resource being referenced', args=[d.arg(name='kind', type=d.T.string)]),
     withKind(kind): { dataSource+: { kind: kind } },
     '#withName':: d.fn(help='Name is the name of resource being referenced', args=[d.arg(name='name', type=d.T.string)]),
-    withName(name): { dataSource+: { name: name } }
+    withName(name): { dataSource+: { name: name } },
   },
   '#resources':: d.obj(help='ResourceRequirements describes the compute resource requirements.'),
   resources: {
@@ -19,7 +19,7 @@
     '#withRequests':: d.fn(help='Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/', args=[d.arg(name='requests', type=d.T.object)]),
     withRequests(requests): { resources+: { requests: requests } },
     '#withRequestsMixin':: d.fn(help='Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='requests', type=d.T.object)]),
-    withRequestsMixin(requests): { resources+: { requests+: requests } }
+    withRequestsMixin(requests): { resources+: { requests+: requests } },
   },
   '#selector':: d.obj(help='A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.'),
   selector: {
@@ -30,7 +30,7 @@
     '#withMatchLabels':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.', args=[d.arg(name='matchLabels', type=d.T.object)]),
     withMatchLabels(matchLabels): { selector+: { matchLabels: matchLabels } },
     '#withMatchLabelsMixin':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
-    withMatchLabelsMixin(matchLabels): { selector+: { matchLabels+: matchLabels } }
+    withMatchLabelsMixin(matchLabels): { selector+: { matchLabels+: matchLabels } },
   },
   '#withAccessModes':: d.fn(help='AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1', args=[d.arg(name='accessModes', type=d.T.array)]),
   withAccessModes(accessModes): { accessModes: if std.isArray(v=accessModes) then accessModes else [accessModes] },
@@ -43,5 +43,5 @@
   '#withVolumeName':: d.fn(help='VolumeName is the binding reference to the PersistentVolume backing this claim.', args=[d.arg(name='volumeName', type=d.T.string)]),
   withVolumeName(volumeName): { volumeName: volumeName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

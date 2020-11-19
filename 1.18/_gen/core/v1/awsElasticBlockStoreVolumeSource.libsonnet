@@ -10,5 +10,5 @@
   '#withVolumeID':: d.fn(help='Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore', args=[d.arg(name='volumeID', type=d.T.string)]),
   withVolumeID(volumeID): { volumeID: volumeID },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

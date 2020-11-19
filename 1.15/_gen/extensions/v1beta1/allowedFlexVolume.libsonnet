@@ -4,5 +4,5 @@
   '#withDriver':: d.fn(help='driver is the name of the Flexvolume driver.', args=[d.arg(name='driver', type=d.T.string)]),
   withDriver(driver): { driver: driver },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

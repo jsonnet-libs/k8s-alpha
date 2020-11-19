@@ -12,5 +12,5 @@
   volumeAttachmentSpec: (import 'volumeAttachmentSpec.libsonnet'),
   volumeAttachmentStatus: (import 'volumeAttachmentStatus.libsonnet'),
   volumeError: (import 'volumeError.libsonnet'),
-  volumeNodeResources: (import 'volumeNodeResources.libsonnet')
+  volumeNodeResources: (import 'volumeNodeResources.libsonnet'),
 }

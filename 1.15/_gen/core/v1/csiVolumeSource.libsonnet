@@ -4,7 +4,7 @@
   '#nodePublishSecretRef':: d.obj(help='LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.'),
   nodePublishSecretRef: {
     '#withName':: d.fn(help='Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names', args=[d.arg(name='name', type=d.T.string)]),
-    withName(name): { nodePublishSecretRef+: { name: name } }
+    withName(name): { nodePublishSecretRef+: { name: name } },
   },
   '#withDriver':: d.fn(help='Driver is the name of the CSI driver that handles this volume. Consult with your admin for the correct name as registered in the cluster.', args=[d.arg(name='driver', type=d.T.string)]),
   withDriver(driver): { driver: driver },
@@ -17,5 +17,5 @@
   '#withVolumeAttributesMixin':: d.fn(help="VolumeAttributes stores driver-specific properties that are passed to the CSI driver. Consult your driver's documentation for supported values.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='volumeAttributes', type=d.T.object)]),
   withVolumeAttributesMixin(volumeAttributes): { volumeAttributes+: volumeAttributes },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

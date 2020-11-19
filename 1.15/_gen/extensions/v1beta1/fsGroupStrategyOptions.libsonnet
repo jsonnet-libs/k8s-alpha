@@ -8,5 +8,5 @@
   '#withRule':: d.fn(help='rule is the strategy that will dictate what FSGroup is used in the SecurityContext.', args=[d.arg(name='rule', type=d.T.string)]),
   withRule(rule): { rule: rule },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

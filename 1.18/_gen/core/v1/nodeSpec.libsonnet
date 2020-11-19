@@ -14,8 +14,8 @@
       '#withResourceVersion':: d.fn(help='ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='resourceVersion', type=d.T.string)]),
       withResourceVersion(resourceVersion): { configSource+: { configMap+: { resourceVersion: resourceVersion } } },
       '#withUid':: d.fn(help='UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='uid', type=d.T.string)]),
-      withUid(uid): { configSource+: { configMap+: { uid: uid } } }
-    }
+      withUid(uid): { configSource+: { configMap+: { uid: uid } } },
+    },
   },
   '#withExternalID':: d.fn(help='Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.k8s.io/61966', args=[d.arg(name='externalID', type=d.T.string)]),
   withExternalID(externalID): { externalID: externalID },
@@ -34,5 +34,5 @@
   '#withUnschedulable':: d.fn(help='Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration', args=[d.arg(name='unschedulable', type=d.T.boolean)]),
   withUnschedulable(unschedulable): { unschedulable: unschedulable },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

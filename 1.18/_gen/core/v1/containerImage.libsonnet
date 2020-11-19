@@ -8,5 +8,5 @@
   '#withSizeBytes':: d.fn(help='The size of the image in bytes.', args=[d.arg(name='sizeBytes', type=d.T.integer)]),
   withSizeBytes(sizeBytes): { sizeBytes: sizeBytes },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

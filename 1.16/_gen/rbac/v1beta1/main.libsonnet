@@ -8,5 +8,5 @@
   role: (import 'role.libsonnet'),
   roleBinding: (import 'roleBinding.libsonnet'),
   roleRef: (import 'roleRef.libsonnet'),
-  subject: (import 'subject.libsonnet')
+  subject: (import 'subject.libsonnet'),
 }

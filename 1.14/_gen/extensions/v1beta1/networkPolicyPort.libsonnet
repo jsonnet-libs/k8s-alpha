@@ -6,5 +6,5 @@
   '#withProtocol':: d.fn(help='Optional.  The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.', args=[d.arg(name='protocol', type=d.T.string)]),
   withProtocol(protocol): { protocol: protocol },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

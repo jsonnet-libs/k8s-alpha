@@ -4,8 +4,8 @@
   '#kubeletEndpoint':: d.obj(help='DaemonEndpoint contains information about a single Daemon endpoint.'),
   kubeletEndpoint: {
     '#withPort':: d.fn(help='Port number of the given endpoint.', args=[d.arg(name='port', type=d.T.integer)]),
-    withPort(port): { kubeletEndpoint+: { port: port } }
+    withPort(port): { kubeletEndpoint+: { port: port } },
   },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

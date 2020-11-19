@@ -22,5 +22,5 @@
   '#withSystemUUID':: d.fn(help='SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-US/Red_Hat_Subscription_Management/1/html/RHSM/getting-system-uuid.html', args=[d.arg(name='systemUUID', type=d.T.string)]),
   withSystemUUID(systemUUID): { systemUUID: systemUUID },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

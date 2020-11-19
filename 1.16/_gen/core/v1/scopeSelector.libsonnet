@@ -6,5 +6,5 @@
   '#withMatchExpressionsMixin':: d.fn(help='A list of scope selector requirements by scope of the resources.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchExpressions', type=d.T.array)]),
   withMatchExpressionsMixin(matchExpressions): { matchExpressions+: if std.isArray(v=matchExpressions) then matchExpressions else [matchExpressions] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

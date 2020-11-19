@@ -406,7 +406,7 @@ Optional: User is the rados user name, default is admin More info: https://examp
 
 ## obj cephfs.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn cephfs.secretRef.withName
 
@@ -552,7 +552,7 @@ VolumeAttributes stores driver-specific properties that are passed to the CSI dr
 
 ## obj csi.nodePublishSecretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn csi.nodePublishSecretRef.withName
 
@@ -754,7 +754,7 @@ Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly 
 
 ## obj flexVolume.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn flexVolume.secretRef.withName
 

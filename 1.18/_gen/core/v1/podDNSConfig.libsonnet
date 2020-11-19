@@ -14,5 +14,5 @@
   '#withSearchesMixin':: d.fn(help='A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='searches', type=d.T.array)]),
   withSearchesMixin(searches): { searches+: if std.isArray(v=searches) then searches else [searches] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

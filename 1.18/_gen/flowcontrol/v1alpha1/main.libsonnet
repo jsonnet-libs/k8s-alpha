@@ -20,5 +20,5 @@
   resourcePolicyRule: (import 'resourcePolicyRule.libsonnet'),
   serviceAccountSubject: (import 'serviceAccountSubject.libsonnet'),
   subject: (import 'subject.libsonnet'),
-  userSubject: (import 'userSubject.libsonnet')
+  userSubject: (import 'userSubject.libsonnet'),
 }

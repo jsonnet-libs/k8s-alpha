@@ -14,5 +14,5 @@
   '#withResourceRulesMixin':: d.fn(help="ResourceRules is the list of actions the subject is allowed to perform on resources. The list ordering isn't significant, may contain duplicates, and possibly be incomplete.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='resourceRules', type=d.T.array)]),
   withResourceRulesMixin(resourceRules): { resourceRules+: if std.isArray(v=resourceRules) then resourceRules else [resourceRules] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

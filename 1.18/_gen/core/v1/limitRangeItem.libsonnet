@@ -24,5 +24,5 @@
   '#withType':: d.fn(help='Type of resource that this limit applies to.', args=[d.arg(name='type', type=d.T.string)]),
   withType(type): { type: type },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

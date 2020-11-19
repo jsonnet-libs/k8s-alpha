@@ -10,10 +10,10 @@
     '#withType':: d.fn(help='Type is a SELinux type label that applies to the container.', args=[d.arg(name='type', type=d.T.string)]),
     withType(type): { seLinuxOptions+: { type: type } },
     '#withUser':: d.fn(help='User is a SELinux user label that applies to the container.', args=[d.arg(name='user', type=d.T.string)]),
-    withUser(user): { seLinuxOptions+: { user: user } }
+    withUser(user): { seLinuxOptions+: { user: user } },
   },
   '#withRule':: d.fn(help='rule is the strategy that will dictate the allowable labels that may be set.', args=[d.arg(name='rule', type=d.T.string)]),
   withRule(rule): { rule: rule },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

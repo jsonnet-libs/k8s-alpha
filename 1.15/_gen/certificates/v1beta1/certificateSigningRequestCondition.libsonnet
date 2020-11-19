@@ -10,5 +10,5 @@
   '#withType':: d.fn(help='request approval state, currently Approved or Denied.', args=[d.arg(name='type', type=d.T.string)]),
   withType(type): { type: type },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

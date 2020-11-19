@@ -289,7 +289,7 @@ Stages is a list of stages for which events are created.
 
 ## obj spec.webhook
 
-Webhook holds the configuration of the webhook
+
 
 ## obj spec.webhook.clientConfig
 

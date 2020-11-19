@@ -6,5 +6,5 @@
   '#withGmsaCredentialSpecName':: d.fn(help='GMSACredentialSpecName is the name of the GMSA credential spec to use. This field is alpha-level and is only honored by servers that enable the WindowsGMSA feature flag.', args=[d.arg(name='gmsaCredentialSpecName', type=d.T.string)]),
   withGmsaCredentialSpecName(gmsaCredentialSpecName): { gmsaCredentialSpecName: gmsaCredentialSpecName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

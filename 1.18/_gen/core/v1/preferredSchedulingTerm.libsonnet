@@ -10,10 +10,10 @@
     '#withMatchFields':: d.fn(help="A list of node selector requirements by node's fields.", args=[d.arg(name='matchFields', type=d.T.array)]),
     withMatchFields(matchFields): { preference+: { matchFields: if std.isArray(v=matchFields) then matchFields else [matchFields] } },
     '#withMatchFieldsMixin':: d.fn(help="A list of node selector requirements by node's fields.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='matchFields', type=d.T.array)]),
-    withMatchFieldsMixin(matchFields): { preference+: { matchFields+: if std.isArray(v=matchFields) then matchFields else [matchFields] } }
+    withMatchFieldsMixin(matchFields): { preference+: { matchFields+: if std.isArray(v=matchFields) then matchFields else [matchFields] } },
   },
   '#withWeight':: d.fn(help='Weight associated with matching the corresponding nodeSelectorTerm, in the range 1-100.', args=[d.arg(name='weight', type=d.T.integer)]),
   withWeight(weight): { weight: weight },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -4,7 +4,7 @@
   '#running':: d.obj(help='ContainerStateRunning is a running state of a container.'),
   running: {
     '#withStartedAt':: d.fn(help='Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.', args=[d.arg(name='startedAt', type=d.T.string)]),
-    withStartedAt(startedAt): { running+: { startedAt: startedAt } }
+    withStartedAt(startedAt): { running+: { startedAt: startedAt } },
   },
   '#terminated':: d.obj(help='ContainerStateTerminated is a terminated state of a container.'),
   terminated: {
@@ -21,15 +21,15 @@
     '#withSignal':: d.fn(help='Signal from the last termination of the container', args=[d.arg(name='signal', type=d.T.integer)]),
     withSignal(signal): { terminated+: { signal: signal } },
     '#withStartedAt':: d.fn(help='Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.', args=[d.arg(name='startedAt', type=d.T.string)]),
-    withStartedAt(startedAt): { terminated+: { startedAt: startedAt } }
+    withStartedAt(startedAt): { terminated+: { startedAt: startedAt } },
   },
   '#waiting':: d.obj(help='ContainerStateWaiting is a waiting state of a container.'),
   waiting: {
     '#withMessage':: d.fn(help='Message regarding why the container is not yet running.', args=[d.arg(name='message', type=d.T.string)]),
     withMessage(message): { waiting+: { message: message } },
     '#withReason':: d.fn(help='(brief) reason the container is not yet running.', args=[d.arg(name='reason', type=d.T.string)]),
-    withReason(reason): { waiting+: { reason: reason } }
+    withReason(reason): { waiting+: { reason: reason } },
   },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

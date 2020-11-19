@@ -12,16 +12,16 @@
         '#withQueueLengthLimit':: d.fn(help='`queueLengthLimit` is the maximum number of requests allowed to be waiting in a given queue of this priority level at a time; excess requests are rejected.  This value must be positive.  If not specified, it will be defaulted to 50.', args=[d.arg(name='queueLengthLimit', type=d.T.integer)]),
         withQueueLengthLimit(queueLengthLimit): { limited+: { limitResponse+: { queuing+: { queueLengthLimit: queueLengthLimit } } } },
         '#withQueues':: d.fn(help='`queues` is the number of queues for this priority level. The queues exist independently at each apiserver. The value must be positive.  Setting it to 1 effectively precludes shufflesharding and thus makes the distinguisher method of associated flow schemas irrelevant.  This field has a default value of 64.', args=[d.arg(name='queues', type=d.T.integer)]),
-        withQueues(queues): { limited+: { limitResponse+: { queuing+: { queues: queues } } } }
+        withQueues(queues): { limited+: { limitResponse+: { queuing+: { queues: queues } } } },
       },
       '#withType':: d.fn(help='`type` is "Queue" or "Reject". "Queue" means that requests that can not be executed upon arrival are held in a queue until they can be executed or a queuing limit is reached. "Reject" means that requests that can not be executed upon arrival are rejected. Required.', args=[d.arg(name='type', type=d.T.string)]),
-      withType(type): { limited+: { limitResponse+: { type: type } } }
+      withType(type): { limited+: { limitResponse+: { type: type } } },
     },
     '#withAssuredConcurrencyShares':: d.fn(help="`assuredConcurrencyShares` (ACS) configures the execution limit, which is a limit on the number of requests of this priority level that may be exeucting at a given time.  ACS must be a positive number. The server's concurrency limit (SCL) is divided among the concurrency-controlled priority levels in proportion to their assured concurrency shares. This produces the assured concurrency value (ACV) --- the number of requests that may be executing at a time --- for each such priority level:\n\n            ACV(l) = ceil( SCL * ACS(l) / ( sum[priority levels k] ACS(k) ) )\n\nbigger numbers of ACS mean more reserved concurrent requests (at the expense of every other PL). This field has a default value of 30.", args=[d.arg(name='assuredConcurrencyShares', type=d.T.integer)]),
-    withAssuredConcurrencyShares(assuredConcurrencyShares): { limited+: { assuredConcurrencyShares: assuredConcurrencyShares } }
+    withAssuredConcurrencyShares(assuredConcurrencyShares): { limited+: { assuredConcurrencyShares: assuredConcurrencyShares } },
   },
   '#withType':: d.fn(help="`type` indicates whether this priority level is subject to limitation on request execution.  A value of `'Exempt'` means that requests of this priority level are not subject to a limit (and thus are never queued) and do not detract from the capacity made available to other priority levels.  A value of `'Limited'` means that (a) requests of this priority level _are_ subject to limits and (b) some of the server's limited capacity is made available exclusively to this priority level. Required.", args=[d.arg(name='type', type=d.T.string)]),
   withType(type): { type: type },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

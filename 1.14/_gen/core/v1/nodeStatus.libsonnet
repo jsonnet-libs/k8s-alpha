@@ -16,8 +16,8 @@
         '#withResourceVersion':: d.fn(help='ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='resourceVersion', type=d.T.string)]),
         withResourceVersion(resourceVersion): { config+: { active+: { configMap+: { resourceVersion: resourceVersion } } } },
         '#withUid':: d.fn(help='UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='uid', type=d.T.string)]),
-        withUid(uid): { config+: { active+: { configMap+: { uid: uid } } } }
-      }
+        withUid(uid): { config+: { active+: { configMap+: { uid: uid } } } },
+      },
     },
     '#assigned':: d.obj(help='NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.'),
     assigned: {
@@ -32,8 +32,8 @@
         '#withResourceVersion':: d.fn(help='ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='resourceVersion', type=d.T.string)]),
         withResourceVersion(resourceVersion): { config+: { assigned+: { configMap+: { resourceVersion: resourceVersion } } } },
         '#withUid':: d.fn(help='UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='uid', type=d.T.string)]),
-        withUid(uid): { config+: { assigned+: { configMap+: { uid: uid } } } }
-      }
+        withUid(uid): { config+: { assigned+: { configMap+: { uid: uid } } } },
+      },
     },
     '#lastKnownGood':: d.obj(help='NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.'),
     lastKnownGood: {
@@ -48,19 +48,19 @@
         '#withResourceVersion':: d.fn(help='ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='resourceVersion', type=d.T.string)]),
         withResourceVersion(resourceVersion): { config+: { lastKnownGood+: { configMap+: { resourceVersion: resourceVersion } } } },
         '#withUid':: d.fn(help='UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='uid', type=d.T.string)]),
-        withUid(uid): { config+: { lastKnownGood+: { configMap+: { uid: uid } } } }
-      }
+        withUid(uid): { config+: { lastKnownGood+: { configMap+: { uid: uid } } } },
+      },
     },
     '#withError':: d.fn(help='Error describes any problems reconciling the Spec.ConfigSource to the Active config. Errors may occur, for example, attempting to checkpoint Spec.ConfigSource to the local Assigned record, attempting to checkpoint the payload associated with Spec.ConfigSource, attempting to load or validate the Assigned config, etc. Errors may occur at different points while syncing config. Earlier errors (e.g. download or checkpointing errors) will not result in a rollback to LastKnownGood, and may resolve across Kubelet retries. Later errors (e.g. loading or validating a checkpointed config) will result in a rollback to LastKnownGood. In the latter case, it is usually possible to resolve the error by fixing the config assigned in Spec.ConfigSource. You can find additional information for debugging by searching the error message in the Kubelet log. Error is a human-readable description of the error state; machines can check whether or not Error is empty, but should not rely on the stability of the Error text across Kubelet versions.', args=[d.arg(name='err', type=d.T.string)]),
-    withError(err): { config+: { 'error': err } }
+    withError(err): { config+: { 'error': err } },
   },
   '#daemonEndpoints':: d.obj(help='NodeDaemonEndpoints lists ports opened by daemons running on the Node.'),
   daemonEndpoints: {
     '#kubeletEndpoint':: d.obj(help='DaemonEndpoint contains information about a single Daemon endpoint.'),
     kubeletEndpoint: {
       '#withPort':: d.fn(help='Port number of the given endpoint.', args=[d.arg(name='port', type=d.T.integer)]),
-      withPort(port): { daemonEndpoints+: { kubeletEndpoint+: { port: port } } }
-    }
+      withPort(port): { daemonEndpoints+: { kubeletEndpoint+: { port: port } } },
+    },
   },
   '#nodeInfo':: d.obj(help='NodeSystemInfo is a set of ids/uuids to uniquely identify the node.'),
   nodeInfo: {
@@ -83,7 +83,7 @@
     '#withOsImage':: d.fn(help='OS Image reported by the node from /etc/os-release (e.g. Debian GNU/Linux 7 (wheezy)).', args=[d.arg(name='osImage', type=d.T.string)]),
     withOsImage(osImage): { nodeInfo+: { osImage: osImage } },
     '#withSystemUUID':: d.fn(help='SystemUUID reported by the node. For unique machine identification MachineID is preferred. This field is specific to Red Hat hosts https://access.redhat.com/documentation/en-US/Red_Hat_Subscription_Management/1/html/RHSM/getting-system-uuid.html', args=[d.arg(name='systemUUID', type=d.T.string)]),
-    withSystemUUID(systemUUID): { nodeInfo+: { systemUUID: systemUUID } }
+    withSystemUUID(systemUUID): { nodeInfo+: { systemUUID: systemUUID } },
   },
   '#withAddresses':: d.fn(help='List of addresses reachable to the node. Queried from cloud provider, if available. More info: https://kubernetes.io/docs/concepts/nodes/node/#addresses', args=[d.arg(name='addresses', type=d.T.array)]),
   withAddresses(addresses): { addresses: if std.isArray(v=addresses) then addresses else [addresses] },
@@ -116,5 +116,5 @@
   '#withVolumesInUseMixin':: d.fn(help='List of attachable volumes in use (mounted) by the node.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='volumesInUse', type=d.T.array)]),
   withVolumesInUseMixin(volumesInUse): { volumesInUse+: if std.isArray(v=volumesInUse) then volumesInUse else [volumesInUse] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

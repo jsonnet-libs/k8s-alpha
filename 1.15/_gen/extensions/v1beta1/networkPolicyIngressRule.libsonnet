@@ -10,5 +10,5 @@
   '#withPortsMixin':: d.fn(help='List of ports which should be made accessible on the pods selected for this rule. Each item in this list is combined using a logical OR. If this field is empty or missing, this rule matches all ports (traffic not restricted by port). If this field is present and contains at least one item, then this rule allows traffic only if the traffic matches at least one port in the list.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='ports', type=d.T.array)]),
   withPortsMixin(ports): { ports+: if std.isArray(v=ports) then ports else [ports] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

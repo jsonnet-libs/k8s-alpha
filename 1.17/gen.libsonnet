@@ -21,5 +21,5 @@
   rbac:: (import '_gen/rbac/main.libsonnet'),
   scheduling:: (import '_gen/scheduling/main.libsonnet'),
   settings:: (import '_gen/settings/main.libsonnet'),
-  storage:: (import '_gen/storage/main.libsonnet')
+  storage:: (import '_gen/storage/main.libsonnet'),
 }

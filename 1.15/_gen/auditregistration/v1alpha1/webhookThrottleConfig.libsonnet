@@ -6,5 +6,5 @@
   '#withQps':: d.fn(help='ThrottleQPS maximum number of batches per second default 10 QPS', args=[d.arg(name='qps', type=d.T.integer)]),
   withQps(qps): { qps: qps },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

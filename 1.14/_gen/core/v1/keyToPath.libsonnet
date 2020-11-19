@@ -8,5 +8,5 @@
   '#withPath':: d.fn(help="The relative path of the file to map the key to. May not be an absolute path. May not contain the path element '..'. May not start with the string '..'.", args=[d.arg(name='path', type=d.T.string)]),
   withPath(path): { path: path },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -8,5 +8,5 @@
   '#withExceptMixin':: d.fn(help='Except is a slice of CIDRs that should not be included within an IP Block Valid examples are "192.168.1.1/24" Except values will be rejected if they are outside the CIDR range\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='except', type=d.T.array)]),
   withExceptMixin(except): { except+: if std.isArray(v=except) then except else [except] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

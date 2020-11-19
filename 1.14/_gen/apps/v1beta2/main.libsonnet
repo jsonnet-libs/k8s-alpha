@@ -26,5 +26,5 @@
   statefulSetCondition: (import 'statefulSetCondition.libsonnet'),
   statefulSetSpec: (import 'statefulSetSpec.libsonnet'),
   statefulSetStatus: (import 'statefulSetStatus.libsonnet'),
-  statefulSetUpdateStrategy: (import 'statefulSetUpdateStrategy.libsonnet')
+  statefulSetUpdateStrategy: (import 'statefulSetUpdateStrategy.libsonnet'),
 }

@@ -10,7 +10,7 @@
     '#withDrop':: d.fn(help='Removed capabilities', args=[d.arg(name='drop', type=d.T.array)]),
     withDrop(drop): { capabilities+: { drop: if std.isArray(v=drop) then drop else [drop] } },
     '#withDropMixin':: d.fn(help='Removed capabilities\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='drop', type=d.T.array)]),
-    withDropMixin(drop): { capabilities+: { drop+: if std.isArray(v=drop) then drop else [drop] } }
+    withDropMixin(drop): { capabilities+: { drop+: if std.isArray(v=drop) then drop else [drop] } },
   },
   '#seLinuxOptions':: d.obj(help='SELinuxOptions are the labels to be applied to the container'),
   seLinuxOptions: {
@@ -21,7 +21,7 @@
     '#withType':: d.fn(help='Type is a SELinux type label that applies to the container.', args=[d.arg(name='type', type=d.T.string)]),
     withType(type): { seLinuxOptions+: { type: type } },
     '#withUser':: d.fn(help='User is a SELinux user label that applies to the container.', args=[d.arg(name='user', type=d.T.string)]),
-    withUser(user): { seLinuxOptions+: { user: user } }
+    withUser(user): { seLinuxOptions+: { user: user } },
   },
   '#withAllowPrivilegeEscalation':: d.fn(help='AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN', args=[d.arg(name='allowPrivilegeEscalation', type=d.T.boolean)]),
   withAllowPrivilegeEscalation(allowPrivilegeEscalation): { allowPrivilegeEscalation: allowPrivilegeEscalation },
@@ -38,5 +38,5 @@
   '#withRunAsUser':: d.fn(help='The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.', args=[d.arg(name='runAsUser', type=d.T.integer)]),
   withRunAsUser(runAsUser): { runAsUser: runAsUser },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

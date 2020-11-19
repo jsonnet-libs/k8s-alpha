@@ -12,5 +12,5 @@
   '#withUid':: d.fn(help='UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='uid', type=d.T.string)]),
   withUid(uid): { uid: uid },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

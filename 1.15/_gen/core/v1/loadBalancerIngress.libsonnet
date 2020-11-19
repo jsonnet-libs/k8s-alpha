@@ -6,5 +6,5 @@
   '#withIp':: d.fn(help='IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)', args=[d.arg(name='ip', type=d.T.string)]),
   withIp(ip): { ip: ip },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

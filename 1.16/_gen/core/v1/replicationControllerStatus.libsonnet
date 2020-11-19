@@ -16,5 +16,5 @@
   '#withReplicas':: d.fn(help='Replicas is the most recently oberved number of replicas. More info: https://kubernetes.io/docs/concepts/workloads/controllers/replicationcontroller#what-is-a-replicationcontroller', args=[d.arg(name='replicas', type=d.T.integer)]),
   withReplicas(replicas): { replicas: replicas },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

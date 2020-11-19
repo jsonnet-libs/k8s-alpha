@@ -430,7 +430,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -470,7 +470,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -644,7 +644,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn securityContext.seLinuxOptions.withLevel
 

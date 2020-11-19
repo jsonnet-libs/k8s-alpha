@@ -6,5 +6,5 @@
   '#withMin':: d.fn(help='min is the start of the range, inclusive.', args=[d.arg(name='min', type=d.T.integer)]),
   withMin(min): { min: min },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

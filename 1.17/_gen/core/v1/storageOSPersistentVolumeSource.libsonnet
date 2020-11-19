@@ -14,7 +14,7 @@
     '#withResourceVersion':: d.fn(help='Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency', args=[d.arg(name='resourceVersion', type=d.T.string)]),
     withResourceVersion(resourceVersion): { secretRef+: { resourceVersion: resourceVersion } },
     '#withUid':: d.fn(help='UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids', args=[d.arg(name='uid', type=d.T.string)]),
-    withUid(uid): { secretRef+: { uid: uid } }
+    withUid(uid): { secretRef+: { uid: uid } },
   },
   '#withFsType':: d.fn(help='Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.', args=[d.arg(name='fsType', type=d.T.string)]),
   withFsType(fsType): { fsType: fsType },
@@ -25,5 +25,5 @@
   '#withVolumeNamespace':: d.fn(help="VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to 'default' if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.", args=[d.arg(name='volumeNamespace', type=d.T.string)]),
   withVolumeNamespace(volumeNamespace): { volumeNamespace: volumeNamespace },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

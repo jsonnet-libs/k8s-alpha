@@ -12,5 +12,5 @@
   '#withProtocol':: d.fn(help='Protocol for port. Must be UDP, TCP, or SCTP. Defaults to "TCP".', args=[d.arg(name='protocol', type=d.T.string)]),
   withProtocol(protocol): { protocol: protocol },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

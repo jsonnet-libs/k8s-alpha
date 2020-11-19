@@ -6,5 +6,5 @@
   '#withTime':: d.fn(help='Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.', args=[d.arg(name='time', type=d.T.string)]),
   withTime(time): { time: time },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

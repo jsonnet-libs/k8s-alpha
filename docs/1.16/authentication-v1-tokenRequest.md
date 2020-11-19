@@ -276,7 +276,7 @@ ExpirationSeconds is the requested duration of validity of the request. The toke
 
 ## obj spec.boundObjectRef
 
-
+BoundObjectReference is a reference to an object that a token is bound to.
 
 ### fn spec.boundObjectRef.withKind
 

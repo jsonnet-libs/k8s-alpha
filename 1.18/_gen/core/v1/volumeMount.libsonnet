@@ -14,5 +14,5 @@
   '#withSubPathExpr':: d.fn(help="Expanded path within the volume from which the container's volume should be mounted. Behaves similarly to SubPath but environment variable references $(VAR_NAME) are expanded using the container's environment. Defaults to '' (volume's root). SubPathExpr and SubPath are mutually exclusive.", args=[d.arg(name='subPathExpr', type=d.T.string)]),
   withSubPathExpr(subPathExpr): { subPathExpr: subPathExpr },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

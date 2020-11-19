@@ -10,7 +10,7 @@
     '#withType':: d.fn(help='Type is a SELinux type label that applies to the container.', args=[d.arg(name='type', type=d.T.string)]),
     withType(type): { seLinuxOptions+: { type: type } },
     '#withUser':: d.fn(help='User is a SELinux user label that applies to the container.', args=[d.arg(name='user', type=d.T.string)]),
-    withUser(user): { seLinuxOptions+: { user: user } }
+    withUser(user): { seLinuxOptions+: { user: user } },
   },
   '#withFsGroup':: d.fn(help="A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:\n\n1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw----\n\nIf unset, the Kubelet will not modify the ownership and permissions of any volume.", args=[d.arg(name='fsGroup', type=d.T.integer)]),
   withFsGroup(fsGroup): { fsGroup: fsGroup },
@@ -29,5 +29,5 @@
   '#withSysctlsMixin':: d.fn(help='Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='sysctls', type=d.T.array)]),
   withSysctlsMixin(sysctls): { sysctls+: if std.isArray(v=sysctls) then sysctls else [sysctls] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

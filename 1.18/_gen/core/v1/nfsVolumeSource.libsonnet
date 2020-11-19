@@ -8,5 +8,5 @@
   '#withServer':: d.fn(help='Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs', args=[d.arg(name='server', type=d.T.string)]),
   withServer(server): { server: server },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -14,7 +14,7 @@
         '#withReadOnly':: d.fn(help='Specify "true" to force and set the ReadOnly property in VolumeMounts to "true". If omitted, the default is "false". More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore', args=[d.arg(name='readOnly', type=d.T.boolean)]),
         withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { awsElasticBlockStore+: { readOnly: readOnly } } } },
         '#withVolumeID':: d.fn(help='Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info: https://kubernetes.io/docs/concepts/storage/volumes#awselasticblockstore', args=[d.arg(name='volumeID', type=d.T.string)]),
-        withVolumeID(volumeID): { source+: { inlineVolumeSpec+: { awsElasticBlockStore+: { volumeID: volumeID } } } }
+        withVolumeID(volumeID): { source+: { inlineVolumeSpec+: { awsElasticBlockStore+: { volumeID: volumeID } } } },
       },
       '#azureDisk':: d.obj(help='AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.'),
       azureDisk: {
@@ -29,7 +29,7 @@
         '#withKind':: d.fn(help='Expected values Shared: multiple blob disks per storage account  Dedicated: single blob disk per storage account  Managed: azure managed data disk (only in managed availability set). defaults to shared', args=[d.arg(name='kind', type=d.T.string)]),
         withKind(kind): { source+: { inlineVolumeSpec+: { azureDisk+: { kind: kind } } } },
         '#withReadOnly':: d.fn(help='Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.', args=[d.arg(name='readOnly', type=d.T.boolean)]),
-        withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { azureDisk+: { readOnly: readOnly } } } }
+        withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { azureDisk+: { readOnly: readOnly } } } },
       },
       '#azureFile':: d.obj(help='AzureFile represents an Azure File Service mount on the host and bind mount to the pod.'),
       azureFile: {
@@ -40,7 +40,7 @@
         '#withSecretNamespace':: d.fn(help='the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod', args=[d.arg(name='secretNamespace', type=d.T.string)]),
         withSecretNamespace(secretNamespace): { source+: { inlineVolumeSpec+: { azureFile+: { secretNamespace: secretNamespace } } } },
         '#withShareName':: d.fn(help='Share Name', args=[d.arg(name='shareName', type=d.T.string)]),
-        withShareName(shareName): { source+: { inlineVolumeSpec+: { azureFile+: { shareName: shareName } } } }
+        withShareName(shareName): { source+: { inlineVolumeSpec+: { azureFile+: { shareName: shareName } } } },
       },
       '#cephfs':: d.obj(help='Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.'),
       cephfs: {
@@ -49,7 +49,7 @@
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { cephfs+: { secretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { cephfs+: { secretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { cephfs+: { secretRef+: { namespace: namespace } } } } },
         },
         '#withMonitors':: d.fn(help='Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it', args=[d.arg(name='monitors', type=d.T.array)]),
         withMonitors(monitors): { source+: { inlineVolumeSpec+: { cephfs+: { monitors: if std.isArray(v=monitors) then monitors else [monitors] } } } },
@@ -62,7 +62,7 @@
         '#withSecretFile':: d.fn(help='Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it', args=[d.arg(name='secretFile', type=d.T.string)]),
         withSecretFile(secretFile): { source+: { inlineVolumeSpec+: { cephfs+: { secretFile: secretFile } } } },
         '#withUser':: d.fn(help='Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it', args=[d.arg(name='user', type=d.T.string)]),
-        withUser(user): { source+: { inlineVolumeSpec+: { cephfs+: { user: user } } } }
+        withUser(user): { source+: { inlineVolumeSpec+: { cephfs+: { user: user } } } },
       },
       '#cinder':: d.obj(help='Represents a cinder volume resource in Openstack. A Cinder volume must exist before mounting to a container. The volume must also be in the same region as the kubelet. Cinder volumes support ownership management and SELinux relabeling.'),
       cinder: {
@@ -71,14 +71,14 @@
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { cinder+: { secretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { cinder+: { secretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { cinder+: { secretRef+: { namespace: namespace } } } } },
         },
         '#withFsType':: d.fn(help='Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md', args=[d.arg(name='fsType', type=d.T.string)]),
         withFsType(fsType): { source+: { inlineVolumeSpec+: { cinder+: { fsType: fsType } } } },
         '#withReadOnly':: d.fn(help='Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/mysql-cinder-pd/README.md', args=[d.arg(name='readOnly', type=d.T.boolean)]),
         withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { cinder+: { readOnly: readOnly } } } },
         '#withVolumeID':: d.fn(help='volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md', args=[d.arg(name='volumeID', type=d.T.string)]),
-        withVolumeID(volumeID): { source+: { inlineVolumeSpec+: { cinder+: { volumeID: volumeID } } } }
+        withVolumeID(volumeID): { source+: { inlineVolumeSpec+: { cinder+: { volumeID: volumeID } } } },
       },
       '#claimRef':: d.obj(help='ObjectReference contains enough information to let you inspect or modify the referred object.'),
       claimRef: {
@@ -93,7 +93,7 @@
         '#withResourceVersion':: d.fn(help='Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency', args=[d.arg(name='resourceVersion', type=d.T.string)]),
         withResourceVersion(resourceVersion): { source+: { inlineVolumeSpec+: { claimRef+: { resourceVersion: resourceVersion } } } },
         '#withUid':: d.fn(help='UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids', args=[d.arg(name='uid', type=d.T.string)]),
-        withUid(uid): { source+: { inlineVolumeSpec+: { claimRef+: { uid: uid } } } }
+        withUid(uid): { source+: { inlineVolumeSpec+: { claimRef+: { uid: uid } } } },
       },
       '#csi':: d.obj(help='Represents storage that is managed by an external CSI volume driver (Beta feature)'),
       csi: {
@@ -102,28 +102,28 @@
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { csi+: { controllerExpandSecretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { csi+: { controllerExpandSecretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { csi+: { controllerExpandSecretRef+: { namespace: namespace } } } } },
         },
         '#controllerPublishSecretRef':: d.obj(help='SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace'),
         controllerPublishSecretRef: {
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { csi+: { controllerPublishSecretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { csi+: { controllerPublishSecretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { csi+: { controllerPublishSecretRef+: { namespace: namespace } } } } },
         },
         '#nodePublishSecretRef':: d.obj(help='SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace'),
         nodePublishSecretRef: {
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { csi+: { nodePublishSecretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { csi+: { nodePublishSecretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { csi+: { nodePublishSecretRef+: { namespace: namespace } } } } },
         },
         '#nodeStageSecretRef':: d.obj(help='SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace'),
         nodeStageSecretRef: {
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { csi+: { nodeStageSecretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { csi+: { nodeStageSecretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { csi+: { nodeStageSecretRef+: { namespace: namespace } } } } },
         },
         '#withDriver':: d.fn(help='Driver is the name of the driver to use for this volume. Required.', args=[d.arg(name='driver', type=d.T.string)]),
         withDriver(driver): { source+: { inlineVolumeSpec+: { csi+: { driver: driver } } } },
@@ -136,7 +136,7 @@
         '#withVolumeAttributesMixin':: d.fn(help='Attributes of the volume to publish.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='volumeAttributes', type=d.T.object)]),
         withVolumeAttributesMixin(volumeAttributes): { source+: { inlineVolumeSpec+: { csi+: { volumeAttributes+: volumeAttributes } } } },
         '#withVolumeHandle':: d.fn(help='VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all subsequent calls. Required.', args=[d.arg(name='volumeHandle', type=d.T.string)]),
-        withVolumeHandle(volumeHandle): { source+: { inlineVolumeSpec+: { csi+: { volumeHandle: volumeHandle } } } }
+        withVolumeHandle(volumeHandle): { source+: { inlineVolumeSpec+: { csi+: { volumeHandle: volumeHandle } } } },
       },
       '#fc':: d.obj(help='Represents a Fibre Channel volume. Fibre Channel volumes can only be mounted as read/write once. Fibre Channel volumes support ownership management and SELinux relabeling.'),
       fc: {
@@ -153,7 +153,7 @@
         '#withWwids':: d.fn(help='Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.', args=[d.arg(name='wwids', type=d.T.array)]),
         withWwids(wwids): { source+: { inlineVolumeSpec+: { fc+: { wwids: if std.isArray(v=wwids) then wwids else [wwids] } } } },
         '#withWwidsMixin':: d.fn(help='Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='wwids', type=d.T.array)]),
-        withWwidsMixin(wwids): { source+: { inlineVolumeSpec+: { fc+: { wwids+: if std.isArray(v=wwids) then wwids else [wwids] } } } }
+        withWwidsMixin(wwids): { source+: { inlineVolumeSpec+: { fc+: { wwids+: if std.isArray(v=wwids) then wwids else [wwids] } } } },
       },
       '#flexVolume':: d.obj(help='FlexPersistentVolumeSource represents a generic persistent volume resource that is provisioned/attached using an exec based plugin.'),
       flexVolume: {
@@ -162,7 +162,7 @@
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { flexVolume+: { secretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { flexVolume+: { secretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { flexVolume+: { secretRef+: { namespace: namespace } } } } },
         },
         '#withDriver':: d.fn(help='Driver is the name of the driver to use for this volume.', args=[d.arg(name='driver', type=d.T.string)]),
         withDriver(driver): { source+: { inlineVolumeSpec+: { flexVolume+: { driver: driver } } } },
@@ -173,14 +173,14 @@
         '#withOptionsMixin':: d.fn(help='Optional: Extra command options if any.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='options', type=d.T.object)]),
         withOptionsMixin(options): { source+: { inlineVolumeSpec+: { flexVolume+: { options+: options } } } },
         '#withReadOnly':: d.fn(help='Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.', args=[d.arg(name='readOnly', type=d.T.boolean)]),
-        withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { flexVolume+: { readOnly: readOnly } } } }
+        withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { flexVolume+: { readOnly: readOnly } } } },
       },
       '#flocker':: d.obj(help='Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.'),
       flocker: {
         '#withDatasetName':: d.fn(help='Name of the dataset stored as metadata -> name on the dataset for Flocker should be considered as deprecated', args=[d.arg(name='datasetName', type=d.T.string)]),
         withDatasetName(datasetName): { source+: { inlineVolumeSpec+: { flocker+: { datasetName: datasetName } } } },
         '#withDatasetUUID':: d.fn(help='UUID of the dataset. This is unique identifier of a Flocker dataset', args=[d.arg(name='datasetUUID', type=d.T.string)]),
-        withDatasetUUID(datasetUUID): { source+: { inlineVolumeSpec+: { flocker+: { datasetUUID: datasetUUID } } } }
+        withDatasetUUID(datasetUUID): { source+: { inlineVolumeSpec+: { flocker+: { datasetUUID: datasetUUID } } } },
       },
       '#gcePersistentDisk':: d.obj(help='Represents a Persistent Disk resource in Google Compute Engine.\n\nA GCE PD must exist before mounting to a container. The disk must also be in the same GCE project and zone as the kubelet. A GCE PD can only be mounted as read/write once or read-only many times. GCE PDs support ownership management and SELinux relabeling.'),
       gcePersistentDisk: {
@@ -191,7 +191,7 @@
         '#withPdName':: d.fn(help='Unique name of the PD resource in GCE. Used to identify the disk in GCE. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk', args=[d.arg(name='pdName', type=d.T.string)]),
         withPdName(pdName): { source+: { inlineVolumeSpec+: { gcePersistentDisk+: { pdName: pdName } } } },
         '#withReadOnly':: d.fn(help='ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk', args=[d.arg(name='readOnly', type=d.T.boolean)]),
-        withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { gcePersistentDisk+: { readOnly: readOnly } } } }
+        withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { gcePersistentDisk+: { readOnly: readOnly } } } },
       },
       '#glusterfs':: d.obj(help='Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.'),
       glusterfs: {
@@ -202,14 +202,14 @@
         '#withPath':: d.fn(help='Path is the Glusterfs volume path. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod', args=[d.arg(name='path', type=d.T.string)]),
         withPath(path): { source+: { inlineVolumeSpec+: { glusterfs+: { path: path } } } },
         '#withReadOnly':: d.fn(help='ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://examples.k8s.io/volumes/glusterfs/README.md#create-a-pod', args=[d.arg(name='readOnly', type=d.T.boolean)]),
-        withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { glusterfs+: { readOnly: readOnly } } } }
+        withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { glusterfs+: { readOnly: readOnly } } } },
       },
       '#hostPath':: d.obj(help='Represents a host path mapped into a pod. Host path volumes do not support ownership management or SELinux relabeling.'),
       hostPath: {
         '#withPath':: d.fn(help='Path of the directory on the host. If the path is a symlink, it will follow the link to the real path. More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath', args=[d.arg(name='path', type=d.T.string)]),
         withPath(path): { source+: { inlineVolumeSpec+: { hostPath+: { path: path } } } },
         '#withType':: d.fn(help='Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath', args=[d.arg(name='type', type=d.T.string)]),
-        withType(type): { source+: { inlineVolumeSpec+: { hostPath+: { type: type } } } }
+        withType(type): { source+: { inlineVolumeSpec+: { hostPath+: { type: type } } } },
       },
       '#iscsi':: d.obj(help='ISCSIPersistentVolumeSource represents an ISCSI disk. ISCSI volumes can only be mounted as read/write once. ISCSI volumes support ownership management and SELinux relabeling.'),
       iscsi: {
@@ -218,7 +218,7 @@
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { iscsi+: { secretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { iscsi+: { secretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { iscsi+: { secretRef+: { namespace: namespace } } } } },
         },
         '#withChapAuthDiscovery':: d.fn(help='whether support iSCSI Discovery CHAP authentication', args=[d.arg(name='chapAuthDiscovery', type=d.T.boolean)]),
         withChapAuthDiscovery(chapAuthDiscovery): { source+: { inlineVolumeSpec+: { iscsi+: { chapAuthDiscovery: chapAuthDiscovery } } } },
@@ -241,14 +241,14 @@
         '#withReadOnly':: d.fn(help='ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false.', args=[d.arg(name='readOnly', type=d.T.boolean)]),
         withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { iscsi+: { readOnly: readOnly } } } },
         '#withTargetPortal':: d.fn(help='iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).', args=[d.arg(name='targetPortal', type=d.T.string)]),
-        withTargetPortal(targetPortal): { source+: { inlineVolumeSpec+: { iscsi+: { targetPortal: targetPortal } } } }
+        withTargetPortal(targetPortal): { source+: { inlineVolumeSpec+: { iscsi+: { targetPortal: targetPortal } } } },
       },
       '#local':: d.obj(help='Local represents directly-attached storage with node affinity (Beta feature)'),
       'local': {
         '#withFsType':: d.fn(help='Filesystem type to mount. It applies only when the Path is a block device. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". The default value is to auto-select a fileystem if unspecified.', args=[d.arg(name='fsType', type=d.T.string)]),
         withFsType(fsType): { source+: { inlineVolumeSpec+: { 'local'+: { fsType: fsType } } } },
         '#withPath':: d.fn(help='The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).', args=[d.arg(name='path', type=d.T.string)]),
-        withPath(path): { source+: { inlineVolumeSpec+: { 'local'+: { path: path } } } }
+        withPath(path): { source+: { inlineVolumeSpec+: { 'local'+: { path: path } } } },
       },
       '#nfs':: d.obj(help='Represents an NFS mount that lasts the lifetime of a pod. NFS volumes do not support ownership management or SELinux relabeling.'),
       nfs: {
@@ -257,7 +257,7 @@
         '#withReadOnly':: d.fn(help='ReadOnly here will force the NFS export to be mounted with read-only permissions. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs', args=[d.arg(name='readOnly', type=d.T.boolean)]),
         withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { nfs+: { readOnly: readOnly } } } },
         '#withServer':: d.fn(help='Server is the hostname or IP address of the NFS server. More info: https://kubernetes.io/docs/concepts/storage/volumes#nfs', args=[d.arg(name='server', type=d.T.string)]),
-        withServer(server): { source+: { inlineVolumeSpec+: { nfs+: { server: server } } } }
+        withServer(server): { source+: { inlineVolumeSpec+: { nfs+: { server: server } } } },
       },
       '#nodeAffinity':: d.obj(help='VolumeNodeAffinity defines constraints that limit what nodes this volume can be accessed from.'),
       nodeAffinity: {
@@ -266,15 +266,15 @@
           '#withNodeSelectorTerms':: d.fn(help='Required. A list of node selector terms. The terms are ORed.', args=[d.arg(name='nodeSelectorTerms', type=d.T.array)]),
           withNodeSelectorTerms(nodeSelectorTerms): { source+: { inlineVolumeSpec+: { nodeAffinity+: { required+: { nodeSelectorTerms: if std.isArray(v=nodeSelectorTerms) then nodeSelectorTerms else [nodeSelectorTerms] } } } } },
           '#withNodeSelectorTermsMixin':: d.fn(help='Required. A list of node selector terms. The terms are ORed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='nodeSelectorTerms', type=d.T.array)]),
-          withNodeSelectorTermsMixin(nodeSelectorTerms): { source+: { inlineVolumeSpec+: { nodeAffinity+: { required+: { nodeSelectorTerms+: if std.isArray(v=nodeSelectorTerms) then nodeSelectorTerms else [nodeSelectorTerms] } } } } }
-        }
+          withNodeSelectorTermsMixin(nodeSelectorTerms): { source+: { inlineVolumeSpec+: { nodeAffinity+: { required+: { nodeSelectorTerms+: if std.isArray(v=nodeSelectorTerms) then nodeSelectorTerms else [nodeSelectorTerms] } } } } },
+        },
       },
       '#photonPersistentDisk':: d.obj(help='Represents a Photon Controller persistent disk resource.'),
       photonPersistentDisk: {
         '#withFsType':: d.fn(help='Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.', args=[d.arg(name='fsType', type=d.T.string)]),
         withFsType(fsType): { source+: { inlineVolumeSpec+: { photonPersistentDisk+: { fsType: fsType } } } },
         '#withPdID':: d.fn(help='ID that identifies Photon Controller persistent disk', args=[d.arg(name='pdID', type=d.T.string)]),
-        withPdID(pdID): { source+: { inlineVolumeSpec+: { photonPersistentDisk+: { pdID: pdID } } } }
+        withPdID(pdID): { source+: { inlineVolumeSpec+: { photonPersistentDisk+: { pdID: pdID } } } },
       },
       '#portworxVolume':: d.obj(help='PortworxVolumeSource represents a Portworx volume resource.'),
       portworxVolume: {
@@ -283,7 +283,7 @@
         '#withReadOnly':: d.fn(help='Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.', args=[d.arg(name='readOnly', type=d.T.boolean)]),
         withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { portworxVolume+: { readOnly: readOnly } } } },
         '#withVolumeID':: d.fn(help='VolumeID uniquely identifies a Portworx volume', args=[d.arg(name='volumeID', type=d.T.string)]),
-        withVolumeID(volumeID): { source+: { inlineVolumeSpec+: { portworxVolume+: { volumeID: volumeID } } } }
+        withVolumeID(volumeID): { source+: { inlineVolumeSpec+: { portworxVolume+: { volumeID: volumeID } } } },
       },
       '#quobyte':: d.obj(help='Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.'),
       quobyte: {
@@ -298,7 +298,7 @@
         '#withUser':: d.fn(help='User to map volume access to Defaults to serivceaccount user', args=[d.arg(name='user', type=d.T.string)]),
         withUser(user): { source+: { inlineVolumeSpec+: { quobyte+: { user: user } } } },
         '#withVolume':: d.fn(help='Volume is a string that references an already created Quobyte volume by name.', args=[d.arg(name='volume', type=d.T.string)]),
-        withVolume(volume): { source+: { inlineVolumeSpec+: { quobyte+: { volume: volume } } } }
+        withVolume(volume): { source+: { inlineVolumeSpec+: { quobyte+: { volume: volume } } } },
       },
       '#rbd':: d.obj(help='Represents a Rados Block Device mount that lasts the lifetime of a pod. RBD volumes support ownership management and SELinux relabeling.'),
       rbd: {
@@ -307,7 +307,7 @@
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { rbd+: { secretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { rbd+: { secretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { rbd+: { secretRef+: { namespace: namespace } } } } },
         },
         '#withFsType':: d.fn(help='Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd', args=[d.arg(name='fsType', type=d.T.string)]),
         withFsType(fsType): { source+: { inlineVolumeSpec+: { rbd+: { fsType: fsType } } } },
@@ -324,7 +324,7 @@
         '#withReadOnly':: d.fn(help='ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it', args=[d.arg(name='readOnly', type=d.T.boolean)]),
         withReadOnly(readOnly): { source+: { inlineVolumeSpec+: { rbd+: { readOnly: readOnly } } } },
         '#withUser':: d.fn(help='The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it', args=[d.arg(name='user', type=d.T.string)]),
-        withUser(user): { source+: { inlineVolumeSpec+: { rbd+: { user: user } } } }
+        withUser(user): { source+: { inlineVolumeSpec+: { rbd+: { user: user } } } },
       },
       '#scaleIO':: d.obj(help='ScaleIOPersistentVolumeSource represents a persistent ScaleIO volume'),
       scaleIO: {
@@ -333,7 +333,7 @@
           '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
           withName(name): { source+: { inlineVolumeSpec+: { scaleIO+: { secretRef+: { name: name } } } } },
           '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-          withNamespace(namespace): { source+: { inlineVolumeSpec+: { scaleIO+: { secretRef+: { namespace: namespace } } } } }
+          withNamespace(namespace): { source+: { inlineVolumeSpec+: { scaleIO+: { secretRef+: { namespace: namespace } } } } },
         },
         '#withFsType':: d.fn(help='Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs"', args=[d.arg(name='fsType', type=d.T.string)]),
         withFsType(fsType): { source+: { inlineVolumeSpec+: { scaleIO+: { fsType: fsType } } } },
@@ -352,7 +352,7 @@
         '#withSystem':: d.fn(help='The name of the storage system as configured in ScaleIO.', args=[d.arg(name='system', type=d.T.string)]),
         withSystem(system): { source+: { inlineVolumeSpec+: { scaleIO+: { system: system } } } },
         '#withVolumeName':: d.fn(help='The name of a volume already created in the ScaleIO system that is associated with this volume source.', args=[d.arg(name='volumeName', type=d.T.string)]),
-        withVolumeName(volumeName): { source+: { inlineVolumeSpec+: { scaleIO+: { volumeName: volumeName } } } }
+        withVolumeName(volumeName): { source+: { inlineVolumeSpec+: { scaleIO+: { volumeName: volumeName } } } },
       },
       '#storageos':: d.obj(help='Represents a StorageOS persistent volume resource.'),
       storageos: {
@@ -369,7 +369,7 @@
           '#withResourceVersion':: d.fn(help='Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency', args=[d.arg(name='resourceVersion', type=d.T.string)]),
           withResourceVersion(resourceVersion): { source+: { inlineVolumeSpec+: { storageos+: { secretRef+: { resourceVersion: resourceVersion } } } } },
           '#withUid':: d.fn(help='UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids', args=[d.arg(name='uid', type=d.T.string)]),
-          withUid(uid): { source+: { inlineVolumeSpec+: { storageos+: { secretRef+: { uid: uid } } } } }
+          withUid(uid): { source+: { inlineVolumeSpec+: { storageos+: { secretRef+: { uid: uid } } } } },
         },
         '#withFsType':: d.fn(help='Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified.', args=[d.arg(name='fsType', type=d.T.string)]),
         withFsType(fsType): { source+: { inlineVolumeSpec+: { storageos+: { fsType: fsType } } } },
@@ -378,7 +378,7 @@
         '#withVolumeName':: d.fn(help='VolumeName is the human-readable name of the StorageOS volume.  Volume names are only unique within a namespace.', args=[d.arg(name='volumeName', type=d.T.string)]),
         withVolumeName(volumeName): { source+: { inlineVolumeSpec+: { storageos+: { volumeName: volumeName } } } },
         '#withVolumeNamespace':: d.fn(help="VolumeNamespace specifies the scope of the volume within StorageOS.  If no namespace is specified then the Pod's namespace will be used.  This allows the Kubernetes name scoping to be mirrored within StorageOS for tighter integration. Set VolumeName to any name to override the default behaviour. Set to 'default' if you are not using namespaces within StorageOS. Namespaces that do not pre-exist within StorageOS will be created.", args=[d.arg(name='volumeNamespace', type=d.T.string)]),
-        withVolumeNamespace(volumeNamespace): { source+: { inlineVolumeSpec+: { storageos+: { volumeNamespace: volumeNamespace } } } }
+        withVolumeNamespace(volumeNamespace): { source+: { inlineVolumeSpec+: { storageos+: { volumeNamespace: volumeNamespace } } } },
       },
       '#vsphereVolume':: d.obj(help='Represents a vSphere volume resource.'),
       vsphereVolume: {
@@ -389,7 +389,7 @@
         '#withStoragePolicyName':: d.fn(help='Storage Policy Based Management (SPBM) profile name.', args=[d.arg(name='storagePolicyName', type=d.T.string)]),
         withStoragePolicyName(storagePolicyName): { source+: { inlineVolumeSpec+: { vsphereVolume+: { storagePolicyName: storagePolicyName } } } },
         '#withVolumePath':: d.fn(help='Path that identifies vSphere volume vmdk', args=[d.arg(name='volumePath', type=d.T.string)]),
-        withVolumePath(volumePath): { source+: { inlineVolumeSpec+: { vsphereVolume+: { volumePath: volumePath } } } }
+        withVolumePath(volumePath): { source+: { inlineVolumeSpec+: { vsphereVolume+: { volumePath: volumePath } } } },
       },
       '#withAccessModes':: d.fn(help='AccessModes contains all ways the volume can be mounted. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes', args=[d.arg(name='accessModes', type=d.T.array)]),
       withAccessModes(accessModes): { source+: { inlineVolumeSpec+: { accessModes: if std.isArray(v=accessModes) then accessModes else [accessModes] } } },
@@ -408,15 +408,15 @@
       '#withStorageClassName':: d.fn(help='Name of StorageClass to which this persistent volume belongs. Empty value means that this volume does not belong to any StorageClass.', args=[d.arg(name='storageClassName', type=d.T.string)]),
       withStorageClassName(storageClassName): { source+: { inlineVolumeSpec+: { storageClassName: storageClassName } } },
       '#withVolumeMode':: d.fn(help='volumeMode defines if a volume is intended to be used with a formatted filesystem or to remain in raw block state. Value of Filesystem is implied when not included in spec.', args=[d.arg(name='volumeMode', type=d.T.string)]),
-      withVolumeMode(volumeMode): { source+: { inlineVolumeSpec+: { volumeMode: volumeMode } } }
+      withVolumeMode(volumeMode): { source+: { inlineVolumeSpec+: { volumeMode: volumeMode } } },
     },
     '#withPersistentVolumeName':: d.fn(help='Name of the persistent volume to attach.', args=[d.arg(name='persistentVolumeName', type=d.T.string)]),
-    withPersistentVolumeName(persistentVolumeName): { source+: { persistentVolumeName: persistentVolumeName } }
+    withPersistentVolumeName(persistentVolumeName): { source+: { persistentVolumeName: persistentVolumeName } },
   },
   '#withAttacher':: d.fn(help='Attacher indicates the name of the volume driver that MUST handle this request. This is the name returned by GetPluginName().', args=[d.arg(name='attacher', type=d.T.string)]),
   withAttacher(attacher): { attacher: attacher },
   '#withNodeName':: d.fn(help='The node that the volume should be attached to.', args=[d.arg(name='nodeName', type=d.T.string)]),
   withNodeName(nodeName): { nodeName: nodeName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

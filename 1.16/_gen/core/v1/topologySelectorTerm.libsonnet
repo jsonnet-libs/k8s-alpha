@@ -6,5 +6,5 @@
   '#withMatchLabelExpressionsMixin':: d.fn(help='A list of topology selector requirements by labels.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabelExpressions', type=d.T.array)]),
   withMatchLabelExpressionsMixin(matchLabelExpressions): { matchLabelExpressions+: if std.isArray(v=matchLabelExpressions) then matchLabelExpressions else [matchLabelExpressions] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

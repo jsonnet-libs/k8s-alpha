@@ -6,5 +6,5 @@
   '#withName':: d.fn(help='Name of the referent; More info: http://kubernetes.io/docs/user-guide/identifiers#names', args=[d.arg(name='name', type=d.T.string)]),
   withName(name): { name: name },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -6,5 +6,5 @@
   '#withNamespace':: d.fn(help='`namespace` is the namespace of matching ServiceAccount objects. Required.', args=[d.arg(name='namespace', type=d.T.string)]),
   withNamespace(namespace): { namespace: namespace },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

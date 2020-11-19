@@ -6,5 +6,5 @@
   '#withPathsMixin':: d.fn(help='A collection of paths that map requests to backends.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='paths', type=d.T.array)]),
   withPathsMixin(paths): { paths+: if std.isArray(v=paths) then paths else [paths] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

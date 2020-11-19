@@ -14,5 +14,5 @@
   '#withUsername':: d.fn(help='The name that uniquely identifies this user among all active users.', args=[d.arg(name='username', type=d.T.string)]),
   withUsername(username): { username: username },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

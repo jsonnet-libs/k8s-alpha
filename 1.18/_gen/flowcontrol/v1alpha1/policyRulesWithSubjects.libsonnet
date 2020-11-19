@@ -14,5 +14,5 @@
   '#withSubjectsMixin':: d.fn(help='subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='subjects', type=d.T.array)]),
   withSubjectsMixin(subjects): { subjects+: if std.isArray(v=subjects) then subjects else [subjects] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

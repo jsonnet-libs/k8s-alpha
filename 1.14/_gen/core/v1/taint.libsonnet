@@ -10,5 +10,5 @@
   '#withValue':: d.fn(help='Required. The taint value corresponding to the taint key.', args=[d.arg(name='value', type=d.T.string)]),
   withValue(value): { value: value },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

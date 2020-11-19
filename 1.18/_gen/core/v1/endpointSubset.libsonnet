@@ -14,5 +14,5 @@
   '#withPortsMixin':: d.fn(help='Port numbers available on the related IP addresses.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='ports', type=d.T.array)]),
   withPortsMixin(ports): { ports+: if std.isArray(v=ports) then ports else [ports] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -20,5 +20,5 @@
   '#withUsername':: d.fn(help='Information about the requesting user. See user.Info interface for details.', args=[d.arg(name='username', type=d.T.string)]),
   withUsername(username): { username: username },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -10,5 +10,5 @@
   '#withVolumePath':: d.fn(help='Path that identifies vSphere volume vmdk', args=[d.arg(name='volumePath', type=d.T.string)]),
   withVolumePath(volumePath): { volumePath: volumePath },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

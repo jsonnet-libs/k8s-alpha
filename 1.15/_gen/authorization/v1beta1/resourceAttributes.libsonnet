@@ -16,5 +16,5 @@
   '#withVersion':: d.fn(help='Version is the API Version of the Resource.  "*" means all.', args=[d.arg(name='version', type=d.T.string)]),
   withVersion(version): { version: version },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

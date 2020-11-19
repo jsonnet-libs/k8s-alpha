@@ -10,5 +10,5 @@
   '#withValuesMixin':: d.fn(help='An array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='values', type=d.T.array)]),
   withValuesMixin(values): { values+: if std.isArray(v=values) then values else [values] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

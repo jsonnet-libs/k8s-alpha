@@ -4,5 +4,5 @@
   '#withIp':: d.fn(help='ip is an IP address (IPv4 or IPv6) assigned to the pod', args=[d.arg(name='ip', type=d.T.string)]),
   withIp(ip): { ip: ip },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

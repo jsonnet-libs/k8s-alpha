@@ -4,5 +4,5 @@
   '#withPersistentVolumeName':: d.fn(help='Name of the persistent volume to attach.', args=[d.arg(name='persistentVolumeName', type=d.T.string)]),
   withPersistentVolumeName(persistentVolumeName): { persistentVolumeName: persistentVolumeName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

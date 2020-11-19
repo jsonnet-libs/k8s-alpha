@@ -10,5 +10,5 @@
   '#withReadOnly':: d.fn(help='ReadOnly here will force the Glusterfs volume to be mounted with read-only permissions. Defaults to false. More info: https://releases.k8s.io/HEAD/examples/volumes/glusterfs/README.md#create-a-pod', args=[d.arg(name='readOnly', type=d.T.boolean)]),
   withReadOnly(readOnly): { readOnly: readOnly },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

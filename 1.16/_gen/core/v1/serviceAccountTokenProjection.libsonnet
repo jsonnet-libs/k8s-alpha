@@ -8,5 +8,5 @@
   '#withPath':: d.fn(help='Path is the path relative to the mount point of the file to project the token into.', args=[d.arg(name='path', type=d.T.string)]),
   withPath(path): { path: path },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

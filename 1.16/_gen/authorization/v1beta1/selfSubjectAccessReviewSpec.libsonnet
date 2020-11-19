@@ -6,7 +6,7 @@
     '#withPath':: d.fn(help='Path is the URL path of the request', args=[d.arg(name='path', type=d.T.string)]),
     withPath(path): { nonResourceAttributes+: { path: path } },
     '#withVerb':: d.fn(help='Verb is the standard HTTP verb', args=[d.arg(name='verb', type=d.T.string)]),
-    withVerb(verb): { nonResourceAttributes+: { verb: verb } }
+    withVerb(verb): { nonResourceAttributes+: { verb: verb } },
   },
   '#resourceAttributes':: d.obj(help='ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface'),
   resourceAttributes: {
@@ -23,8 +23,8 @@
     '#withVerb':: d.fn(help='Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.', args=[d.arg(name='verb', type=d.T.string)]),
     withVerb(verb): { resourceAttributes+: { verb: verb } },
     '#withVersion':: d.fn(help='Version is the API Version of the Resource.  "*" means all.', args=[d.arg(name='version', type=d.T.string)]),
-    withVersion(version): { resourceAttributes+: { version: version } }
+    withVersion(version): { resourceAttributes+: { version: version } },
   },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -10,5 +10,5 @@
   '#withDropMixin':: d.fn(help='Removed capabilities\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='drop', type=d.T.array)]),
   withDropMixin(drop): { drop+: if std.isArray(v=drop) then drop else [drop] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

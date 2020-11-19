@@ -319,7 +319,7 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj spec.backend.resource
 
-
+TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.
 
 ### fn spec.backend.resource.withApiGroup
 

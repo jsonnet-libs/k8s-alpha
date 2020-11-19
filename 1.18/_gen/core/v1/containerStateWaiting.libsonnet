@@ -6,5 +6,5 @@
   '#withReason':: d.fn(help='(brief) reason the container is not yet running.', args=[d.arg(name='reason', type=d.T.string)]),
   withReason(reason): { reason: reason },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

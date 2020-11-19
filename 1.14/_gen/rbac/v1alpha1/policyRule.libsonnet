@@ -22,5 +22,5 @@
   '#withVerbsMixin':: d.fn(help='Verbs is a list of Verbs that apply to ALL the ResourceKinds and AttributeRestrictions contained in this rule.  VerbAll represents all kinds.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='verbs', type=d.T.array)]),
   withVerbsMixin(verbs): { verbs+: if std.isArray(v=verbs) then verbs else [verbs] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

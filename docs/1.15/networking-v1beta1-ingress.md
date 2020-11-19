@@ -265,7 +265,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -287,7 +287,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -433,7 +433,7 @@ TLS configuration. Currently the Ingress only supports a single TLS port, 443. I
 
 ## obj spec.backend
 
-
+IngressBackend describes all endpoints for a given service and port.
 
 ### fn spec.backend.withServiceName
 

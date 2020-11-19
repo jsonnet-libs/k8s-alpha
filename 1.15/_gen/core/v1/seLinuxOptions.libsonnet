@@ -10,5 +10,5 @@
   '#withUser':: d.fn(help='User is a SELinux user label that applies to the container.', args=[d.arg(name='user', type=d.T.string)]),
   withUser(user): { user: user },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

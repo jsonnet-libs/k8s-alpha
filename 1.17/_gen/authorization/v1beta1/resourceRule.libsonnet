@@ -18,5 +18,5 @@
   '#withVerbsMixin':: d.fn(help='Verb is a list of kubernetes resource API verbs, like: get, list, watch, create, update, delete, proxy.  "*" means all.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='verbs', type=d.T.array)]),
   withVerbsMixin(verbs): { verbs+: if std.isArray(v=verbs) then verbs else [verbs] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

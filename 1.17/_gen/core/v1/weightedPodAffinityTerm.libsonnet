@@ -12,17 +12,17 @@
       '#withMatchLabels':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.', args=[d.arg(name='matchLabels', type=d.T.object)]),
       withMatchLabels(matchLabels): { podAffinityTerm+: { labelSelector+: { matchLabels: matchLabels } } },
       '#withMatchLabelsMixin':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
-      withMatchLabelsMixin(matchLabels): { podAffinityTerm+: { labelSelector+: { matchLabels+: matchLabels } } }
+      withMatchLabelsMixin(matchLabels): { podAffinityTerm+: { labelSelector+: { matchLabels+: matchLabels } } },
     },
     '#withNamespaces':: d.fn(help="namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means 'this pod's namespace'", args=[d.arg(name='namespaces', type=d.T.array)]),
     withNamespaces(namespaces): { podAffinityTerm+: { namespaces: if std.isArray(v=namespaces) then namespaces else [namespaces] } },
     '#withNamespacesMixin':: d.fn(help="namespaces specifies which namespaces the labelSelector applies to (matches against); null or empty list means 'this pod's namespace'\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='namespaces', type=d.T.array)]),
     withNamespacesMixin(namespaces): { podAffinityTerm+: { namespaces+: if std.isArray(v=namespaces) then namespaces else [namespaces] } },
     '#withTopologyKey':: d.fn(help='This pod should be co-located (affinity) or not co-located (anti-affinity) with the pods matching the labelSelector in the specified namespaces, where co-located is defined as running on a node whose value of the label with key topologyKey matches that of any node on which any of the selected pods is running. Empty topologyKey is not allowed.', args=[d.arg(name='topologyKey', type=d.T.string)]),
-    withTopologyKey(topologyKey): { podAffinityTerm+: { topologyKey: topologyKey } }
+    withTopologyKey(topologyKey): { podAffinityTerm+: { topologyKey: topologyKey } },
   },
   '#withWeight':: d.fn(help='weight associated with matching the corresponding podAffinityTerm, in the range 1-100.', args=[d.arg(name='weight', type=d.T.integer)]),
   withWeight(weight): { weight: weight },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

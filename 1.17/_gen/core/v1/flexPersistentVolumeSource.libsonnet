@@ -6,7 +6,7 @@
     '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { secretRef+: { name: name } },
     '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-    withNamespace(namespace): { secretRef+: { namespace: namespace } }
+    withNamespace(namespace): { secretRef+: { namespace: namespace } },
   },
   '#withDriver':: d.fn(help='Driver is the name of the driver to use for this volume.', args=[d.arg(name='driver', type=d.T.string)]),
   withDriver(driver): { driver: driver },
@@ -19,5 +19,5 @@
   '#withReadOnly':: d.fn(help='Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.', args=[d.arg(name='readOnly', type=d.T.boolean)]),
   withReadOnly(readOnly): { readOnly: readOnly },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

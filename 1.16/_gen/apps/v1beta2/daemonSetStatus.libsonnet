@@ -24,5 +24,5 @@
   '#withUpdatedNumberScheduled':: d.fn(help='The total number of nodes that are running updated daemon pod', args=[d.arg(name='updatedNumberScheduled', type=d.T.integer)]),
   withUpdatedNumberScheduled(updatedNumberScheduled): { updatedNumberScheduled: updatedNumberScheduled },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

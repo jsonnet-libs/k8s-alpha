@@ -20,5 +20,5 @@
   '#withUpdatedReplicas':: d.fn(help='Total number of non-terminated pods targeted by this deployment that have the desired template spec.', args=[d.arg(name='updatedReplicas', type=d.T.integer)]),
   withUpdatedReplicas(updatedReplicas): { updatedReplicas: updatedReplicas },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

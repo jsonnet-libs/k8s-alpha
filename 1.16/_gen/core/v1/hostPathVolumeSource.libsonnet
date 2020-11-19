@@ -6,5 +6,5 @@
   '#withType':: d.fn(help='Type for HostPath Volume Defaults to "" More info: https://kubernetes.io/docs/concepts/storage/volumes#hostpath', args=[d.arg(name='type', type=d.T.string)]),
   withType(type): { type: type },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

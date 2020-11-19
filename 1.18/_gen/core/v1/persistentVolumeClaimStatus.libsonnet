@@ -16,5 +16,5 @@
   '#withPhase':: d.fn(help='Phase represents the current phase of PersistentVolumeClaim.', args=[d.arg(name='phase', type=d.T.string)]),
   withPhase(phase): { phase: phase },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

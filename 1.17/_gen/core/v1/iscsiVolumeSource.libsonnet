@@ -4,7 +4,7 @@
   '#secretRef':: d.obj(help='LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.'),
   secretRef: {
     '#withName':: d.fn(help='Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names', args=[d.arg(name='name', type=d.T.string)]),
-    withName(name): { secretRef+: { name: name } }
+    withName(name): { secretRef+: { name: name } },
   },
   '#withChapAuthDiscovery':: d.fn(help='whether support iSCSI Discovery CHAP authentication', args=[d.arg(name='chapAuthDiscovery', type=d.T.boolean)]),
   withChapAuthDiscovery(chapAuthDiscovery): { chapAuthDiscovery: chapAuthDiscovery },
@@ -29,5 +29,5 @@
   '#withTargetPortal':: d.fn(help='iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).', args=[d.arg(name='targetPortal', type=d.T.string)]),
   withTargetPortal(targetPortal): { targetPortal: targetPortal },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -10,12 +10,12 @@
       '#withKind':: d.fn(help='Kind is the type of resource being referenced', args=[d.arg(name='kind', type=d.T.string)]),
       withKind(kind): { backend+: { resource+: { kind: kind } } },
       '#withName':: d.fn(help='Name is the name of resource being referenced', args=[d.arg(name='name', type=d.T.string)]),
-      withName(name): { backend+: { resource+: { name: name } } }
+      withName(name): { backend+: { resource+: { name: name } } },
     },
     '#withServiceName':: d.fn(help='Specifies the name of the referenced service.', args=[d.arg(name='serviceName', type=d.T.string)]),
     withServiceName(serviceName): { backend+: { serviceName: serviceName } },
     '#withServicePort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='servicePort', type=d.T.string)]),
-    withServicePort(servicePort): { backend+: { servicePort: servicePort } }
+    withServicePort(servicePort): { backend+: { servicePort: servicePort } },
   },
   '#withIngressClassName':: d.fn(help='IngressClassName is the name of the IngressClass cluster resource. The associated IngressClass defines which controller will implement the resource. This replaces the deprecated `kubernetes.io/ingress.class` annotation. For backwards compatibility, when that annotation is set, it must be given precedence over this field. The controller may emit a warning if the field and annotation have different values. Implementations of this API should ignore Ingresses without a class specified. An IngressClass resource may be marked as default, which can be used to set a default value for this field. For more information, refer to the IngressClass documentation.', args=[d.arg(name='ingressClassName', type=d.T.string)]),
   withIngressClassName(ingressClassName): { ingressClassName: ingressClassName },
@@ -28,5 +28,5 @@
   '#withTlsMixin':: d.fn(help='TLS configuration. Currently the Ingress only supports a single TLS port, 443. If multiple members of this list specify different hosts, they will be multiplexed on the same port according to the hostname specified through the SNI TLS extension, if the ingress controller fulfilling the ingress supports SNI.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tls', type=d.T.array)]),
   withTlsMixin(tls): { tls+: if std.isArray(v=tls) then tls else [tls] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

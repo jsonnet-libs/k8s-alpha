@@ -211,11 +211,11 @@ Error describes any problems reconciling the Spec.ConfigSource to the Active con
 
 ## obj config.active
 
-
+NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.
 
 ## obj config.active.configMap
 
-
+ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
 
 ### fn config.active.configMap.withKubeletConfigKey
 

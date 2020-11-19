@@ -8,5 +8,5 @@
   '#withQueues':: d.fn(help='`queues` is the number of queues for this priority level. The queues exist independently at each apiserver. The value must be positive.  Setting it to 1 effectively precludes shufflesharding and thus makes the distinguisher method of associated flow schemas irrelevant.  This field has a default value of 64.', args=[d.arg(name='queues', type=d.T.integer)]),
   withQueues(queues): { queues: queues },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

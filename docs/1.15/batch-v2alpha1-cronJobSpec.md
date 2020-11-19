@@ -565,7 +565,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj jobTemplate.spec
 
-JobSpec describes how the job execution will look like.
+
 
 ### fn jobTemplate.spec.withActiveDeadlineSeconds
 
@@ -879,7 +879,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj jobTemplate.spec.template.metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn jobTemplate.spec.template.metadata.initializers.result.withCode
 
@@ -985,7 +985,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj jobTemplate.spec.template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn jobTemplate.spec.template.spec.withActiveDeadlineSeconds
 
@@ -1293,11 +1293,11 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj jobTemplate.spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj jobTemplate.spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn jobTemplate.spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1381,7 +1381,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj jobTemplate.spec.template.spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn jobTemplate.spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1555,7 +1555,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 

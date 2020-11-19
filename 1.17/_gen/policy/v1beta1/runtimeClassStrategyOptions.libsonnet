@@ -8,5 +8,5 @@
   '#withDefaultRuntimeClassName':: d.fn(help='defaultRuntimeClassName is the default RuntimeClassName to set on the pod. The default MUST be allowed by the allowedRuntimeClassNames list. A value of nil does not mutate the Pod.', args=[d.arg(name='defaultRuntimeClassName', type=d.T.string)]),
   withDefaultRuntimeClassName(defaultRuntimeClassName): { defaultRuntimeClassName: defaultRuntimeClassName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

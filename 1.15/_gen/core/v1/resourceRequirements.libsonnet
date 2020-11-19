@@ -10,5 +10,5 @@
   '#withRequestsMixin':: d.fn(help='Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='requests', type=d.T.object)]),
   withRequestsMixin(requests): { requests+: requests },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -8,5 +8,5 @@
   '#withUid':: d.fn(help='UID of the referent.', args=[d.arg(name='uid', type=d.T.string)]),
   withUid(uid): { uid: uid },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

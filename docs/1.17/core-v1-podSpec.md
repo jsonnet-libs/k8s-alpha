@@ -543,7 +543,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj affinity.podAntiAffinity
 
-
+Pod anti affinity is a group of inter pod anti affinity scheduling rules.
 
 ### fn affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -753,7 +753,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn securityContext.windowsOptions.withGmsaCredentialSpec
 

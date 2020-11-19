@@ -4,5 +4,5 @@
   '#withPort':: d.fn(help='Port number of the given endpoint.', args=[d.arg(name='port', type=d.T.integer)]),
   withPort(port): { port: port },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

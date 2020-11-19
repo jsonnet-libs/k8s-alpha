@@ -8,7 +8,7 @@
       '#withResourceVersion':: d.fn(help='Specifies the target ResourceVersion', args=[d.arg(name='resourceVersion', type=d.T.string)]),
       withResourceVersion(resourceVersion): { deleteOptions+: { preconditions+: { resourceVersion: resourceVersion } } },
       '#withUid':: d.fn(help='Specifies the target UID.', args=[d.arg(name='uid', type=d.T.string)]),
-      withUid(uid): { deleteOptions+: { preconditions+: { uid: uid } } }
+      withUid(uid): { deleteOptions+: { preconditions+: { uid: uid } } },
     },
     '#withDryRun':: d.fn(help='When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed', args=[d.arg(name='dryRun', type=d.T.array)]),
     withDryRun(dryRun): { deleteOptions+: { dryRun: if std.isArray(v=dryRun) then dryRun else [dryRun] } },
@@ -21,7 +21,7 @@
     '#withOrphanDependents':: d.fn(help="Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the 'orphan' finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both.", args=[d.arg(name='orphanDependents', type=d.T.boolean)]),
     withOrphanDependents(orphanDependents): { deleteOptions+: { orphanDependents: orphanDependents } },
     '#withPropagationPolicy':: d.fn(help="Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground.", args=[d.arg(name='propagationPolicy', type=d.T.string)]),
-    withPropagationPolicy(propagationPolicy): { deleteOptions+: { propagationPolicy: propagationPolicy } }
+    withPropagationPolicy(propagationPolicy): { deleteOptions+: { propagationPolicy: propagationPolicy } },
   },
   '#metadata':: d.obj(help='ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.'),
   metadata: {
@@ -44,7 +44,7 @@
           '#withRetryAfterSeconds':: d.fn(help='If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.', args=[d.arg(name='retryAfterSeconds', type=d.T.integer)]),
           withRetryAfterSeconds(retryAfterSeconds): { metadata+: { initializers+: { result+: { details+: { retryAfterSeconds: retryAfterSeconds } } } } },
           '#withUid':: d.fn(help='UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids', args=[d.arg(name='uid', type=d.T.string)]),
-          withUid(uid): { metadata+: { initializers+: { result+: { details+: { uid: uid } } } } }
+          withUid(uid): { metadata+: { initializers+: { result+: { details+: { uid: uid } } } } },
         },
         '#withCode':: d.fn(help='Suggested HTTP return code for this status, 0 if not set.', args=[d.arg(name='code', type=d.T.integer)]),
         withCode(code): { metadata+: { initializers+: { result+: { code: code } } } },
@@ -55,12 +55,12 @@
         '#withMetadata':: d.fn(help='Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds', args=[d.arg(name='metadata', type=d.T.any)]),
         withMetadata(metadata): { metadata+: { initializers+: { result+: { metadata: metadata } } } },
         '#withReason':: d.fn(help='A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.', args=[d.arg(name='reason', type=d.T.string)]),
-        withReason(reason): { metadata+: { initializers+: { result+: { reason: reason } } } }
+        withReason(reason): { metadata+: { initializers+: { result+: { reason: reason } } } },
       },
       '#withPending':: d.fn(help='Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients.', args=[d.arg(name='pending', type=d.T.array)]),
       withPending(pending): { metadata+: { initializers+: { pending: if std.isArray(v=pending) then pending else [pending] } } },
       '#withPendingMixin':: d.fn(help='Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='pending', type=d.T.array)]),
-      withPendingMixin(pending): { metadata+: { initializers+: { pending+: if std.isArray(v=pending) then pending else [pending] } } }
+      withPendingMixin(pending): { metadata+: { initializers+: { pending+: if std.isArray(v=pending) then pending else [pending] } } },
     },
     '#withAnnotations':: d.fn(help='Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations', args=[d.arg(name='annotations', type=d.T.object)]),
     withAnnotations(annotations): { metadata+: { annotations: annotations } },
@@ -103,13 +103,13 @@
     '#withSelfLink':: d.fn(help='SelfLink is a URL representing this object. Populated by the system. Read-only.', args=[d.arg(name='selfLink', type=d.T.string)]),
     withSelfLink(selfLink): { metadata+: { selfLink: selfLink } },
     '#withUid':: d.fn(help='UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids', args=[d.arg(name='uid', type=d.T.string)]),
-    withUid(uid): { metadata+: { uid: uid } }
+    withUid(uid): { metadata+: { uid: uid } },
   },
   '#new':: d.fn(help='new returns an instance of Eviction', args=[d.arg(name='name', type=d.T.string)]),
   new(name): {
     apiVersion: 'policy/v1beta1',
-    kind: 'Eviction'
+    kind: 'Eviction',
   } + self.metadata.withName(name=name),
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -6,5 +6,5 @@
   '#withValue':: d.fn(help='The header field value', args=[d.arg(name='value', type=d.T.string)]),
   withValue(value): { value: value },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

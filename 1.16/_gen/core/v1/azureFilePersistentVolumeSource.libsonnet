@@ -10,5 +10,5 @@
   '#withShareName':: d.fn(help='Share Name', args=[d.arg(name='shareName', type=d.T.string)]),
   withShareName(shareName): { shareName: shareName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

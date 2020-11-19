@@ -4,5 +4,5 @@
   '#withNamespace':: d.fn(help='Namespace to evaluate rules for. Required.', args=[d.arg(name='namespace', type=d.T.string)]),
   withNamespace(namespace): { namespace: namespace },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

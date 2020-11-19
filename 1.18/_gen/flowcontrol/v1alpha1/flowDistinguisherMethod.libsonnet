@@ -4,5 +4,5 @@
   '#withType':: d.fn(help='`type` is the type of flow distinguisher method The supported types are "ByUser" and "ByNamespace". Required.', args=[d.arg(name='type', type=d.T.string)]),
   withType(type): { type: type },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

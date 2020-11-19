@@ -369,7 +369,7 @@ Lifecycle describes actions that the management system should take in response t
 
 ## obj lifecycle.postStart
 
-
+Handler defines a specific action that should be taken
 
 ## obj lifecycle.postStart.exec
 
@@ -449,7 +449,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.postStart.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn lifecycle.postStart.tcpSocket.withHost
 
@@ -473,7 +473,7 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj lifecycle.preStop.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn lifecycle.preStop.exec.withCommand
 
@@ -495,7 +495,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj lifecycle.preStop.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn lifecycle.preStop.httpGet.withHost
 
@@ -549,7 +549,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.preStop.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn lifecycle.preStop.tcpSocket.withHost
 
@@ -949,7 +949,7 @@ The UID to run the entrypoint of the container process. Defaults to user specifi
 
 ## obj securityContext.capabilities
 
-
+Adds and removes POSIX capabilities from running containers.
 
 ### fn securityContext.capabilities.withAdd
 

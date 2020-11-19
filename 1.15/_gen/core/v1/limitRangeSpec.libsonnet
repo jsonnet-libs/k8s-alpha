@@ -6,5 +6,5 @@
   '#withLimitsMixin':: d.fn(help='Limits is the list of LimitRangeItem objects that are enforced.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='limits', type=d.T.array)]),
   withLimitsMixin(limits): { limits+: if std.isArray(v=limits) then limits else [limits] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

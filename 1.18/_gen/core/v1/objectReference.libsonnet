@@ -14,5 +14,5 @@
   '#withUid':: d.fn(help='UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids', args=[d.arg(name='uid', type=d.T.string)]),
   withUid(uid): { uid: uid },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

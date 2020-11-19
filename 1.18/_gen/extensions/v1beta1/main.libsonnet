@@ -8,5 +8,5 @@
   ingressRule: (import 'ingressRule.libsonnet'),
   ingressSpec: (import 'ingressSpec.libsonnet'),
   ingressStatus: (import 'ingressStatus.libsonnet'),
-  ingressTLS: (import 'ingressTLS.libsonnet')
+  ingressTLS: (import 'ingressTLS.libsonnet'),
 }

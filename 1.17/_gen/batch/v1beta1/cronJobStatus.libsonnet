@@ -8,5 +8,5 @@
   '#withLastScheduleTime':: d.fn(help='Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.', args=[d.arg(name='lastScheduleTime', type=d.T.string)]),
   withLastScheduleTime(lastScheduleTime): { lastScheduleTime: lastScheduleTime },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

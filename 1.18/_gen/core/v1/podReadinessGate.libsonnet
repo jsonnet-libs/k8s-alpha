@@ -4,5 +4,5 @@
   '#withConditionType':: d.fn(help="ConditionType refers to a condition in the pod's condition list with matching type.", args=[d.arg(name='conditionType', type=d.T.string)]),
   withConditionType(conditionType): { conditionType: conditionType },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

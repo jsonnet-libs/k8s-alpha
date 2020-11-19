@@ -10,7 +10,7 @@
     '#withMatchLabels':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.', args=[d.arg(name='matchLabels', type=d.T.object)]),
     withMatchLabels(matchLabels): { selector+: { matchLabels: matchLabels } },
     '#withMatchLabelsMixin':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
-    withMatchLabelsMixin(matchLabels): { selector+: { matchLabels+: matchLabels } }
+    withMatchLabelsMixin(matchLabels): { selector+: { matchLabels+: matchLabels } },
   },
   '#withEnv':: d.fn(help='Env defines the collection of EnvVar to inject into containers.', args=[d.arg(name='env', type=d.T.array)]),
   withEnv(env): { env: if std.isArray(v=env) then env else [env] },
@@ -29,5 +29,5 @@
   '#withVolumesMixin':: d.fn(help='Volumes defines the collection of Volume to inject into the pod.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='volumes', type=d.T.array)]),
   withVolumesMixin(volumes): { volumes+: if std.isArray(v=volumes) then volumes else [volumes] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

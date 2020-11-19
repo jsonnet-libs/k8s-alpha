@@ -16,5 +16,5 @@
   '#withObservedGeneration':: d.fn(help="Most recent generation observed when updating this PDB status. PodDisruptionsAllowed and other status informatio is valid only if observedGeneration equals to PDB's object generation.", args=[d.arg(name='observedGeneration', type=d.T.integer)]),
   withObservedGeneration(observedGeneration): { observedGeneration: observedGeneration },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

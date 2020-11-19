@@ -8,5 +8,5 @@
   '#withReason':: d.fn(help='Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.', args=[d.arg(name='reason', type=d.T.string)]),
   withReason(reason): { reason: reason },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

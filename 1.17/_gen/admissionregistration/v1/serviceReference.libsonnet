@@ -10,5 +10,5 @@
   '#withPort':: d.fn(help='If specified, the port on the service that hosting webhook. Default to 443 for backward compatibility. `port` should be a valid port number (1-65535, inclusive).', args=[d.arg(name='port', type=d.T.integer)]),
   withPort(port): { port: port },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

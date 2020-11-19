@@ -10,5 +10,5 @@
   '#withRequiredDuringSchedulingIgnoredDuringExecutionMixin':: d.fn(help='If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='requiredDuringSchedulingIgnoredDuringExecution', type=d.T.array)]),
   withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringSchedulingIgnoredDuringExecution): { requiredDuringSchedulingIgnoredDuringExecution+: if std.isArray(v=requiredDuringSchedulingIgnoredDuringExecution) then requiredDuringSchedulingIgnoredDuringExecution else [requiredDuringSchedulingIgnoredDuringExecution] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

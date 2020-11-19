@@ -12,5 +12,5 @@
   '#withObservedGeneration':: d.fn(help='most recent generation observed by this autoscaler.', args=[d.arg(name='observedGeneration', type=d.T.integer)]),
   withObservedGeneration(observedGeneration): { observedGeneration: observedGeneration },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -8,5 +8,5 @@
   '#withProtocol':: d.fn(help='The IP protocol for this port. Must be UDP, TCP, or SCTP. Default is TCP.', args=[d.arg(name='protocol', type=d.T.string)]),
   withProtocol(protocol): { protocol: protocol },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

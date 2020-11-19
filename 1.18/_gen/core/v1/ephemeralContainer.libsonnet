@@ -10,7 +10,7 @@
         '#withCommand':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.", args=[d.arg(name='command', type=d.T.array)]),
         withCommand(command): { lifecycle+: { postStart+: { exec+: { command: if std.isArray(v=command) then command else [command] } } } },
         '#withCommandMixin':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
-        withCommandMixin(command): { lifecycle+: { postStart+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } }
+        withCommandMixin(command): { lifecycle+: { postStart+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } },
       },
       '#httpGet':: d.obj(help='HTTPGetAction describes an action based on HTTP Get requests.'),
       httpGet: {
@@ -25,15 +25,15 @@
         '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
         withPort(port): { lifecycle+: { postStart+: { httpGet+: { port: port } } } },
         '#withScheme':: d.fn(help='Scheme to use for connecting to the host. Defaults to HTTP.', args=[d.arg(name='scheme', type=d.T.string)]),
-        withScheme(scheme): { lifecycle+: { postStart+: { httpGet+: { scheme: scheme } } } }
+        withScheme(scheme): { lifecycle+: { postStart+: { httpGet+: { scheme: scheme } } } },
       },
       '#tcpSocket':: d.obj(help='TCPSocketAction describes an action based on opening a socket'),
       tcpSocket: {
         '#withHost':: d.fn(help='Optional: Host name to connect to, defaults to the pod IP.', args=[d.arg(name='host', type=d.T.string)]),
         withHost(host): { lifecycle+: { postStart+: { tcpSocket+: { host: host } } } },
         '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
-        withPort(port): { lifecycle+: { postStart+: { tcpSocket+: { port: port } } } }
-      }
+        withPort(port): { lifecycle+: { postStart+: { tcpSocket+: { port: port } } } },
+      },
     },
     '#preStop':: d.obj(help='Handler defines a specific action that should be taken'),
     preStop: {
@@ -42,7 +42,7 @@
         '#withCommand':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.", args=[d.arg(name='command', type=d.T.array)]),
         withCommand(command): { lifecycle+: { preStop+: { exec+: { command: if std.isArray(v=command) then command else [command] } } } },
         '#withCommandMixin':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
-        withCommandMixin(command): { lifecycle+: { preStop+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } }
+        withCommandMixin(command): { lifecycle+: { preStop+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } } },
       },
       '#httpGet':: d.obj(help='HTTPGetAction describes an action based on HTTP Get requests.'),
       httpGet: {
@@ -57,16 +57,16 @@
         '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
         withPort(port): { lifecycle+: { preStop+: { httpGet+: { port: port } } } },
         '#withScheme':: d.fn(help='Scheme to use for connecting to the host. Defaults to HTTP.', args=[d.arg(name='scheme', type=d.T.string)]),
-        withScheme(scheme): { lifecycle+: { preStop+: { httpGet+: { scheme: scheme } } } }
+        withScheme(scheme): { lifecycle+: { preStop+: { httpGet+: { scheme: scheme } } } },
       },
       '#tcpSocket':: d.obj(help='TCPSocketAction describes an action based on opening a socket'),
       tcpSocket: {
         '#withHost':: d.fn(help='Optional: Host name to connect to, defaults to the pod IP.', args=[d.arg(name='host', type=d.T.string)]),
         withHost(host): { lifecycle+: { preStop+: { tcpSocket+: { host: host } } } },
         '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
-        withPort(port): { lifecycle+: { preStop+: { tcpSocket+: { port: port } } } }
-      }
-    }
+        withPort(port): { lifecycle+: { preStop+: { tcpSocket+: { port: port } } } },
+      },
+    },
   },
   '#livenessProbe':: d.obj(help='Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.'),
   livenessProbe: {
@@ -75,7 +75,7 @@
       '#withCommand':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.", args=[d.arg(name='command', type=d.T.array)]),
       withCommand(command): { livenessProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
       '#withCommandMixin':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
-      withCommandMixin(command): { livenessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } }
+      withCommandMixin(command): { livenessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
     },
     '#httpGet':: d.obj(help='HTTPGetAction describes an action based on HTTP Get requests.'),
     httpGet: {
@@ -90,14 +90,14 @@
       '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
       withPort(port): { livenessProbe+: { httpGet+: { port: port } } },
       '#withScheme':: d.fn(help='Scheme to use for connecting to the host. Defaults to HTTP.', args=[d.arg(name='scheme', type=d.T.string)]),
-      withScheme(scheme): { livenessProbe+: { httpGet+: { scheme: scheme } } }
+      withScheme(scheme): { livenessProbe+: { httpGet+: { scheme: scheme } } },
     },
     '#tcpSocket':: d.obj(help='TCPSocketAction describes an action based on opening a socket'),
     tcpSocket: {
       '#withHost':: d.fn(help='Optional: Host name to connect to, defaults to the pod IP.', args=[d.arg(name='host', type=d.T.string)]),
       withHost(host): { livenessProbe+: { tcpSocket+: { host: host } } },
       '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
-      withPort(port): { livenessProbe+: { tcpSocket+: { port: port } } }
+      withPort(port): { livenessProbe+: { tcpSocket+: { port: port } } },
     },
     '#withFailureThreshold':: d.fn(help='Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.', args=[d.arg(name='failureThreshold', type=d.T.integer)]),
     withFailureThreshold(failureThreshold): { livenessProbe+: { failureThreshold: failureThreshold } },
@@ -108,7 +108,7 @@
     '#withSuccessThreshold':: d.fn(help='Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.', args=[d.arg(name='successThreshold', type=d.T.integer)]),
     withSuccessThreshold(successThreshold): { livenessProbe+: { successThreshold: successThreshold } },
     '#withTimeoutSeconds':: d.fn(help='Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes', args=[d.arg(name='timeoutSeconds', type=d.T.integer)]),
-    withTimeoutSeconds(timeoutSeconds): { livenessProbe+: { timeoutSeconds: timeoutSeconds } }
+    withTimeoutSeconds(timeoutSeconds): { livenessProbe+: { timeoutSeconds: timeoutSeconds } },
   },
   '#readinessProbe':: d.obj(help='Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.'),
   readinessProbe: {
@@ -117,7 +117,7 @@
       '#withCommand':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.", args=[d.arg(name='command', type=d.T.array)]),
       withCommand(command): { readinessProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
       '#withCommandMixin':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
-      withCommandMixin(command): { readinessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } }
+      withCommandMixin(command): { readinessProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
     },
     '#httpGet':: d.obj(help='HTTPGetAction describes an action based on HTTP Get requests.'),
     httpGet: {
@@ -132,14 +132,14 @@
       '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
       withPort(port): { readinessProbe+: { httpGet+: { port: port } } },
       '#withScheme':: d.fn(help='Scheme to use for connecting to the host. Defaults to HTTP.', args=[d.arg(name='scheme', type=d.T.string)]),
-      withScheme(scheme): { readinessProbe+: { httpGet+: { scheme: scheme } } }
+      withScheme(scheme): { readinessProbe+: { httpGet+: { scheme: scheme } } },
     },
     '#tcpSocket':: d.obj(help='TCPSocketAction describes an action based on opening a socket'),
     tcpSocket: {
       '#withHost':: d.fn(help='Optional: Host name to connect to, defaults to the pod IP.', args=[d.arg(name='host', type=d.T.string)]),
       withHost(host): { readinessProbe+: { tcpSocket+: { host: host } } },
       '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
-      withPort(port): { readinessProbe+: { tcpSocket+: { port: port } } }
+      withPort(port): { readinessProbe+: { tcpSocket+: { port: port } } },
     },
     '#withFailureThreshold':: d.fn(help='Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.', args=[d.arg(name='failureThreshold', type=d.T.integer)]),
     withFailureThreshold(failureThreshold): { readinessProbe+: { failureThreshold: failureThreshold } },
@@ -150,7 +150,7 @@
     '#withSuccessThreshold':: d.fn(help='Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.', args=[d.arg(name='successThreshold', type=d.T.integer)]),
     withSuccessThreshold(successThreshold): { readinessProbe+: { successThreshold: successThreshold } },
     '#withTimeoutSeconds':: d.fn(help='Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes', args=[d.arg(name='timeoutSeconds', type=d.T.integer)]),
-    withTimeoutSeconds(timeoutSeconds): { readinessProbe+: { timeoutSeconds: timeoutSeconds } }
+    withTimeoutSeconds(timeoutSeconds): { readinessProbe+: { timeoutSeconds: timeoutSeconds } },
   },
   '#resources':: d.obj(help='ResourceRequirements describes the compute resource requirements.'),
   resources: {
@@ -161,7 +161,7 @@
     '#withRequests':: d.fn(help='Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/', args=[d.arg(name='requests', type=d.T.object)]),
     withRequests(requests): { resources+: { requests: requests } },
     '#withRequestsMixin':: d.fn(help='Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='requests', type=d.T.object)]),
-    withRequestsMixin(requests): { resources+: { requests+: requests } }
+    withRequestsMixin(requests): { resources+: { requests+: requests } },
   },
   '#securityContext':: d.obj(help='SecurityContext holds security configuration that will be applied to a container. Some fields are present in both SecurityContext and PodSecurityContext.  When both are set, the values in SecurityContext take precedence.'),
   securityContext: {
@@ -174,7 +174,7 @@
       '#withDrop':: d.fn(help='Removed capabilities', args=[d.arg(name='drop', type=d.T.array)]),
       withDrop(drop): { securityContext+: { capabilities+: { drop: if std.isArray(v=drop) then drop else [drop] } } },
       '#withDropMixin':: d.fn(help='Removed capabilities\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='drop', type=d.T.array)]),
-      withDropMixin(drop): { securityContext+: { capabilities+: { drop+: if std.isArray(v=drop) then drop else [drop] } } }
+      withDropMixin(drop): { securityContext+: { capabilities+: { drop+: if std.isArray(v=drop) then drop else [drop] } } },
     },
     '#seLinuxOptions':: d.obj(help='SELinuxOptions are the labels to be applied to the container'),
     seLinuxOptions: {
@@ -185,7 +185,7 @@
       '#withType':: d.fn(help='Type is a SELinux type label that applies to the container.', args=[d.arg(name='type', type=d.T.string)]),
       withType(type): { securityContext+: { seLinuxOptions+: { type: type } } },
       '#withUser':: d.fn(help='User is a SELinux user label that applies to the container.', args=[d.arg(name='user', type=d.T.string)]),
-      withUser(user): { securityContext+: { seLinuxOptions+: { user: user } } }
+      withUser(user): { securityContext+: { seLinuxOptions+: { user: user } } },
     },
     '#windowsOptions':: d.obj(help='WindowsSecurityContextOptions contain Windows-specific options and credentials.'),
     windowsOptions: {
@@ -194,7 +194,7 @@
       '#withGmsaCredentialSpecName':: d.fn(help='GMSACredentialSpecName is the name of the GMSA credential spec to use.', args=[d.arg(name='gmsaCredentialSpecName', type=d.T.string)]),
       withGmsaCredentialSpecName(gmsaCredentialSpecName): { securityContext+: { windowsOptions+: { gmsaCredentialSpecName: gmsaCredentialSpecName } } },
       '#withRunAsUserName':: d.fn(help='The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.', args=[d.arg(name='runAsUserName', type=d.T.string)]),
-      withRunAsUserName(runAsUserName): { securityContext+: { windowsOptions+: { runAsUserName: runAsUserName } } }
+      withRunAsUserName(runAsUserName): { securityContext+: { windowsOptions+: { runAsUserName: runAsUserName } } },
     },
     '#withAllowPrivilegeEscalation':: d.fn(help='AllowPrivilegeEscalation controls whether a process can gain more privileges than its parent process. This bool directly controls if the no_new_privs flag will be set on the container process. AllowPrivilegeEscalation is true always when the container is: 1) run as Privileged 2) has CAP_SYS_ADMIN', args=[d.arg(name='allowPrivilegeEscalation', type=d.T.boolean)]),
     withAllowPrivilegeEscalation(allowPrivilegeEscalation): { securityContext+: { allowPrivilegeEscalation: allowPrivilegeEscalation } },
@@ -209,7 +209,7 @@
     '#withRunAsNonRoot':: d.fn(help='Indicates that the container must run as a non-root user. If true, the Kubelet will validate the image at runtime to ensure that it does not run as UID 0 (root) and fail to start the container if it does. If unset or false, no such validation will be performed. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.', args=[d.arg(name='runAsNonRoot', type=d.T.boolean)]),
     withRunAsNonRoot(runAsNonRoot): { securityContext+: { runAsNonRoot: runAsNonRoot } },
     '#withRunAsUser':: d.fn(help='The UID to run the entrypoint of the container process. Defaults to user specified in image metadata if unspecified. May also be set in PodSecurityContext.  If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence.', args=[d.arg(name='runAsUser', type=d.T.integer)]),
-    withRunAsUser(runAsUser): { securityContext+: { runAsUser: runAsUser } }
+    withRunAsUser(runAsUser): { securityContext+: { runAsUser: runAsUser } },
   },
   '#startupProbe':: d.obj(help='Probe describes a health check to be performed against a container to determine whether it is alive or ready to receive traffic.'),
   startupProbe: {
@@ -218,7 +218,7 @@
       '#withCommand':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.", args=[d.arg(name='command', type=d.T.array)]),
       withCommand(command): { startupProbe+: { exec+: { command: if std.isArray(v=command) then command else [command] } } },
       '#withCommandMixin':: d.fn(help="Command is the command line to execute inside the container, the working directory for the command  is root ('/') in the container's filesystem. The command is simply exec'd, it is not run inside a shell, so traditional shell instructions ('|', etc) won't work. To use a shell, you need to explicitly call out to that shell. Exit status of 0 is treated as live/healthy and non-zero is unhealthy.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='command', type=d.T.array)]),
-      withCommandMixin(command): { startupProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } }
+      withCommandMixin(command): { startupProbe+: { exec+: { command+: if std.isArray(v=command) then command else [command] } } },
     },
     '#httpGet':: d.obj(help='HTTPGetAction describes an action based on HTTP Get requests.'),
     httpGet: {
@@ -233,14 +233,14 @@
       '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
       withPort(port): { startupProbe+: { httpGet+: { port: port } } },
       '#withScheme':: d.fn(help='Scheme to use for connecting to the host. Defaults to HTTP.', args=[d.arg(name='scheme', type=d.T.string)]),
-      withScheme(scheme): { startupProbe+: { httpGet+: { scheme: scheme } } }
+      withScheme(scheme): { startupProbe+: { httpGet+: { scheme: scheme } } },
     },
     '#tcpSocket':: d.obj(help='TCPSocketAction describes an action based on opening a socket'),
     tcpSocket: {
       '#withHost':: d.fn(help='Optional: Host name to connect to, defaults to the pod IP.', args=[d.arg(name='host', type=d.T.string)]),
       withHost(host): { startupProbe+: { tcpSocket+: { host: host } } },
       '#withPort':: d.fn(help='IntOrString is a type that can hold an int32 or a string.  When used in JSON or YAML marshalling and unmarshalling, it produces or consumes the inner type.  This allows you to have, for example, a JSON field that can accept a name or number.', args=[d.arg(name='port', type=d.T.string)]),
-      withPort(port): { startupProbe+: { tcpSocket+: { port: port } } }
+      withPort(port): { startupProbe+: { tcpSocket+: { port: port } } },
     },
     '#withFailureThreshold':: d.fn(help='Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1.', args=[d.arg(name='failureThreshold', type=d.T.integer)]),
     withFailureThreshold(failureThreshold): { startupProbe+: { failureThreshold: failureThreshold } },
@@ -251,7 +251,7 @@
     '#withSuccessThreshold':: d.fn(help='Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness and startup. Minimum value is 1.', args=[d.arg(name='successThreshold', type=d.T.integer)]),
     withSuccessThreshold(successThreshold): { startupProbe+: { successThreshold: successThreshold } },
     '#withTimeoutSeconds':: d.fn(help='Number of seconds after which the probe times out. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes', args=[d.arg(name='timeoutSeconds', type=d.T.integer)]),
-    withTimeoutSeconds(timeoutSeconds): { startupProbe+: { timeoutSeconds: timeoutSeconds } }
+    withTimeoutSeconds(timeoutSeconds): { startupProbe+: { timeoutSeconds: timeoutSeconds } },
   },
   '#withArgs':: d.fn(help="Arguments to the entrypoint. The docker image's CMD is used if this is not provided. Variable references $(VAR_NAME) are expanded using the container's environment. If a variable cannot be resolved, the reference in the input string will be unchanged. The $(VAR_NAME) syntax can be escaped with a double $$, ie: $$(VAR_NAME). Escaped references will never be expanded, regardless of whether the variable exists or not. Cannot be updated. More info: https://kubernetes.io/docs/tasks/inject-data-application/define-command-argument-container/#running-a-command-in-a-shell", args=[d.arg(name='args', type=d.T.array)]),
   withArgs(args): { args: if std.isArray(v=args) then args else [args] },
@@ -302,5 +302,5 @@
   '#withWorkingDir':: d.fn(help="Container's working directory. If not specified, the container runtime's default will be used, which might be configured in the container image. Cannot be updated.", args=[d.arg(name='workingDir', type=d.T.string)]),
   withWorkingDir(workingDir): { workingDir: workingDir },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -10,14 +10,14 @@
     '#withName':: d.fn(help='Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { configMap+: { name: name } },
     '#withOptional':: d.fn(help="Specify whether the ConfigMap or it's keys must be defined", args=[d.arg(name='optional', type=d.T.boolean)]),
-    withOptional(optional): { configMap+: { optional: optional } }
+    withOptional(optional): { configMap+: { optional: optional } },
   },
   '#downwardAPI':: d.obj(help='Represents downward API info for projecting into a projected volume. Note that this is identical to a downwardAPI volume source without the default mode.'),
   downwardAPI: {
     '#withItems':: d.fn(help='Items is a list of DownwardAPIVolume file', args=[d.arg(name='items', type=d.T.array)]),
     withItems(items): { downwardAPI+: { items: if std.isArray(v=items) then items else [items] } },
     '#withItemsMixin':: d.fn(help='Items is a list of DownwardAPIVolume file\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='items', type=d.T.array)]),
-    withItemsMixin(items): { downwardAPI+: { items+: if std.isArray(v=items) then items else [items] } }
+    withItemsMixin(items): { downwardAPI+: { items+: if std.isArray(v=items) then items else [items] } },
   },
   '#secret':: d.obj(help="Adapts a secret into a projected volume.\n\nThe contents of the target Secret's Data field will be presented in a projected volume as files using the keys in the Data field as the file names. Note that this is identical to a secret volume source without the default mode."),
   secret: {
@@ -28,7 +28,7 @@
     '#withName':: d.fn(help='Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { secret+: { name: name } },
     '#withOptional':: d.fn(help='Specify whether the Secret or its key must be defined', args=[d.arg(name='optional', type=d.T.boolean)]),
-    withOptional(optional): { secret+: { optional: optional } }
+    withOptional(optional): { secret+: { optional: optional } },
   },
   '#serviceAccountToken':: d.obj(help='ServiceAccountTokenProjection represents a projected service account token volume. This projection can be used to insert a service account token into the pods runtime filesystem for use against APIs (Kubernetes API Server or otherwise).'),
   serviceAccountToken: {
@@ -37,8 +37,8 @@
     '#withExpirationSeconds':: d.fn(help='ExpirationSeconds is the requested duration of validity of the service account token. As the token approaches expiration, the kubelet volume plugin will proactively rotate the service account token. The kubelet will start trying to rotate the token if the token is older than 80 percent of its time to live or if the token is older than 24 hours.Defaults to 1 hour and must be at least 10 minutes.', args=[d.arg(name='expirationSeconds', type=d.T.integer)]),
     withExpirationSeconds(expirationSeconds): { serviceAccountToken+: { expirationSeconds: expirationSeconds } },
     '#withPath':: d.fn(help='Path is the path relative to the mount point of the file to project the token into.', args=[d.arg(name='path', type=d.T.string)]),
-    withPath(path): { serviceAccountToken+: { path: path } }
+    withPath(path): { serviceAccountToken+: { path: path } },
   },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -12,5 +12,5 @@
   '#withValue':: d.fn(help='Value is the taint value the toleration matches to. If the operator is Exists, the value should be empty, otherwise just a regular string.', args=[d.arg(name='value', type=d.T.string)]),
   withValue(value): { value: value },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

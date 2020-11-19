@@ -4,7 +4,7 @@
   '#secretRef':: d.obj(help='LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.'),
   secretRef: {
     '#withName':: d.fn(help='Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names', args=[d.arg(name='name', type=d.T.string)]),
-    withName(name): { secretRef+: { name: name } }
+    withName(name): { secretRef+: { name: name } },
   },
   '#withFsType':: d.fn(help='Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd', args=[d.arg(name='fsType', type=d.T.string)]),
   withFsType(fsType): { fsType: fsType },
@@ -23,5 +23,5 @@
   '#withUser':: d.fn(help='The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it', args=[d.arg(name='user', type=d.T.string)]),
   withUser(user): { user: user },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

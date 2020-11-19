@@ -6,5 +6,5 @@
   '#withPath':: d.fn(help='The full path to the volume on the node. It can be either a directory or block device (disk, partition, ...).', args=[d.arg(name='path', type=d.T.string)]),
   withPath(path): { path: path },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

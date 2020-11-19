@@ -48,5 +48,5 @@
   scaleSpec: (import 'scaleSpec.libsonnet'),
   scaleStatus: (import 'scaleStatus.libsonnet'),
   seLinuxStrategyOptions: (import 'seLinuxStrategyOptions.libsonnet'),
-  supplementalGroupsStrategyOptions: (import 'supplementalGroupsStrategyOptions.libsonnet')
+  supplementalGroupsStrategyOptions: (import 'supplementalGroupsStrategyOptions.libsonnet'),
 }

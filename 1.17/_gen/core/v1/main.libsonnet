@@ -168,5 +168,5 @@
   volumeProjection: (import 'volumeProjection.libsonnet'),
   vsphereVirtualDiskVolumeSource: (import 'vsphereVirtualDiskVolumeSource.libsonnet'),
   weightedPodAffinityTerm: (import 'weightedPodAffinityTerm.libsonnet'),
-  windowsSecurityContextOptions: (import 'windowsSecurityContextOptions.libsonnet')
+  windowsSecurityContextOptions: (import 'windowsSecurityContextOptions.libsonnet'),
 }

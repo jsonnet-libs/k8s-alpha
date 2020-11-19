@@ -6,5 +6,5 @@
   '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
   withNamespace(namespace): { namespace: namespace },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

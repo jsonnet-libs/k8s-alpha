@@ -18,5 +18,5 @@
   podsMetricSource: (import 'podsMetricSource.libsonnet'),
   podsMetricStatus: (import 'podsMetricStatus.libsonnet'),
   resourceMetricSource: (import 'resourceMetricSource.libsonnet'),
-  resourceMetricStatus: (import 'resourceMetricStatus.libsonnet')
+  resourceMetricStatus: (import 'resourceMetricStatus.libsonnet'),
 }

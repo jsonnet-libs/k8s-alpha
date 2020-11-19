@@ -6,5 +6,5 @@
   '#withReadOnly':: d.fn(help='Will force the ReadOnly setting in VolumeMounts. Default false.', args=[d.arg(name='readOnly', type=d.T.boolean)]),
   withReadOnly(readOnly): { readOnly: readOnly },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

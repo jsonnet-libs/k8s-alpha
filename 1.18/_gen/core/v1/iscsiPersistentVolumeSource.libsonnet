@@ -6,7 +6,7 @@
     '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { secretRef+: { name: name } },
     '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-    withNamespace(namespace): { secretRef+: { namespace: namespace } }
+    withNamespace(namespace): { secretRef+: { namespace: namespace } },
   },
   '#withChapAuthDiscovery':: d.fn(help='whether support iSCSI Discovery CHAP authentication', args=[d.arg(name='chapAuthDiscovery', type=d.T.boolean)]),
   withChapAuthDiscovery(chapAuthDiscovery): { chapAuthDiscovery: chapAuthDiscovery },
@@ -31,5 +31,5 @@
   '#withTargetPortal':: d.fn(help='iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is other than default (typically TCP ports 860 and 3260).', args=[d.arg(name='targetPortal', type=d.T.string)]),
   withTargetPortal(targetPortal): { targetPortal: targetPortal },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

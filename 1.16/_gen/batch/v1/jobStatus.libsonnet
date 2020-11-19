@@ -16,5 +16,5 @@
   '#withSucceeded':: d.fn(help='The number of pods which reached phase Succeeded.', args=[d.arg(name='succeeded', type=d.T.integer)]),
   withSucceeded(succeeded): { succeeded: succeeded },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

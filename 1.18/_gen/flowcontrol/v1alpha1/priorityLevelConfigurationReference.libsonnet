@@ -4,5 +4,5 @@
   '#withName':: d.fn(help='`name` is the name of the priority level configuration being referenced Required.', args=[d.arg(name='name', type=d.T.string)]),
   withName(name): { name: name },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

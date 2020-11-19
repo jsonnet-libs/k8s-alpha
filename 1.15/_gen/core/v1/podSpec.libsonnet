@@ -10,12 +10,12 @@
         '#withNodeSelectorTerms':: d.fn(help='Required. A list of node selector terms. The terms are ORed.', args=[d.arg(name='nodeSelectorTerms', type=d.T.array)]),
         withNodeSelectorTerms(nodeSelectorTerms): { affinity+: { nodeAffinity+: { requiredDuringSchedulingIgnoredDuringExecution+: { nodeSelectorTerms: if std.isArray(v=nodeSelectorTerms) then nodeSelectorTerms else [nodeSelectorTerms] } } } },
         '#withNodeSelectorTermsMixin':: d.fn(help='Required. A list of node selector terms. The terms are ORed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='nodeSelectorTerms', type=d.T.array)]),
-        withNodeSelectorTermsMixin(nodeSelectorTerms): { affinity+: { nodeAffinity+: { requiredDuringSchedulingIgnoredDuringExecution+: { nodeSelectorTerms+: if std.isArray(v=nodeSelectorTerms) then nodeSelectorTerms else [nodeSelectorTerms] } } } }
+        withNodeSelectorTermsMixin(nodeSelectorTerms): { affinity+: { nodeAffinity+: { requiredDuringSchedulingIgnoredDuringExecution+: { nodeSelectorTerms+: if std.isArray(v=nodeSelectorTerms) then nodeSelectorTerms else [nodeSelectorTerms] } } } },
       },
       '#withPreferredDuringSchedulingIgnoredDuringExecution':: d.fn(help='The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.', args=[d.arg(name='preferredDuringSchedulingIgnoredDuringExecution', type=d.T.array)]),
       withPreferredDuringSchedulingIgnoredDuringExecution(preferredDuringSchedulingIgnoredDuringExecution): { affinity+: { nodeAffinity+: { preferredDuringSchedulingIgnoredDuringExecution: if std.isArray(v=preferredDuringSchedulingIgnoredDuringExecution) then preferredDuringSchedulingIgnoredDuringExecution else [preferredDuringSchedulingIgnoredDuringExecution] } } },
       '#withPreferredDuringSchedulingIgnoredDuringExecutionMixin':: d.fn(help='The scheduler will prefer to schedule pods to nodes that satisfy the affinity expressions specified by this field, but it may choose a node that violates one or more of the expressions. The node that is most preferred is the one with the greatest sum of weights, i.e. for each node that meets all of the scheduling requirements (resource request, requiredDuringScheduling affinity expressions, etc.), compute a sum by iterating through the elements of this field and adding "weight" to the sum if the node matches the corresponding matchExpressions; the node(s) with the highest sum are the most preferred.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='preferredDuringSchedulingIgnoredDuringExecution', type=d.T.array)]),
-      withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringSchedulingIgnoredDuringExecution): { affinity+: { nodeAffinity+: { preferredDuringSchedulingIgnoredDuringExecution+: if std.isArray(v=preferredDuringSchedulingIgnoredDuringExecution) then preferredDuringSchedulingIgnoredDuringExecution else [preferredDuringSchedulingIgnoredDuringExecution] } } }
+      withPreferredDuringSchedulingIgnoredDuringExecutionMixin(preferredDuringSchedulingIgnoredDuringExecution): { affinity+: { nodeAffinity+: { preferredDuringSchedulingIgnoredDuringExecution+: if std.isArray(v=preferredDuringSchedulingIgnoredDuringExecution) then preferredDuringSchedulingIgnoredDuringExecution else [preferredDuringSchedulingIgnoredDuringExecution] } } },
     },
     '#podAffinity':: d.obj(help='Pod affinity is a group of inter pod affinity scheduling rules.'),
     podAffinity: {
@@ -26,7 +26,7 @@
       '#withRequiredDuringSchedulingIgnoredDuringExecution':: d.fn(help='If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.', args=[d.arg(name='requiredDuringSchedulingIgnoredDuringExecution', type=d.T.array)]),
       withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnoredDuringExecution): { affinity+: { podAffinity+: { requiredDuringSchedulingIgnoredDuringExecution: if std.isArray(v=requiredDuringSchedulingIgnoredDuringExecution) then requiredDuringSchedulingIgnoredDuringExecution else [requiredDuringSchedulingIgnoredDuringExecution] } } },
       '#withRequiredDuringSchedulingIgnoredDuringExecutionMixin':: d.fn(help='If the affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='requiredDuringSchedulingIgnoredDuringExecution', type=d.T.array)]),
-      withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringSchedulingIgnoredDuringExecution): { affinity+: { podAffinity+: { requiredDuringSchedulingIgnoredDuringExecution+: if std.isArray(v=requiredDuringSchedulingIgnoredDuringExecution) then requiredDuringSchedulingIgnoredDuringExecution else [requiredDuringSchedulingIgnoredDuringExecution] } } }
+      withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringSchedulingIgnoredDuringExecution): { affinity+: { podAffinity+: { requiredDuringSchedulingIgnoredDuringExecution+: if std.isArray(v=requiredDuringSchedulingIgnoredDuringExecution) then requiredDuringSchedulingIgnoredDuringExecution else [requiredDuringSchedulingIgnoredDuringExecution] } } },
     },
     '#podAntiAffinity':: d.obj(help='Pod anti affinity is a group of inter pod anti affinity scheduling rules.'),
     podAntiAffinity: {
@@ -37,8 +37,8 @@
       '#withRequiredDuringSchedulingIgnoredDuringExecution':: d.fn(help='If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.', args=[d.arg(name='requiredDuringSchedulingIgnoredDuringExecution', type=d.T.array)]),
       withRequiredDuringSchedulingIgnoredDuringExecution(requiredDuringSchedulingIgnoredDuringExecution): { affinity+: { podAntiAffinity+: { requiredDuringSchedulingIgnoredDuringExecution: if std.isArray(v=requiredDuringSchedulingIgnoredDuringExecution) then requiredDuringSchedulingIgnoredDuringExecution else [requiredDuringSchedulingIgnoredDuringExecution] } } },
       '#withRequiredDuringSchedulingIgnoredDuringExecutionMixin':: d.fn(help='If the anti-affinity requirements specified by this field are not met at scheduling time, the pod will not be scheduled onto the node. If the anti-affinity requirements specified by this field cease to be met at some point during pod execution (e.g. due to a pod label update), the system may or may not try to eventually evict the pod from its node. When there are multiple elements, the lists of nodes corresponding to each podAffinityTerm are intersected, i.e. all terms must be satisfied.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='requiredDuringSchedulingIgnoredDuringExecution', type=d.T.array)]),
-      withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringSchedulingIgnoredDuringExecution): { affinity+: { podAntiAffinity+: { requiredDuringSchedulingIgnoredDuringExecution+: if std.isArray(v=requiredDuringSchedulingIgnoredDuringExecution) then requiredDuringSchedulingIgnoredDuringExecution else [requiredDuringSchedulingIgnoredDuringExecution] } } }
-    }
+      withRequiredDuringSchedulingIgnoredDuringExecutionMixin(requiredDuringSchedulingIgnoredDuringExecution): { affinity+: { podAntiAffinity+: { requiredDuringSchedulingIgnoredDuringExecution+: if std.isArray(v=requiredDuringSchedulingIgnoredDuringExecution) then requiredDuringSchedulingIgnoredDuringExecution else [requiredDuringSchedulingIgnoredDuringExecution] } } },
+    },
   },
   '#dnsConfig':: d.obj(help='PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.'),
   dnsConfig: {
@@ -53,7 +53,7 @@
     '#withSearches':: d.fn(help='A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.', args=[d.arg(name='searches', type=d.T.array)]),
     withSearches(searches): { dnsConfig+: { searches: if std.isArray(v=searches) then searches else [searches] } },
     '#withSearchesMixin':: d.fn(help='A list of DNS search domains for host-name lookup. This will be appended to the base search paths generated from DNSPolicy. Duplicated search paths will be removed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='searches', type=d.T.array)]),
-    withSearchesMixin(searches): { dnsConfig+: { searches+: if std.isArray(v=searches) then searches else [searches] } }
+    withSearchesMixin(searches): { dnsConfig+: { searches+: if std.isArray(v=searches) then searches else [searches] } },
   },
   '#securityContext':: d.obj(help='PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.'),
   securityContext: {
@@ -66,14 +66,14 @@
       '#withType':: d.fn(help='Type is a SELinux type label that applies to the container.', args=[d.arg(name='type', type=d.T.string)]),
       withType(type): { securityContext+: { seLinuxOptions+: { type: type } } },
       '#withUser':: d.fn(help='User is a SELinux user label that applies to the container.', args=[d.arg(name='user', type=d.T.string)]),
-      withUser(user): { securityContext+: { seLinuxOptions+: { user: user } } }
+      withUser(user): { securityContext+: { seLinuxOptions+: { user: user } } },
     },
     '#windowsOptions':: d.obj(help='WindowsSecurityContextOptions contain Windows-specific options and credentials.'),
     windowsOptions: {
       '#withGmsaCredentialSpec':: d.fn(help='GMSACredentialSpec is where the GMSA admission webhook (https://github.com/kubernetes-sigs/windows-gmsa) inlines the contents of the GMSA credential spec named by the GMSACredentialSpecName field. This field is alpha-level and is only honored by servers that enable the WindowsGMSA feature flag.', args=[d.arg(name='gmsaCredentialSpec', type=d.T.string)]),
       withGmsaCredentialSpec(gmsaCredentialSpec): { securityContext+: { windowsOptions+: { gmsaCredentialSpec: gmsaCredentialSpec } } },
       '#withGmsaCredentialSpecName':: d.fn(help='GMSACredentialSpecName is the name of the GMSA credential spec to use. This field is alpha-level and is only honored by servers that enable the WindowsGMSA feature flag.', args=[d.arg(name='gmsaCredentialSpecName', type=d.T.string)]),
-      withGmsaCredentialSpecName(gmsaCredentialSpecName): { securityContext+: { windowsOptions+: { gmsaCredentialSpecName: gmsaCredentialSpecName } } }
+      withGmsaCredentialSpecName(gmsaCredentialSpecName): { securityContext+: { windowsOptions+: { gmsaCredentialSpecName: gmsaCredentialSpecName } } },
     },
     '#withFsGroup':: d.fn(help="A special supplemental group that applies to all containers in a pod. Some volume types allow the Kubelet to change the ownership of that volume to be owned by the pod:\n\n1. The owning GID will be the FSGroup 2. The setgid bit is set (new files created in the volume will be owned by FSGroup) 3. The permission bits are OR'd with rw-rw----\n\nIf unset, the Kubelet will not modify the ownership and permissions of any volume.", args=[d.arg(name='fsGroup', type=d.T.integer)]),
     withFsGroup(fsGroup): { securityContext+: { fsGroup: fsGroup } },
@@ -90,7 +90,7 @@
     '#withSysctls':: d.fn(help='Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch.', args=[d.arg(name='sysctls', type=d.T.array)]),
     withSysctls(sysctls): { securityContext+: { sysctls: if std.isArray(v=sysctls) then sysctls else [sysctls] } },
     '#withSysctlsMixin':: d.fn(help='Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupported sysctls (by the container runtime) might fail to launch.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='sysctls', type=d.T.array)]),
-    withSysctlsMixin(sysctls): { securityContext+: { sysctls+: if std.isArray(v=sysctls) then sysctls else [sysctls] } }
+    withSysctlsMixin(sysctls): { securityContext+: { sysctls+: if std.isArray(v=sysctls) then sysctls else [sysctls] } },
   },
   '#withActiveDeadlineSeconds':: d.fn(help='Optional duration in seconds the pod may be active on the node relative to StartTime before the system will actively try to mark it failed and kill associated containers. Value must be a positive integer.', args=[d.arg(name='activeDeadlineSeconds', type=d.T.integer)]),
   withActiveDeadlineSeconds(activeDeadlineSeconds): { activeDeadlineSeconds: activeDeadlineSeconds },
@@ -165,5 +165,5 @@
   '#withVolumesMixin':: d.fn(help='List of volumes that can be mounted by containers belonging to the pod. More info: https://kubernetes.io/docs/concepts/storage/volumes\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='volumes', type=d.T.array)]),
   withVolumesMixin(volumes): { volumes+: if std.isArray(v=volumes) then volumes else [volumes] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

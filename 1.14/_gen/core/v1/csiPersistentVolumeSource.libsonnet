@@ -6,21 +6,21 @@
     '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { controllerPublishSecretRef+: { name: name } },
     '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-    withNamespace(namespace): { controllerPublishSecretRef+: { namespace: namespace } }
+    withNamespace(namespace): { controllerPublishSecretRef+: { namespace: namespace } },
   },
   '#nodePublishSecretRef':: d.obj(help='SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace'),
   nodePublishSecretRef: {
     '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { nodePublishSecretRef+: { name: name } },
     '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-    withNamespace(namespace): { nodePublishSecretRef+: { namespace: namespace } }
+    withNamespace(namespace): { nodePublishSecretRef+: { namespace: namespace } },
   },
   '#nodeStageSecretRef':: d.obj(help='SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace'),
   nodeStageSecretRef: {
     '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { nodeStageSecretRef+: { name: name } },
     '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-    withNamespace(namespace): { nodeStageSecretRef+: { namespace: namespace } }
+    withNamespace(namespace): { nodeStageSecretRef+: { namespace: namespace } },
   },
   '#withDriver':: d.fn(help='Driver is the name of the driver to use for this volume. Required.', args=[d.arg(name='driver', type=d.T.string)]),
   withDriver(driver): { driver: driver },
@@ -35,5 +35,5 @@
   '#withVolumeHandle':: d.fn(help='VolumeHandle is the unique volume name returned by the CSI volume plugin’s CreateVolume to refer to the volume on all subsequent calls. Required.', args=[d.arg(name='volumeHandle', type=d.T.string)]),
   withVolumeHandle(volumeHandle): { volumeHandle: volumeHandle },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

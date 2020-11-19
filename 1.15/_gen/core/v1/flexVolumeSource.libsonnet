@@ -4,7 +4,7 @@
   '#secretRef':: d.obj(help='LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.'),
   secretRef: {
     '#withName':: d.fn(help='Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names', args=[d.arg(name='name', type=d.T.string)]),
-    withName(name): { secretRef+: { name: name } }
+    withName(name): { secretRef+: { name: name } },
   },
   '#withDriver':: d.fn(help='Driver is the name of the driver to use for this volume.', args=[d.arg(name='driver', type=d.T.string)]),
   withDriver(driver): { driver: driver },
@@ -17,5 +17,5 @@
   '#withReadOnly':: d.fn(help='Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.', args=[d.arg(name='readOnly', type=d.T.boolean)]),
   withReadOnly(readOnly): { readOnly: readOnly },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

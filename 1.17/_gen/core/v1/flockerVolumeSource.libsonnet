@@ -6,5 +6,5 @@
   '#withDatasetUUID':: d.fn(help='UUID of the dataset. This is unique identifier of a Flocker dataset', args=[d.arg(name='datasetUUID', type=d.T.string)]),
   withDatasetUUID(datasetUUID): { datasetUUID: datasetUUID },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

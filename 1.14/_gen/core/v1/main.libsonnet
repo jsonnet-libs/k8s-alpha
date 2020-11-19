@@ -163,5 +163,5 @@
   volumeNodeAffinity: (import 'volumeNodeAffinity.libsonnet'),
   volumeProjection: (import 'volumeProjection.libsonnet'),
   vsphereVirtualDiskVolumeSource: (import 'vsphereVirtualDiskVolumeSource.libsonnet'),
-  weightedPodAffinityTerm: (import 'weightedPodAffinityTerm.libsonnet')
+  weightedPodAffinityTerm: (import 'weightedPodAffinityTerm.libsonnet'),
 }

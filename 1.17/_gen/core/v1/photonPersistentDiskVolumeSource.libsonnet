@@ -6,5 +6,5 @@
   '#withPdID':: d.fn(help='ID that identifies Photon Controller persistent disk', args=[d.arg(name='pdID', type=d.T.string)]),
   withPdID(pdID): { pdID: pdID },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -45,7 +45,7 @@ Handler defines a specific action that should be taken
 
 ## obj postStart.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn postStart.exec.withCommand
 
@@ -67,7 +67,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj postStart.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn postStart.httpGet.withHost
 
@@ -121,7 +121,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj postStart.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn postStart.tcpSocket.withHost
 
@@ -167,7 +167,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj preStop.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn preStop.httpGet.withHost
 
@@ -221,7 +221,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj preStop.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn preStop.tcpSocket.withHost
 

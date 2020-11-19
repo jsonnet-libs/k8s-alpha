@@ -120,7 +120,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 
 ## obj lastState.terminated
 
-
+ContainerStateTerminated is a terminated state of a container.
 
 ### fn lastState.terminated.withContainerID
 
@@ -180,7 +180,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 
 ## obj lastState.waiting
 
-
+ContainerStateWaiting is a waiting state of a container.
 
 ### fn lastState.waiting.withMessage
 

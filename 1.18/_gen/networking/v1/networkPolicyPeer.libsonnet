@@ -8,7 +8,7 @@
     '#withExcept':: d.fn(help='Except is a slice of CIDRs that should not be included within an IP Block Valid examples are "192.168.1.1/24" or "2001:db9::/64" Except values will be rejected if they are outside the CIDR range', args=[d.arg(name='except', type=d.T.array)]),
     withExcept(except): { ipBlock+: { except: if std.isArray(v=except) then except else [except] } },
     '#withExceptMixin':: d.fn(help='Except is a slice of CIDRs that should not be included within an IP Block Valid examples are "192.168.1.1/24" or "2001:db9::/64" Except values will be rejected if they are outside the CIDR range\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='except', type=d.T.array)]),
-    withExceptMixin(except): { ipBlock+: { except+: if std.isArray(v=except) then except else [except] } }
+    withExceptMixin(except): { ipBlock+: { except+: if std.isArray(v=except) then except else [except] } },
   },
   '#namespaceSelector':: d.obj(help='A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.'),
   namespaceSelector: {
@@ -19,7 +19,7 @@
     '#withMatchLabels':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.', args=[d.arg(name='matchLabels', type=d.T.object)]),
     withMatchLabels(matchLabels): { namespaceSelector+: { matchLabels: matchLabels } },
     '#withMatchLabelsMixin':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
-    withMatchLabelsMixin(matchLabels): { namespaceSelector+: { matchLabels+: matchLabels } }
+    withMatchLabelsMixin(matchLabels): { namespaceSelector+: { matchLabels+: matchLabels } },
   },
   '#podSelector':: d.obj(help='A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.'),
   podSelector: {
@@ -30,8 +30,8 @@
     '#withMatchLabels':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.', args=[d.arg(name='matchLabels', type=d.T.object)]),
     withMatchLabels(matchLabels): { podSelector+: { matchLabels: matchLabels } },
     '#withMatchLabelsMixin':: d.fn(help='matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is "key", the operator is "In", and the values array contains only "value". The requirements are ANDed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='matchLabels', type=d.T.object)]),
-    withMatchLabelsMixin(matchLabels): { podSelector+: { matchLabels+: matchLabels } }
+    withMatchLabelsMixin(matchLabels): { podSelector+: { matchLabels+: matchLabels } },
   },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

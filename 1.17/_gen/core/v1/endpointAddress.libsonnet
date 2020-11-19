@@ -14,7 +14,7 @@
     '#withResourceVersion':: d.fn(help='Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency', args=[d.arg(name='resourceVersion', type=d.T.string)]),
     withResourceVersion(resourceVersion): { targetRef+: { resourceVersion: resourceVersion } },
     '#withUid':: d.fn(help='UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids', args=[d.arg(name='uid', type=d.T.string)]),
-    withUid(uid): { targetRef+: { uid: uid } }
+    withUid(uid): { targetRef+: { uid: uid } },
   },
   '#withHostname':: d.fn(help='The Hostname of this endpoint', args=[d.arg(name='hostname', type=d.T.string)]),
   withHostname(hostname): { hostname: hostname },
@@ -23,5 +23,5 @@
   '#withNodeName':: d.fn(help='Optional: Node hosting this endpoint. This can be used to determine endpoints local to a node.', args=[d.arg(name='nodeName', type=d.T.string)]),
   withNodeName(nodeName): { nodeName: nodeName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

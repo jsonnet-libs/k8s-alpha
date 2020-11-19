@@ -8,5 +8,5 @@
   '#withToken':: d.fn(help='Token is the opaque bearer token.', args=[d.arg(name='token', type=d.T.string)]),
   withToken(token): { token: token },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

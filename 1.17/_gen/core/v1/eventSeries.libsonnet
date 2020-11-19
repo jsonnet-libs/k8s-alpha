@@ -8,5 +8,5 @@
   '#withState':: d.fn(help='State of this Series: Ongoing or Finished Deprecated. Planned removal for 1.18', args=[d.arg(name='state', type=d.T.string)]),
   withState(state): { state: state },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -10,5 +10,5 @@
   '#withReadOnly':: d.fn(help='ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false. More info: https://kubernetes.io/docs/concepts/storage/volumes#gcepersistentdisk', args=[d.arg(name='readOnly', type=d.T.boolean)]),
   withReadOnly(readOnly): { readOnly: readOnly },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

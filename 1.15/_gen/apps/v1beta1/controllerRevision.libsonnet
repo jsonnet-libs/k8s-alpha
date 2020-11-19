@@ -1,10 +1,10 @@
 {
   local d = (import 'doc-util/main.libsonnet'),
   '#':: d.pkg(name='controllerRevision', url='', help='DEPRECATED - This group version of ControllerRevision is deprecated by apps/v1beta2/ControllerRevision. See the release notes for more information. ControllerRevision implements an immutable snapshot of state data. Clients are responsible for serializing and deserializing the objects that contain their internal state. Once a ControllerRevision has been successfully created, it can not be updated. The API Server will fail validation of all requests that attempt to mutate the Data field. ControllerRevisions may, however, be deleted. Note that, due to its use by both the DaemonSet and StatefulSet controllers for update and rollback, this object is beta. However, it may be subject to name and representation changes in future releases, and clients should not depend on its stability. It is primarily for internal use by controllers.'),
-  '#data':: d.obj(help="RawExtension is used to hold extensions in external versions.\n\nTo use this, make a field which has RawExtension as its type in your external, versioned struct, and Object in your internal struct. You also need to register your various plugin types.\n\n// Internal package: type MyAPIObject struct {\n	runtime.TypeMeta `json:',inline'`\n	MyPlugin runtime.Object `json:'myPlugin'`\n} type PluginA struct {\n	AOption string `json:'aOption'`\n}\n\n// External package: type MyAPIObject struct {\n	runtime.TypeMeta `json:',inline'`\n	MyPlugin runtime.RawExtension `json:'myPlugin'`\n} type PluginA struct {\n	AOption string `json:'aOption'`\n}\n\n// On the wire, the JSON will look something like this: {\n	'kind':'MyAPIObject',\n	'apiVersion':'v1',\n	'myPlugin': {\n		'kind':'PluginA',\n		'aOption':'foo',\n	},\n}\n\nSo what happens? Decode first uses json or yaml to unmarshal the serialized data into your external MyAPIObject. That causes the raw JSON to be stored, but not unpacked. The next step is to copy (using pkg/conversion) into the internal struct. The runtime package's DefaultScheme has conversion functions installed which will unpack the JSON stored in RawExtension, turning it into the correct object type, and storing it in the Object. (TODO: In the case where the object is of an unknown type, a runtime.Unknown object will be created and stored.)"),
+  '#data':: d.obj(help="RawExtension is used to hold extensions in external versions.\n\nTo use this, make a field which has RawExtension as its type in your external, versioned struct, and Object in your internal struct. You also need to register your various plugin types.\n\n// Internal package: type MyAPIObject struct {\n\truntime.TypeMeta `json:',inline'`\n\tMyPlugin runtime.Object `json:'myPlugin'`\n} type PluginA struct {\n\tAOption string `json:'aOption'`\n}\n\n// External package: type MyAPIObject struct {\n\truntime.TypeMeta `json:',inline'`\n\tMyPlugin runtime.RawExtension `json:'myPlugin'`\n} type PluginA struct {\n\tAOption string `json:'aOption'`\n}\n\n// On the wire, the JSON will look something like this: {\n\t'kind':'MyAPIObject',\n\t'apiVersion':'v1',\n\t'myPlugin': {\n\t\t'kind':'PluginA',\n\t\t'aOption':'foo',\n\t},\n}\n\nSo what happens? Decode first uses json or yaml to unmarshal the serialized data into your external MyAPIObject. That causes the raw JSON to be stored, but not unpacked. The next step is to copy (using pkg/conversion) into the internal struct. The runtime package's DefaultScheme has conversion functions installed which will unpack the JSON stored in RawExtension, turning it into the correct object type, and storing it in the Object. (TODO: In the case where the object is of an unknown type, a runtime.Unknown object will be created and stored.)"),
   data: {
     '#withRaw':: d.fn(help='Raw is the underlying serialization of this object.', args=[d.arg(name='raw', type=d.T.string)]),
-    withRaw(raw): { data+: { raw: raw } }
+    withRaw(raw): { data+: { raw: raw } },
   },
   '#metadata':: d.obj(help='ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.'),
   metadata: {
@@ -27,7 +27,7 @@
           '#withRetryAfterSeconds':: d.fn(help='If specified, the time in seconds before the operation should be retried. Some errors may indicate the client must take an alternate action - for those errors this field may indicate how long to wait before taking the alternate action.', args=[d.arg(name='retryAfterSeconds', type=d.T.integer)]),
           withRetryAfterSeconds(retryAfterSeconds): { metadata+: { initializers+: { result+: { details+: { retryAfterSeconds: retryAfterSeconds } } } } },
           '#withUid':: d.fn(help='UID of the resource. (when there is a single resource which can be described). More info: http://kubernetes.io/docs/user-guide/identifiers#uids', args=[d.arg(name='uid', type=d.T.string)]),
-          withUid(uid): { metadata+: { initializers+: { result+: { details+: { uid: uid } } } } }
+          withUid(uid): { metadata+: { initializers+: { result+: { details+: { uid: uid } } } } },
         },
         '#withCode':: d.fn(help='Suggested HTTP return code for this status, 0 if not set.', args=[d.arg(name='code', type=d.T.integer)]),
         withCode(code): { metadata+: { initializers+: { result+: { code: code } } } },
@@ -38,12 +38,12 @@
         '#withMetadata':: d.fn(help='Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/api-conventions.md#types-kinds', args=[d.arg(name='metadata', type=d.T.any)]),
         withMetadata(metadata): { metadata+: { initializers+: { result+: { metadata: metadata } } } },
         '#withReason':: d.fn(help='A machine-readable description of why this operation is in the "Failure" status. If this value is empty there is no information available. A Reason clarifies an HTTP status code but does not override it.', args=[d.arg(name='reason', type=d.T.string)]),
-        withReason(reason): { metadata+: { initializers+: { result+: { reason: reason } } } }
+        withReason(reason): { metadata+: { initializers+: { result+: { reason: reason } } } },
       },
       '#withPending':: d.fn(help='Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients.', args=[d.arg(name='pending', type=d.T.array)]),
       withPending(pending): { metadata+: { initializers+: { pending: if std.isArray(v=pending) then pending else [pending] } } },
       '#withPendingMixin':: d.fn(help='Pending is a list of initializers that must execute in order before this object is visible. When the last pending initializer is removed, and no failing result is set, the initializers struct will be set to nil and the object is considered as initialized and visible to all clients.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='pending', type=d.T.array)]),
-      withPendingMixin(pending): { metadata+: { initializers+: { pending+: if std.isArray(v=pending) then pending else [pending] } } }
+      withPendingMixin(pending): { metadata+: { initializers+: { pending+: if std.isArray(v=pending) then pending else [pending] } } },
     },
     '#withAnnotations':: d.fn(help='Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations', args=[d.arg(name='annotations', type=d.T.object)]),
     withAnnotations(annotations): { metadata+: { annotations: annotations } },
@@ -86,15 +86,15 @@
     '#withSelfLink':: d.fn(help='SelfLink is a URL representing this object. Populated by the system. Read-only.', args=[d.arg(name='selfLink', type=d.T.string)]),
     withSelfLink(selfLink): { metadata+: { selfLink: selfLink } },
     '#withUid':: d.fn(help='UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.\n\nPopulated by the system. Read-only. More info: http://kubernetes.io/docs/user-guide/identifiers#uids', args=[d.arg(name='uid', type=d.T.string)]),
-    withUid(uid): { metadata+: { uid: uid } }
+    withUid(uid): { metadata+: { uid: uid } },
   },
   '#new':: d.fn(help='new returns an instance of Controllerrevision', args=[d.arg(name='name', type=d.T.string)]),
   new(name): {
     apiVersion: 'apps/v1beta1',
-    kind: 'ControllerRevision'
+    kind: 'ControllerRevision',
   } + self.metadata.withName(name=name),
   '#withRevision':: d.fn(help='Revision indicates the revision of the state represented by Data.', args=[d.arg(name='revision', type=d.T.integer)]),
   withRevision(revision): { revision: revision },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

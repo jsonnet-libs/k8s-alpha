@@ -4,7 +4,7 @@
   '#secretRef':: d.obj(help='LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.'),
   secretRef: {
     '#withName':: d.fn(help='Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names', args=[d.arg(name='name', type=d.T.string)]),
-    withName(name): { secretRef+: { name: name } }
+    withName(name): { secretRef+: { name: name } },
   },
   '#withMonitors':: d.fn(help='Required: Monitors is a collection of Ceph monitors More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it', args=[d.arg(name='monitors', type=d.T.array)]),
   withMonitors(monitors): { monitors: if std.isArray(v=monitors) then monitors else [monitors] },
@@ -19,5 +19,5 @@
   '#withUser':: d.fn(help='Optional: User is the rados user name, default is admin More info: https://releases.k8s.io/HEAD/examples/volumes/cephfs/README.md#how-to-use-it', args=[d.arg(name='user', type=d.T.string)]),
   withUser(user): { user: user },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

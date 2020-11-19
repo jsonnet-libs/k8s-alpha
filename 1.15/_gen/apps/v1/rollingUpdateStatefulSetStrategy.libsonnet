@@ -4,5 +4,5 @@
   '#withPartition':: d.fn(help='Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.', args=[d.arg(name='partition', type=d.T.integer)]),
   withPartition(partition): { partition: partition },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

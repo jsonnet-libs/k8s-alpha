@@ -14,5 +14,5 @@
   '#withScheme':: d.fn(help='Scheme to use for connecting to the host. Defaults to HTTP.', args=[d.arg(name='scheme', type=d.T.string)]),
   withScheme(scheme): { scheme: scheme },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

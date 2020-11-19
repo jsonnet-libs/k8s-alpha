@@ -6,7 +6,7 @@
     '#withPath':: d.fn(help='Path is the URL path of the request', args=[d.arg(name='path', type=d.T.string)]),
     withPath(path): { nonResourceAttributes+: { path: path } },
     '#withVerb':: d.fn(help='Verb is the standard HTTP verb', args=[d.arg(name='verb', type=d.T.string)]),
-    withVerb(verb): { nonResourceAttributes+: { verb: verb } }
+    withVerb(verb): { nonResourceAttributes+: { verb: verb } },
   },
   '#resourceAttributes':: d.obj(help='ResourceAttributes includes the authorization attributes available for resource requests to the Authorizer interface'),
   resourceAttributes: {
@@ -23,7 +23,7 @@
     '#withVerb':: d.fn(help='Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  "*" means all.', args=[d.arg(name='verb', type=d.T.string)]),
     withVerb(verb): { resourceAttributes+: { verb: verb } },
     '#withVersion':: d.fn(help='Version is the API Version of the Resource.  "*" means all.', args=[d.arg(name='version', type=d.T.string)]),
-    withVersion(version): { resourceAttributes+: { version: version } }
+    withVersion(version): { resourceAttributes+: { version: version } },
   },
   '#withExtra':: d.fn(help='Extra corresponds to the user.Info.GetExtra() method from the authenticator.  Since that is input to the authorizer it needs a reflection here.', args=[d.arg(name='extra', type=d.T.object)]),
   withExtra(extra): { extra: extra },
@@ -38,5 +38,5 @@
   '#withUser':: d.fn(help="User is the user you're testing for. If you specify 'User' but not 'Group', then is it interpreted as 'What if User were not a member of any groups", args=[d.arg(name='user', type=d.T.string)]),
   withUser(user): { user: user },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

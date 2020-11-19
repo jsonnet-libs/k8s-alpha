@@ -4,5 +4,5 @@
   '#withReplicas':: d.fn(help='desired number of instances for the scaled object.', args=[d.arg(name='replicas', type=d.T.integer)]),
   withReplicas(replicas): { replicas: replicas },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -260,9 +260,7 @@ withType(type)
 
 ## obj spec.limited
 
-LimitedPriorityLevelConfiguration specifies how to handle requests that are subject to limits. It addresses two issues:
- * How are requests for this priority level limited?
- * What should be done with requests that exceed the limit?
+
 
 ### fn spec.limited.withAssuredConcurrencyShares
 
@@ -278,7 +276,7 @@ bigger numbers of ACS mean more reserved concurrent requests (at the expense of 
 
 ## obj spec.limited.limitResponse
 
-LimitResponse defines how to handle requests that can not be executed right now.
+
 
 ### fn spec.limited.limitResponse.withType
 

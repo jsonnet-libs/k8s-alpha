@@ -13,5 +13,5 @@
   subjectAccessReview: (import 'subjectAccessReview.libsonnet'),
   subjectAccessReviewSpec: (import 'subjectAccessReviewSpec.libsonnet'),
   subjectAccessReviewStatus: (import 'subjectAccessReviewStatus.libsonnet'),
-  subjectRulesReviewStatus: (import 'subjectRulesReviewStatus.libsonnet')
+  subjectRulesReviewStatus: (import 'subjectRulesReviewStatus.libsonnet'),
 }

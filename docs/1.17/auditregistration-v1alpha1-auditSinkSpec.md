@@ -129,7 +129,7 @@ If specified, the port on the service that hosting webhook. Default to 443 for b
 
 ## obj webhook.throttle
 
-
+WebhookThrottleConfig holds the configuration for throttling events
 
 ### fn webhook.throttle.withBurst
 

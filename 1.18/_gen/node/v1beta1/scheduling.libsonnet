@@ -10,5 +10,5 @@
   '#withTolerationsMixin':: d.fn(help='tolerations are appended (excluding duplicates) to pods running with this RuntimeClass during admission, effectively unioning the set of nodes tolerated by the pod and the RuntimeClass.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='tolerations', type=d.T.array)]),
   withTolerationsMixin(tolerations): { tolerations+: if std.isArray(v=tolerations) then tolerations else [tolerations] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

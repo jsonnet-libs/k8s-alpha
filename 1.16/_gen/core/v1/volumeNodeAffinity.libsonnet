@@ -6,8 +6,8 @@
     '#withNodeSelectorTerms':: d.fn(help='Required. A list of node selector terms. The terms are ORed.', args=[d.arg(name='nodeSelectorTerms', type=d.T.array)]),
     withNodeSelectorTerms(nodeSelectorTerms): { required+: { nodeSelectorTerms: if std.isArray(v=nodeSelectorTerms) then nodeSelectorTerms else [nodeSelectorTerms] } },
     '#withNodeSelectorTermsMixin':: d.fn(help='Required. A list of node selector terms. The terms are ORed.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='nodeSelectorTerms', type=d.T.array)]),
-    withNodeSelectorTermsMixin(nodeSelectorTerms): { required+: { nodeSelectorTerms+: if std.isArray(v=nodeSelectorTerms) then nodeSelectorTerms else [nodeSelectorTerms] } }
+    withNodeSelectorTermsMixin(nodeSelectorTerms): { required+: { nodeSelectorTerms+: if std.isArray(v=nodeSelectorTerms) then nodeSelectorTerms else [nodeSelectorTerms] } },
   },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -12,5 +12,5 @@
   '#withSecretName':: d.fn(help="Name of the secret in the pod's namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret", args=[d.arg(name='secretName', type=d.T.string)]),
   withSecretName(secretName): { secretName: secretName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

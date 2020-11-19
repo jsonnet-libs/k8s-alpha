@@ -6,5 +6,5 @@
   '#withName':: d.fn(help='Name of the attached volume', args=[d.arg(name='name', type=d.T.string)]),
   withName(name): { name: name },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

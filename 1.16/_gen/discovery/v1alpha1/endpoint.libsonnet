@@ -4,7 +4,7 @@
   '#conditions':: d.obj(help='EndpointConditions represents the current condition of an endpoint.'),
   conditions: {
     '#withReady':: d.fn(help='ready indicates that this endpoint is prepared to receive traffic, according to whatever system is managing the endpoint. A nil value indicates an unknown state. In most cases consumers should interpret this unknown state as ready.', args=[d.arg(name='ready', type=d.T.boolean)]),
-    withReady(ready): { conditions+: { ready: ready } }
+    withReady(ready): { conditions+: { ready: ready } },
   },
   '#targetRef':: d.obj(help='ObjectReference contains enough information to let you inspect or modify the referred object.'),
   targetRef: {
@@ -19,7 +19,7 @@
     '#withResourceVersion':: d.fn(help='Specific resourceVersion to which this reference is made, if any. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency', args=[d.arg(name='resourceVersion', type=d.T.string)]),
     withResourceVersion(resourceVersion): { targetRef+: { resourceVersion: resourceVersion } },
     '#withUid':: d.fn(help='UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#uids', args=[d.arg(name='uid', type=d.T.string)]),
-    withUid(uid): { targetRef+: { uid: uid } }
+    withUid(uid): { targetRef+: { uid: uid } },
   },
   '#withAddresses':: d.fn(help='addresses of this endpoint. The contents of this field are interpreted according to the corresponding EndpointSlice addressType field. This allows for cases like dual-stack (IPv4 and IPv6) networking. Consumers (e.g. kube-proxy) must handle different types of addresses in the context of their own capabilities. This must contain at least one address but no more than 100.', args=[d.arg(name='addresses', type=d.T.array)]),
   withAddresses(addresses): { addresses: if std.isArray(v=addresses) then addresses else [addresses] },
@@ -32,5 +32,5 @@
   '#withTopologyMixin':: d.fn(help='topology contains arbitrary topology information associated with the endpoint. These key/value pairs must conform with the label format. https://kubernetes.io/docs/concepts/overview/working-with-objects/labels Topology may include a maximum of 16 key/value pairs. This includes, but is not limited to the following well known keys: * kubernetes.io/hostname: the value indicates the hostname of the node\n  where the endpoint is located. This should match the corresponding\n  node label.\n* topology.kubernetes.io/zone: the value indicates the zone where the\n  endpoint is located. This should match the corresponding node label.\n* topology.kubernetes.io/region: the value indicates the region where the\n  endpoint is located. This should match the corresponding node label.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='topology', type=d.T.object)]),
   withTopologyMixin(topology): { topology+: topology },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

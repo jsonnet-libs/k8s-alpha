@@ -8,5 +8,5 @@
   '#withRevision':: d.fn(help='Commit hash for the specified revision.', args=[d.arg(name='revision', type=d.T.string)]),
   withRevision(revision): { revision: revision },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

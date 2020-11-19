@@ -7,5 +7,5 @@
   horizontalPodAutoscalerStatus: (import 'horizontalPodAutoscalerStatus.libsonnet'),
   scale: (import 'scale.libsonnet'),
   scaleSpec: (import 'scaleSpec.libsonnet'),
-  scaleStatus: (import 'scaleStatus.libsonnet')
+  scaleStatus: (import 'scaleStatus.libsonnet'),
 }

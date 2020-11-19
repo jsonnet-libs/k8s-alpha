@@ -8,5 +8,5 @@
   '#withStagesMixin':: d.fn(help='Stages is a list of stages for which events are created.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='stages', type=d.T.array)]),
   withStagesMixin(stages): { stages+: if std.isArray(v=stages) then stages else [stages] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -14,5 +14,5 @@
   '#withVolume':: d.fn(help='Volume is a string that references an already created Quobyte volume by name.', args=[d.arg(name='volume', type=d.T.string)]),
   withVolume(volume): { volume: volume },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

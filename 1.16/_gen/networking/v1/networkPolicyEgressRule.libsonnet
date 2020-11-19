@@ -10,5 +10,5 @@
   '#withToMixin':: d.fn(help='List of destinations for outgoing traffic of pods selected for this rule. Items in this list are combined using a logical OR operation. If this field is empty or missing, this rule matches all destinations (traffic not restricted by destination). If this field is present and contains at least one item, this rule allows traffic only if the traffic matches at least one item in the to list.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='to', type=d.T.array)]),
   withToMixin(to): { to+: if std.isArray(v=to) then to else [to] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

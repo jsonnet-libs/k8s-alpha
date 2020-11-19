@@ -10,5 +10,5 @@
   '#withType':: d.fn(help='Type of statefulset condition.', args=[d.arg(name='type', type=d.T.string)]),
   withType(type): { type: type },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

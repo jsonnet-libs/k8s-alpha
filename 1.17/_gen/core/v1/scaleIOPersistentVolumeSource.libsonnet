@@ -6,7 +6,7 @@
     '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { secretRef+: { name: name } },
     '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-    withNamespace(namespace): { secretRef+: { namespace: namespace } }
+    withNamespace(namespace): { secretRef+: { namespace: namespace } },
   },
   '#withFsType':: d.fn(help='Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. "ext4", "xfs", "ntfs". Default is "xfs"', args=[d.arg(name='fsType', type=d.T.string)]),
   withFsType(fsType): { fsType: fsType },
@@ -27,5 +27,5 @@
   '#withVolumeName':: d.fn(help='The name of a volume already created in the ScaleIO system that is associated with this volume source.', args=[d.arg(name='volumeName', type=d.T.string)]),
   withVolumeName(volumeName): { volumeName: volumeName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

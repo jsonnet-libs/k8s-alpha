@@ -10,5 +10,5 @@
   '#withReason':: d.fn(help='Reason is optional.  It indicates why a request was allowed or denied.', args=[d.arg(name='reason', type=d.T.string)]),
   withReason(reason): { reason: reason },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

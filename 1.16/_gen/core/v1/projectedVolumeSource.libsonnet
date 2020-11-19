@@ -8,5 +8,5 @@
   '#withSourcesMixin':: d.fn(help='list of volume projections\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='sources', type=d.T.array)]),
   withSourcesMixin(sources): { sources+: if std.isArray(v=sources) then sources else [sources] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -6,7 +6,7 @@
     '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { secretRef+: { name: name } },
     '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-    withNamespace(namespace): { secretRef+: { namespace: namespace } }
+    withNamespace(namespace): { secretRef+: { namespace: namespace } },
   },
   '#withFsType':: d.fn(help='Filesystem type to mount. Must be a filesystem type supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://examples.k8s.io/mysql-cinder-pd/README.md', args=[d.arg(name='fsType', type=d.T.string)]),
   withFsType(fsType): { fsType: fsType },
@@ -15,5 +15,5 @@
   '#withVolumeID':: d.fn(help='volume id used to identify the volume in cinder. More info: https://examples.k8s.io/mysql-cinder-pd/README.md', args=[d.arg(name='volumeID', type=d.T.string)]),
   withVolumeID(volumeID): { volumeID: volumeID },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

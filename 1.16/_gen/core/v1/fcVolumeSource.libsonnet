@@ -16,5 +16,5 @@
   '#withWwidsMixin':: d.fn(help='Optional: FC volume world wide identifiers (wwids) Either wwids or combination of targetWWNs and lun must be set, but not both simultaneously.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='wwids', type=d.T.array)]),
   withWwidsMixin(wwids): { wwids+: if std.isArray(v=wwids) then wwids else [wwids] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

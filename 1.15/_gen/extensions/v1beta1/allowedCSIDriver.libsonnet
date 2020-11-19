@@ -4,5 +4,5 @@
   '#withName':: d.fn(help='Name is the registered name of the CSI driver', args=[d.arg(name='name', type=d.T.string)]),
   withName(name): { name: name },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -323,7 +323,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
 ## obj spec.webhook.clientConfig.service
 
-ServiceReference holds a reference to Service.legacy.k8s.io
+
 
 ### fn spec.webhook.clientConfig.service.withName
 
@@ -359,7 +359,7 @@ If specified, the port on the service that hosting webhook. Default to 443 for b
 
 ## obj spec.webhook.throttle
 
-
+WebhookThrottleConfig holds the configuration for throttling events
 
 ### fn spec.webhook.throttle.withBurst
 

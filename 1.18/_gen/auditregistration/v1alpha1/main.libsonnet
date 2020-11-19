@@ -7,5 +7,5 @@
   serviceReference: (import 'serviceReference.libsonnet'),
   webhook: (import 'webhook.libsonnet'),
   webhookClientConfig: (import 'webhookClientConfig.libsonnet'),
-  webhookThrottleConfig: (import 'webhookThrottleConfig.libsonnet')
+  webhookThrottleConfig: (import 'webhookThrottleConfig.libsonnet'),
 }

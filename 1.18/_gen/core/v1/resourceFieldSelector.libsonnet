@@ -8,5 +8,5 @@
   '#withResource':: d.fn(help='Required: resource to select', args=[d.arg(name='resource', type=d.T.string)]),
   withResource(resource): { resource: resource },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

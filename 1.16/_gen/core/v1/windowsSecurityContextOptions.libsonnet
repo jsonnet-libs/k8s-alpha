@@ -8,5 +8,5 @@
   '#withRunAsUserName':: d.fn(help='The UserName in Windows to run the entrypoint of the container process. Defaults to the user specified in image metadata if unspecified. May also be set in PodSecurityContext. If set in both SecurityContext and PodSecurityContext, the value specified in SecurityContext takes precedence. This field is alpha-level and it is only honored by servers that enable the WindowsRunAsUserName feature flag.', args=[d.arg(name='runAsUserName', type=d.T.string)]),
   withRunAsUserName(runAsUserName): { runAsUserName: runAsUserName },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

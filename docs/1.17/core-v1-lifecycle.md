@@ -45,7 +45,7 @@ Handler defines a specific action that should be taken
 
 ## obj postStart.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn postStart.exec.withCommand
 

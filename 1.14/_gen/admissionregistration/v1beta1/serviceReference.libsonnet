@@ -8,5 +8,5 @@
   '#withPath':: d.fn(help='`path` is an optional URL path which will be sent in any request to this service.', args=[d.arg(name='path', type=d.T.string)]),
   withPath(path): { path: path },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -6,5 +6,5 @@
   '#withReadOnly':: d.fn(help='when set to true, will allow host volumes matching the pathPrefix only if all volume mounts are readOnly.', args=[d.arg(name='readOnly', type=d.T.boolean)]),
   withReadOnly(readOnly): { readOnly: readOnly },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -271,7 +271,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -453,7 +453,7 @@ Unschedulable controls node schedulability of new pods. By default, node is sche
 
 ## obj spec.configSource
 
-NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.
+
 
 ## obj spec.configSource.configMap
 

@@ -8,5 +8,5 @@
   '#withNamespace':: d.fn(help='Namespace of the referenced object.  If the object kind is non-namespace, such as "User" or "Group", and this value is not empty the Authorizer should report an error.', args=[d.arg(name='namespace', type=d.T.string)]),
   withNamespace(namespace): { namespace: namespace },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

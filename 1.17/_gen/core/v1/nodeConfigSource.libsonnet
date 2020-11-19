@@ -12,8 +12,8 @@
     '#withResourceVersion':: d.fn(help='ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='resourceVersion', type=d.T.string)]),
     withResourceVersion(resourceVersion): { configMap+: { resourceVersion: resourceVersion } },
     '#withUid':: d.fn(help='UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.', args=[d.arg(name='uid', type=d.T.string)]),
-    withUid(uid): { configMap+: { uid: uid } }
+    withUid(uid): { configMap+: { uid: uid } },
   },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

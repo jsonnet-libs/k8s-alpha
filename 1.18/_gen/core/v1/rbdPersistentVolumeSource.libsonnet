@@ -6,7 +6,7 @@
     '#withName':: d.fn(help='Name is unique within a namespace to reference a secret resource.', args=[d.arg(name='name', type=d.T.string)]),
     withName(name): { secretRef+: { name: name } },
     '#withNamespace':: d.fn(help='Namespace defines the space within which the secret name must be unique.', args=[d.arg(name='namespace', type=d.T.string)]),
-    withNamespace(namespace): { secretRef+: { namespace: namespace } }
+    withNamespace(namespace): { secretRef+: { namespace: namespace } },
   },
   '#withFsType':: d.fn(help='Filesystem type of the volume that you want to mount. Tip: Ensure that the filesystem type is supported by the host operating system. Examples: "ext4", "xfs", "ntfs". Implicitly inferred to be "ext4" if unspecified. More info: https://kubernetes.io/docs/concepts/storage/volumes#rbd', args=[d.arg(name='fsType', type=d.T.string)]),
   withFsType(fsType): { fsType: fsType },
@@ -25,5 +25,5 @@
   '#withUser':: d.fn(help='The rados user name. Default is admin. More info: https://examples.k8s.io/volumes/rbd/README.md#how-to-use-it', args=[d.arg(name='user', type=d.T.string)]),
   withUser(user): { user: user },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

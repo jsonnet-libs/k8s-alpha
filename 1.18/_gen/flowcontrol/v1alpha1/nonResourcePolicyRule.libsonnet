@@ -10,5 +10,5 @@
   '#withVerbsMixin':: d.fn(help='`verbs` is a list of matching verbs and may not be empty. "*" matches all verbs. If it is present, it must be the only entry. Required.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='verbs', type=d.T.array)]),
   withVerbsMixin(verbs): { verbs+: if std.isArray(v=verbs) then verbs else [verbs] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

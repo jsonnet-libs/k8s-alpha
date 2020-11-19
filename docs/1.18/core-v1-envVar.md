@@ -77,7 +77,7 @@ EnvVarSource represents a source for the value of an EnvVar.
 
 ## obj valueFrom.configMapKeyRef
 
-
+Selects a key from a ConfigMap.
 
 ### fn valueFrom.configMapKeyRef.withKey
 
@@ -105,7 +105,7 @@ Specify whether the ConfigMap or its key must be defined
 
 ## obj valueFrom.fieldRef
 
-ObjectFieldSelector selects an APIVersioned field of an object.
+
 
 ### fn valueFrom.fieldRef.withFieldPath
 
@@ -117,7 +117,7 @@ Path of the field to select in the specified API version.
 
 ## obj valueFrom.resourceFieldRef
 
-ResourceFieldSelector represents container resources (cpu, memory) and their output format
+
 
 ### fn valueFrom.resourceFieldRef.withContainerName
 
@@ -175,7 +175,7 @@ Required: resource to select
 
 ## obj valueFrom.secretKeyRef
 
-SecretKeySelector selects a key of a Secret.
+
 
 ### fn valueFrom.secretKeyRef.withKey
 

@@ -437,7 +437,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj jobTemplate.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn jobTemplate.metadata.initializers.withPending
 
@@ -459,7 +459,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj jobTemplate.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn jobTemplate.metadata.initializers.result.withCode
 
@@ -503,7 +503,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj jobTemplate.metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn jobTemplate.metadata.initializers.result.details.withCauses
 
@@ -857,7 +857,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj jobTemplate.spec.template.metadata.initializers
 
-Initializers tracks the progress of initialization.
+
 
 ### fn jobTemplate.spec.template.metadata.initializers.withPending
 
@@ -879,7 +879,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj jobTemplate.spec.template.metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn jobTemplate.spec.template.metadata.initializers.result.withCode
 
@@ -923,7 +923,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj jobTemplate.spec.template.metadata.initializers.result.details
 
-
+StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
 
 ### fn jobTemplate.spec.template.metadata.initializers.result.details.withCauses
 
@@ -985,7 +985,7 @@ UID of the resource. (when there is a single resource which can be described). M
 
 ## obj jobTemplate.spec.template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn jobTemplate.spec.template.spec.withActiveDeadlineSeconds
 
@@ -1293,7 +1293,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj jobTemplate.spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj jobTemplate.spec.template.spec.affinity.nodeAffinity
 
@@ -1341,7 +1341,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj jobTemplate.spec.template.spec.affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn jobTemplate.spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1381,7 +1381,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj jobTemplate.spec.template.spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn jobTemplate.spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1555,7 +1555,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1591,7 +1591,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj jobTemplate.spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn jobTemplate.spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

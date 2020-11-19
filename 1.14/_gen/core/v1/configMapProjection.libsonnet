@@ -10,5 +10,5 @@
   '#withOptional':: d.fn(help="Specify whether the ConfigMap or it's keys must be defined", args=[d.arg(name='optional', type=d.T.boolean)]),
   withOptional(optional): { optional: optional },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

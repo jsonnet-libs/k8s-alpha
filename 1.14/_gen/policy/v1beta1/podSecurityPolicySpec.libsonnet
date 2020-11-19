@@ -8,7 +8,7 @@
     '#withRangesMixin':: d.fn(help='ranges are the allowed ranges of fs groups.  If you would like to force a single fs group then supply a single range with the same start and end. Required for MustRunAs.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='ranges', type=d.T.array)]),
     withRangesMixin(ranges): { fsGroup+: { ranges+: if std.isArray(v=ranges) then ranges else [ranges] } },
     '#withRule':: d.fn(help='rule is the strategy that will dictate what FSGroup is used in the SecurityContext.', args=[d.arg(name='rule', type=d.T.string)]),
-    withRule(rule): { fsGroup+: { rule: rule } }
+    withRule(rule): { fsGroup+: { rule: rule } },
   },
   '#runAsGroup':: d.obj(help='RunAsGroupStrategyOptions defines the strategy type and any options used to create the strategy.'),
   runAsGroup: {
@@ -17,7 +17,7 @@
     '#withRangesMixin':: d.fn(help='ranges are the allowed ranges of gids that may be used. If you would like to force a single gid then supply a single range with the same start and end. Required for MustRunAs.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='ranges', type=d.T.array)]),
     withRangesMixin(ranges): { runAsGroup+: { ranges+: if std.isArray(v=ranges) then ranges else [ranges] } },
     '#withRule':: d.fn(help='rule is the strategy that will dictate the allowable RunAsGroup values that may be set.', args=[d.arg(name='rule', type=d.T.string)]),
-    withRule(rule): { runAsGroup+: { rule: rule } }
+    withRule(rule): { runAsGroup+: { rule: rule } },
   },
   '#runAsUser':: d.obj(help='RunAsUserStrategyOptions defines the strategy type and any options used to create the strategy.'),
   runAsUser: {
@@ -26,7 +26,7 @@
     '#withRangesMixin':: d.fn(help='ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='ranges', type=d.T.array)]),
     withRangesMixin(ranges): { runAsUser+: { ranges+: if std.isArray(v=ranges) then ranges else [ranges] } },
     '#withRule':: d.fn(help='rule is the strategy that will dictate the allowable RunAsUser values that may be set.', args=[d.arg(name='rule', type=d.T.string)]),
-    withRule(rule): { runAsUser+: { rule: rule } }
+    withRule(rule): { runAsUser+: { rule: rule } },
   },
   '#seLinux':: d.obj(help='SELinuxStrategyOptions defines the strategy type and any options used to create the strategy.'),
   seLinux: {
@@ -39,10 +39,10 @@
       '#withType':: d.fn(help='Type is a SELinux type label that applies to the container.', args=[d.arg(name='type', type=d.T.string)]),
       withType(type): { seLinux+: { seLinuxOptions+: { type: type } } },
       '#withUser':: d.fn(help='User is a SELinux user label that applies to the container.', args=[d.arg(name='user', type=d.T.string)]),
-      withUser(user): { seLinux+: { seLinuxOptions+: { user: user } } }
+      withUser(user): { seLinux+: { seLinuxOptions+: { user: user } } },
     },
     '#withRule':: d.fn(help='rule is the strategy that will dictate the allowable labels that may be set.', args=[d.arg(name='rule', type=d.T.string)]),
-    withRule(rule): { seLinux+: { rule: rule } }
+    withRule(rule): { seLinux+: { rule: rule } },
   },
   '#supplementalGroups':: d.obj(help='SupplementalGroupsStrategyOptions defines the strategy type and options used to create the strategy.'),
   supplementalGroups: {
@@ -51,7 +51,7 @@
     '#withRangesMixin':: d.fn(help='ranges are the allowed ranges of supplemental groups.  If you would like to force a single supplemental group then supply a single range with the same start and end. Required for MustRunAs.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='ranges', type=d.T.array)]),
     withRangesMixin(ranges): { supplementalGroups+: { ranges+: if std.isArray(v=ranges) then ranges else [ranges] } },
     '#withRule':: d.fn(help='rule is the strategy that will dictate what supplemental groups is used in the SecurityContext.', args=[d.arg(name='rule', type=d.T.string)]),
-    withRule(rule): { supplementalGroups+: { rule: rule } }
+    withRule(rule): { supplementalGroups+: { rule: rule } },
   },
   '#withAllowPrivilegeEscalation':: d.fn(help='allowPrivilegeEscalation determines if a pod can request to allow privilege escalation. If unspecified, defaults to true.', args=[d.arg(name='allowPrivilegeEscalation', type=d.T.boolean)]),
   withAllowPrivilegeEscalation(allowPrivilegeEscalation): { allowPrivilegeEscalation: allowPrivilegeEscalation },
@@ -112,5 +112,5 @@
   '#withVolumesMixin':: d.fn(help="volumes is a white list of allowed volume plugins. Empty indicates that no volumes may be used. To allow all volumes you may use '*'.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='volumes', type=d.T.array)]),
   withVolumesMixin(volumes): { volumes+: if std.isArray(v=volumes) then volumes else [volumes] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

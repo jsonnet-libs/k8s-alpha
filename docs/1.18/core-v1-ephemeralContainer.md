@@ -364,7 +364,7 @@ Lifecycle describes actions that the management system should take in response t
 
 ## obj lifecycle.postStart.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn lifecycle.postStart.exec.withCommand
 
@@ -386,7 +386,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj lifecycle.postStart.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn lifecycle.postStart.httpGet.withHost
 
@@ -440,7 +440,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.postStart.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn lifecycle.postStart.tcpSocket.withHost
 
@@ -540,7 +540,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.preStop.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn lifecycle.preStop.tcpSocket.withHost
 
@@ -604,7 +604,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj livenessProbe.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn livenessProbe.exec.withCommand
 
@@ -680,7 +680,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj livenessProbe.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn livenessProbe.tcpSocket.withHost
 
@@ -744,7 +744,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj readinessProbe.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn readinessProbe.exec.withCommand
 
@@ -820,7 +820,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj readinessProbe.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn readinessProbe.tcpSocket.withHost
 
@@ -1164,7 +1164,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj startupProbe.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn startupProbe.tcpSocket.withHost
 

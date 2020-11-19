@@ -22,5 +22,5 @@
   '#withUpdatedReplicas':: d.fn(help='updatedReplicas is the number of Pods created by the StatefulSet controller from the StatefulSet version indicated by updateRevision.', args=[d.arg(name='updatedReplicas', type=d.T.integer)]),
   withUpdatedReplicas(updatedReplicas): { updatedReplicas: updatedReplicas },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

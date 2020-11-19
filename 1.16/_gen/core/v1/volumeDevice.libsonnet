@@ -6,5 +6,5 @@
   '#withName':: d.fn(help='name must match the name of a persistentVolumeClaim in the pod', args=[d.arg(name='name', type=d.T.string)]),
   withName(name): { name: name },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

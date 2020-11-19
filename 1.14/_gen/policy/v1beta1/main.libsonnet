@@ -16,5 +16,5 @@
   runAsGroupStrategyOptions: (import 'runAsGroupStrategyOptions.libsonnet'),
   runAsUserStrategyOptions: (import 'runAsUserStrategyOptions.libsonnet'),
   seLinuxStrategyOptions: (import 'seLinuxStrategyOptions.libsonnet'),
-  supplementalGroupsStrategyOptions: (import 'supplementalGroupsStrategyOptions.libsonnet')
+  supplementalGroupsStrategyOptions: (import 'supplementalGroupsStrategyOptions.libsonnet'),
 }

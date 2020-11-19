@@ -8,5 +8,5 @@
   '#withVolumeID':: d.fn(help='VolumeID uniquely identifies a Portworx volume', args=[d.arg(name='volumeID', type=d.T.string)]),
   withVolumeID(volumeID): { volumeID: volumeID },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

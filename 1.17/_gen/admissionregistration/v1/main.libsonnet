@@ -7,5 +7,5 @@
   serviceReference: (import 'serviceReference.libsonnet'),
   validatingWebhook: (import 'validatingWebhook.libsonnet'),
   validatingWebhookConfiguration: (import 'validatingWebhookConfiguration.libsonnet'),
-  webhookClientConfig: (import 'webhookClientConfig.libsonnet')
+  webhookClientConfig: (import 'webhookClientConfig.libsonnet'),
 }

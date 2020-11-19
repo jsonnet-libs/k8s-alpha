@@ -201,7 +201,7 @@ SessionAffinityConfig represents the configurations of session affinity.
 
 ## obj sessionAffinityConfig.clientIP
 
-ClientIPConfig represents the configurations of Client IP based session affinity.
+
 
 ### fn sessionAffinityConfig.clientIP.withTimeoutSeconds
 

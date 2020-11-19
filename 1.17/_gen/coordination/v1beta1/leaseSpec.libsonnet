@@ -12,5 +12,5 @@
   '#withRenewTime':: d.fn(help='MicroTime is version of Time with microsecond level precision.', args=[d.arg(name='renewTime', type=d.T.string)]),
   withRenewTime(renewTime): { renewTime: renewTime },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -6,5 +6,5 @@
   '#withVerb':: d.fn(help='Verb is the standard HTTP verb', args=[d.arg(name='verb', type=d.T.string)]),
   withVerb(verb): { verb: verb },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

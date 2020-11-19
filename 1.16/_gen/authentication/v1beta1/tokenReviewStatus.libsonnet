@@ -14,7 +14,7 @@
     '#withUid':: d.fn(help='A unique value that identifies this user across time. If this user is deleted and another user by the same name is added, they will have different UIDs.', args=[d.arg(name='uid', type=d.T.string)]),
     withUid(uid): { user+: { uid: uid } },
     '#withUsername':: d.fn(help='The name that uniquely identifies this user among all active users.', args=[d.arg(name='username', type=d.T.string)]),
-    withUsername(username): { user+: { username: username } }
+    withUsername(username): { user+: { username: username } },
   },
   '#withAudiences':: d.fn(help="Audiences are audience identifiers chosen by the authenticator that are compatible with both the TokenReview and token. An identifier is any identifier in the intersection of the TokenReviewSpec audiences and the token's audiences. A client of the TokenReview API that sets the spec.audiences field should validate that a compatible audience identifier is returned in the status.audiences field to ensure that the TokenReview server is audience aware. If a TokenReview returns an empty status.audience field where status.authenticated is 'true', the token is valid against the audience of the Kubernetes API server.", args=[d.arg(name='audiences', type=d.T.array)]),
   withAudiences(audiences): { audiences: if std.isArray(v=audiences) then audiences else [audiences] },
@@ -25,5 +25,5 @@
   '#withError':: d.fn(help="Error indicates that the token couldn't be checked", args=[d.arg(name='err', type=d.T.string)]),
   withError(err): { 'error': err },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

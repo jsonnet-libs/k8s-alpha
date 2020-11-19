@@ -10,5 +10,5 @@
   '#withUsedMixin':: d.fn(help='Used is the current observed total usage of the resource in the namespace.\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='used', type=d.T.object)]),
   withUsedMixin(used): { used+: used },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

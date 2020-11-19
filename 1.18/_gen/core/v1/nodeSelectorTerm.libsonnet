@@ -10,5 +10,5 @@
   '#withMatchFieldsMixin':: d.fn(help="A list of node selector requirements by node's fields.\n\n**Note:** This function appends passed data to existing values", args=[d.arg(name='matchFields', type=d.T.array)]),
   withMatchFieldsMixin(matchFields): { matchFields+: if std.isArray(v=matchFields) then matchFields else [matchFields] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }

@@ -6,5 +6,5 @@
   '#withItemsMixin':: d.fn(help='Items is a list of DownwardAPIVolume file\n\n**Note:** This function appends passed data to existing values', args=[d.arg(name='items', type=d.T.array)]),
   withItemsMixin(items): { items+: if std.isArray(v=items) then items else [items] },
   '#mixin': 'ignore',
-  mixin: self
+  mixin: self,
 }
