@@ -22,7 +22,7 @@ Then put the following into `lib/k.libsonnet`:
 
 ```
 
-> If you happen to use `ksonnet-lib/kausal.libsonnet`, also add:
+> If you happen to use `ksonnet-util/kausal.libsonnet`, also add:
 >
 > ```jsonnet
 > + (import "github.com/jsonnet-libs/k8s-alpha/1.18/extensions/kausal-shim.libsonnet")
@@ -63,6 +63,28 @@ your chance to be part of that!
 The original generator located at https://github.com/ksonnet/ksonnet-gen is not
 maintained anymore, and only provides artifacts for Kubernetes versions up to
 `v1.14`
+
+#### Can I use it to replace [ksonnet-lib](https://github.com/ksonnet/ksonnet-lib)?
+
+For most, yes, however there might be some incompatibilities. Engineers at
+Grafana Labs has been using `ksonnet-util/kausal.libsonnet` and they have replaced
+`ksonnet-lib` successfully in combination with aforementioned
+`kausal-shim.libsonnet`.
+
+Known incompatibilities:
+
+* `ksonnet-lib` has hidden objects that are exposed as 'Type' objects inside
+    other objects, for example `core.v1.container.envType`, these are now
+    available as first class citizens, for this example `core.v1.envVar`. The
+    `kausal-shim.libsonnet` covers this problem.
+* `new(name)` constructors have a mandatory `name` argument, this was not always
+    the case in `ksonnet-lib`. If you come across one of these cases, feel free
+    to make a PR similar to [#20](https://github.com/jsonnet-libs/k8s/pull/20)
+    to make it optional.
+* this library does not support chaining of functions, for example
+    `container.new(name).withEnv(env)`. Turns out this practice had a big
+    performance penalty on the Jsonnet compiler. A mixin pattern is therefor
+    encouraged: `container.new(name) + container.withEnv(env)`.
 
 #### What about [kube-jsonnet/k](https://github.com/kube-jsonnet/k)?
 
