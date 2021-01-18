@@ -60,22 +60,22 @@ maintained anymore, and only provides artifacts for Kubernetes versions up to
 
 #### Can I use it to replace [ksonnet-lib](https://github.com/ksonnet/ksonnet-lib)?
 
-For most, yes, however there might be some incompatibilities. Engineers at
-Grafana Labs has been using `ksonnet-util/kausal.libsonnet` and they have replaced
-`ksonnet-lib` successfully in combination with aforementioned
-`kausal-shim.libsonnet`.
+Yes, however there are a few incompatibilities. Most of them are now covered by
+[`ksonnet-util`](https://github.com/grafana/jsonnet-libs/blob/master/ksonnet-util/),
+please have a look here if you intend to support both libraries.
 
 Known incompatibilities:
 
 * `ksonnet-lib` has hidden objects that are exposed as 'Type' objects inside
     other objects, for example `core.v1.container.envType`, these are now
     available as first class citizens, for this example `core.v1.envVar`. The
-    `kausal-shim.libsonnet` covers this problem.
+    `ksonnet-util` covers this problem.
 * `new(name)` constructors have a mandatory `name` argument, this was not always
-    the case in `ksonnet-lib`. If you come across one of these cases, feel free
-    to make a PR similar to [#20](https://github.com/jsonnet-libs/k8s/pull/20)
-    to make it optional.
-* this library does not support chaining of functions, for example
+    the case in `ksonnet-lib`. The `ksonnet-util` covers this problem.
+* `ksonnet-lib` as nested many functions in `.mixin.`, `k8s-alpha` also supports
+    this. However, library maintainers should also include this if they intend
+    to support both libraries.
+* This library does not support chaining of functions, for example
     `container.new(name).withEnv(env)`. Turns out this practice had a big
     performance penalty on the Jsonnet compiler. A mixin pattern is therefor
     encouraged: `container.new(name) + container.withEnv(env)`.
