@@ -22,12 +22,6 @@ Then put the following into `lib/k.libsonnet`:
 
 ```
 
-> If you happen to use `ksonnet-util/kausal.libsonnet`, also add:
->
-> ```jsonnet
-> + (import "github.com/jsonnet-libs/k8s-alpha/1.18/extensions/kausal-shim.libsonnet")
-> ```
-
 #### Standalone
 
 ```bash
