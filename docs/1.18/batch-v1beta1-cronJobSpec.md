@@ -215,7 +215,7 @@ JobTemplateSpec describes the data a Job should have when created from a templat
 
 ## obj jobTemplate.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn jobTemplate.metadata.withAnnotations
 
@@ -409,7 +409,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj jobTemplate.spec
 
-
+JobSpec describes how the job execution will look like.
 
 ### fn jobTemplate.spec.withActiveDeadlineSeconds
 
@@ -501,11 +501,11 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj jobTemplate.spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj jobTemplate.spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn jobTemplate.spec.template.metadata.withAnnotations
 
@@ -1061,7 +1061,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj jobTemplate.spec.template.spec.affinity
 
-Affinity is a group of affinity scheduling rules.
+
 
 ## obj jobTemplate.spec.template.spec.affinity.nodeAffinity
 
@@ -1087,7 +1087,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-
+A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
 
 ### fn jobTemplate.spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -1247,7 +1247,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj jobTemplate.spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn jobTemplate.spec.template.spec.securityContext.withFsGroup
 
@@ -1367,7 +1367,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj jobTemplate.spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn jobTemplate.spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

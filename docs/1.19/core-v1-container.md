@@ -372,11 +372,11 @@ Lifecycle describes actions that the management system should take in response t
 
 ## obj lifecycle.postStart
 
-
+Handler defines a specific action that should be taken
 
 ## obj lifecycle.postStart.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn lifecycle.postStart.exec.withCommand
 
@@ -452,7 +452,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.postStart.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn lifecycle.postStart.tcpSocket.withHost
 
@@ -476,7 +476,7 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj lifecycle.preStop.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn lifecycle.preStop.exec.withCommand
 
@@ -498,7 +498,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj lifecycle.preStop.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn lifecycle.preStop.httpGet.withHost
 
@@ -552,7 +552,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.preStop.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn lifecycle.preStop.tcpSocket.withHost
 
@@ -638,7 +638,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj livenessProbe.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn livenessProbe.httpGet.withHost
 
@@ -756,7 +756,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj readinessProbe.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn readinessProbe.exec.withCommand
 
@@ -778,7 +778,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj readinessProbe.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn readinessProbe.httpGet.withHost
 
@@ -1050,7 +1050,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 
 ## obj securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -1122,7 +1122,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj startupProbe.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn startupProbe.exec.withCommand
 
@@ -1144,7 +1144,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj startupProbe.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn startupProbe.httpGet.withHost
 
@@ -1198,7 +1198,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj startupProbe.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn startupProbe.tcpSocket.withHost
 

@@ -460,7 +460,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj affinity.nodeAffinity
 
-Node affinity is a group of node affinity scheduling rules.
+
 
 ### fn affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -482,7 +482,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 
@@ -504,7 +504,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj affinity.podAffinity
 
-Pod affinity is a group of inter pod affinity scheduling rules.
+
 
 ### fn affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -726,7 +726,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn securityContext.seLinuxOptions.withLevel
 

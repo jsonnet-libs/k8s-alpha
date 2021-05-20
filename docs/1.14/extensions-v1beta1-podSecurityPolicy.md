@@ -376,7 +376,7 @@ A machine-readable description of why this operation is in the "Failure" status.
 
 ## obj metadata.initializers.result.details
 
-StatusDetails is a set of additional properties that MAY be set by the server to provide additional information about a response. The Reason field of a Status object defines what attributes will be set. Clients must ignore fields that do not match the defined type of each attribute, and should assume that any attribute may be empty, invalid, or under defined.
+
 
 ### fn metadata.initializers.result.details.withCauses
 
@@ -794,7 +794,7 @@ rule is the strategy that will dictate the allowable RunAsUser values that may b
 
 ## obj spec.seLinux
 
-
+SELinuxStrategyOptions defines the strategy type and any options used to create the strategy. Deprecated: use SELinuxStrategyOptions from policy API Group instead.
 
 ### fn spec.seLinux.withRule
 
@@ -806,7 +806,7 @@ rule is the strategy that will dictate the allowable labels that may be set.
 
 ## obj spec.seLinux.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.seLinux.seLinuxOptions.withLevel
 
@@ -842,7 +842,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.supplementalGroups
 
-
+SupplementalGroupsStrategyOptions defines the strategy type and options used to create the strategy. Deprecated: use SupplementalGroupsStrategyOptions from policy API Group instead.
 
 ### fn spec.supplementalGroups.withRanges
 

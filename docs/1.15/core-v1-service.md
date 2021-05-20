@@ -299,7 +299,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 
@@ -545,7 +545,7 @@ type determines how the Service is exposed. Defaults to ClusterIP. Valid options
 
 ## obj spec.sessionAffinityConfig
 
-
+SessionAffinityConfig represents the configurations of session affinity.
 
 ## obj spec.sessionAffinityConfig.clientIP
 

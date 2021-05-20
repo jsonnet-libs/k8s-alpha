@@ -75,7 +75,7 @@ ExternalMetricSource indicates how to scale on a metric not associated with any 
 
 ## obj external.metric
 
-MetricIdentifier defines the name and optionally selector for a metric
+
 
 ### fn external.metric.withName
 
@@ -87,7 +87,7 @@ name is the name of the given metric
 
 ## obj external.metric.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn external.metric.selector.withMatchExpressions
 
@@ -399,7 +399,7 @@ PodsMetricSource indicates how to scale on a metric describing each pod in the c
 
 ## obj pods.metric
 
-
+MetricIdentifier defines the name and optionally selector for a metric
 
 ### fn pods.metric.withName
 
@@ -411,7 +411,7 @@ name is the name of the given metric
 
 ## obj pods.metric.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn pods.metric.selector.withMatchExpressions
 

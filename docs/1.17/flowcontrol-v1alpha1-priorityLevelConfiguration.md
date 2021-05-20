@@ -288,7 +288,7 @@ withType(type)
 
 ## obj spec.limited.limitResponse.queuing
 
-
+QueuingConfiguration holds the configuration parameters for queuing
 
 ### fn spec.limited.limitResponse.queuing.withHandSize
 

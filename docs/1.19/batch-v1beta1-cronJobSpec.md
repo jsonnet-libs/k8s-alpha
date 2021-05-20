@@ -219,7 +219,7 @@ JobTemplateSpec describes the data a Job should have when created from a templat
 
 ## obj jobTemplate.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn jobTemplate.metadata.withAnnotations
 
@@ -413,7 +413,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj jobTemplate.spec
 
-JobSpec describes how the job execution will look like.
+
 
 ### fn jobTemplate.spec.withActiveDeadlineSeconds
 
@@ -465,7 +465,7 @@ ttlSecondsAfterFinished limits the lifetime of a Job that has finished execution
 
 ## obj jobTemplate.spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn jobTemplate.spec.selector.withMatchExpressions
 
@@ -505,7 +505,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj jobTemplate.spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj jobTemplate.spec.template.metadata
 
@@ -1073,7 +1073,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj jobTemplate.spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj jobTemplate.spec.template.spec.affinity.nodeAffinity
 
@@ -1161,7 +1161,7 @@ If the affinity requirements specified by this field are not met at scheduling t
 
 ## obj jobTemplate.spec.template.spec.affinity.podAntiAffinity
 
-Pod anti affinity is a group of inter pod anti affinity scheduling rules.
+
 
 ### fn jobTemplate.spec.template.spec.affinity.podAntiAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1343,7 +1343,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 
@@ -1401,7 +1401,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 
 ## obj jobTemplate.spec.template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn jobTemplate.spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

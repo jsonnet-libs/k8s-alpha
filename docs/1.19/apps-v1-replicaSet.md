@@ -9,8 +9,14 @@ ReplicaSet ensures that a specified number of pod replicas are running at any gi
 ## Index
 
 * [`fn new(name)`](#fn-new)
+* [`fn configMapVolumeMount(configMap, path, volumeMountMixin)`](#fn-configmapvolumemount)
+* [`fn configVolumeMount(name, path, volumeMountMixin)`](#fn-configvolumemount)
+* [`fn emptyVolumeMount(name, path, volumeMountMixin, volumeMixin)`](#fn-emptyvolumemount)
+* [`fn hostVolumeMount(name, hostPath, path, readOnly, volumeMountMixin)`](#fn-hostvolumemount)
 * [`fn mapContainers(f)`](#fn-mapcontainers)
 * [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
+* [`fn pvcVolumeMount(name, path, readOnly, volumeMountMixin)`](#fn-pvcvolumemount)
+* [`fn secretVolumeMount(name, path, defaultMode, volumeMountMixin)`](#fn-secretvolumemount)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -165,6 +171,53 @@ new(name)
 
 new returns an instance of Replicaset
 
+### fn configMapVolumeMount
+
+```ts
+configMapVolumeMount(configMap, path, volumeMountMixin)
+```
+
+`configMapVolumeMount` mounts a `configMap` into all container on `path`. It will
+also add an annotation hash to ensure the pods are re-deployed when the config map
+changes.
+This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn configVolumeMount
+
+```ts
+configVolumeMount(name, path, volumeMountMixin)
+```
+
+`configVolumeMount` mounts a ConfigMap by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn emptyVolumeMount
+
+```ts
+emptyVolumeMount(name, path, volumeMountMixin, volumeMixin)
+```
+
+`emptyVolumeMount` mounts empty volume by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn hostVolumeMount
+
+```ts
+hostVolumeMount(name, hostPath, path, readOnly, volumeMountMixin)
+```
+
+`hostVolumeMount` mounts a `hostPath` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
 ### fn mapContainers
 
 ```ts
@@ -187,6 +240,28 @@ mapContainersWithName(names, f)
 ```
 
 `mapContainersWithName` is like `mapContainers`, but only applies to those containers in the `names` array
+
+### fn pvcVolumeMount
+
+```ts
+pvcVolumeMount(name, path, readOnly, volumeMountMixin)
+```
+
+`hostVolumeMount` mounts a PersistentVolumeClaim by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn secretVolumeMount
+
+```ts
+secretVolumeMount(name, path, defaultMode, volumeMountMixin)
+```
+
+`secretVolumeMount` mounts a Secret by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
 
 ## obj metadata
 
@@ -404,7 +479,7 @@ Replicas is the number of desired replicas. This is a pointer to distinguish bet
 
 ## obj spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.selector.withMatchExpressions
 
@@ -444,11 +519,11 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj spec.template.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn spec.template.metadata.withAnnotations
 
@@ -1016,7 +1091,7 @@ Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
-
+Node affinity is a group of node affinity scheduling rules.
 
 ### fn spec.template.spec.affinity.nodeAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1198,7 +1273,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1318,7 +1393,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.seccompProfile
 
-SeccompProfile defines a pod/container's seccomp profile settings. Only one profile source may be set.
+
 
 ### fn spec.template.spec.securityContext.seccompProfile.withLocalhostProfile
 
@@ -1340,7 +1415,7 @@ Localhost - a profile defined in a file on the node should be used. RuntimeDefau
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 

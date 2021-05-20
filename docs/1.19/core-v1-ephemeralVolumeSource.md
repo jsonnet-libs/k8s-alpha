@@ -263,7 +263,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj volumeClaimTemplate.spec
 
-
+PersistentVolumeClaimSpec describes the common attributes of storage devices and allows a Source for provider-specific attributes
 
 ### fn volumeClaimTemplate.spec.withAccessModes
 
@@ -309,7 +309,7 @@ VolumeName is the binding reference to the PersistentVolume backing this claim.
 
 ## obj volumeClaimTemplate.spec.dataSource
 
-TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.
+
 
 ### fn volumeClaimTemplate.spec.dataSource.withApiGroup
 
@@ -337,7 +337,7 @@ Name is the name of resource being referenced
 
 ## obj volumeClaimTemplate.spec.resources
 
-
+ResourceRequirements describes the compute resource requirements.
 
 ### fn volumeClaimTemplate.spec.resources.withLimits
 
@@ -377,7 +377,7 @@ Requests describes the minimum amount of compute resources required. If Requests
 
 ## obj volumeClaimTemplate.spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn volumeClaimTemplate.spec.selector.withMatchExpressions
 

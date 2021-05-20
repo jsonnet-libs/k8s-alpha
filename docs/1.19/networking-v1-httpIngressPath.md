@@ -95,7 +95,7 @@ Name is the referenced service. The service must exist in the same namespace as 
 
 ## obj backend.service.port
 
-
+ServiceBackendPort is the service port being referenced.
 
 ### fn backend.service.port.withName
 

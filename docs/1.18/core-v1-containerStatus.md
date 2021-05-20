@@ -276,7 +276,7 @@ Time is a wrapper around time.Time which supports correct marshaling to YAML and
 
 ## obj state.waiting
 
-ContainerStateWaiting is a waiting state of a container.
+
 
 ### fn state.waiting.withMessage
 

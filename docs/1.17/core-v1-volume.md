@@ -406,7 +406,7 @@ Optional: User is the rados user name, default is admin More info: https://examp
 
 ## obj cephfs.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn cephfs.secretRef.withName
 
@@ -446,7 +446,7 @@ volume id used to identify the volume in cinder. More info: https://examples.k8s
 
 ## obj cinder.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn cinder.secretRef.withName
 
@@ -552,7 +552,7 @@ VolumeAttributes stores driver-specific properties that are passed to the CSI dr
 
 ## obj csi.nodePublishSecretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn csi.nodePublishSecretRef.withName
 
@@ -1256,7 +1256,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj rbd.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn rbd.secretRef.withName
 
@@ -1344,7 +1344,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj scaleIO.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn scaleIO.secretRef.withName
 
@@ -1440,7 +1440,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj storageos.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn storageos.secretRef.withName
 

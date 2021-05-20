@@ -552,7 +552,7 @@ VolumeAttributes stores driver-specific properties that are passed to the CSI dr
 
 ## obj csi.nodePublishSecretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn csi.nodePublishSecretRef.withName
 
@@ -1344,7 +1344,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj scaleIO.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn scaleIO.secretRef.withName
 

@@ -401,7 +401,7 @@ SelfSubjectAccessReviewSpec is a description of the access request.  Exactly one
 
 ## obj spec.nonResourceAttributes
 
-
+NonResourceAttributes includes the authorization attributes available for non-resource requests to the Authorizer interface
 
 ### fn spec.nonResourceAttributes.withPath
 

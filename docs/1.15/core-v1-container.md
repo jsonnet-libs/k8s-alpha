@@ -353,7 +353,7 @@ Lifecycle describes actions that the management system should take in response t
 
 ## obj lifecycle.postStart.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn lifecycle.postStart.exec.withCommand
 
@@ -429,7 +429,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.postStart.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn lifecycle.postStart.tcpSocket.withHost
 
@@ -475,7 +475,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj lifecycle.preStop.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn lifecycle.preStop.httpGet.withHost
 
@@ -529,7 +529,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.preStop.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn lifecycle.preStop.tcpSocket.withHost
 
@@ -733,7 +733,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj readinessProbe.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn readinessProbe.exec.withCommand
 
@@ -755,7 +755,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj readinessProbe.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn readinessProbe.httpGet.withHost
 
@@ -809,7 +809,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj readinessProbe.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn readinessProbe.tcpSocket.withHost
 
@@ -969,7 +969,7 @@ Removed capabilities
 
 ## obj securityContext.seLinuxOptions
 
-SELinuxOptions are the labels to be applied to the container
+
 
 ### fn securityContext.seLinuxOptions.withLevel
 
@@ -1005,7 +1005,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj securityContext.windowsOptions
 
-WindowsSecurityContextOptions contain Windows-specific options and credentials.
+
 
 ### fn securityContext.windowsOptions.withGmsaCredentialSpec
 

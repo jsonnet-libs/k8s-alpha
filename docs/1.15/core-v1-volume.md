@@ -552,7 +552,7 @@ VolumeAttributes stores driver-specific properties that are passed to the CSI dr
 
 ## obj csi.nodePublishSecretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn csi.nodePublishSecretRef.withName
 
@@ -1256,7 +1256,7 @@ The rados user name. Default is admin. More info: https://releases.k8s.io/HEAD/e
 
 ## obj rbd.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn rbd.secretRef.withName
 
@@ -1440,7 +1440,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj storageos.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn storageos.secretRef.withName
 

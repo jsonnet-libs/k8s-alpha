@@ -306,7 +306,7 @@ IngressBackend describes all endpoints for a given service and port.
 
 ## obj spec.defaultBackend.resource
 
-TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.
+
 
 ### fn spec.defaultBackend.resource.withApiGroup
 
@@ -334,7 +334,7 @@ Name is the name of resource being referenced
 
 ## obj spec.defaultBackend.service
 
-IngressServiceBackend references a Kubernetes Service as a Backend.
+
 
 ### fn spec.defaultBackend.service.withName
 

@@ -474,7 +474,7 @@ JobTemplateSpec describes the data a Job should have when created from a templat
 
 ## obj spec.jobTemplate.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.jobTemplate.metadata.withAnnotations
 
@@ -668,7 +668,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.jobTemplate.spec
 
-
+JobSpec describes how the job execution will look like.
 
 ### fn spec.jobTemplate.spec.withActiveDeadlineSeconds
 
@@ -764,7 +764,7 @@ PodTemplateSpec describes the data a pod should have when created from a templat
 
 ## obj spec.jobTemplate.spec.template.metadata
 
-
+ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
 
 ### fn spec.jobTemplate.spec.template.metadata.withAnnotations
 
@@ -1376,7 +1376,7 @@ Required. A list of node selector terms. The terms are ORed.
 
 ## obj spec.jobTemplate.spec.template.spec.affinity.podAffinity
 
-
+Pod affinity is a group of inter pod affinity scheduling rules.
 
 ### fn spec.jobTemplate.spec.template.spec.affinity.podAffinity.withPreferredDuringSchedulingIgnoredDuringExecution
 
@@ -1456,7 +1456,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.jobTemplate.spec.template.spec.dnsConfig
 
-PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
+
 
 ### fn spec.jobTemplate.spec.template.spec.dnsConfig.withNameservers
 
@@ -1514,7 +1514,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext
 
-PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
+
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.withFsGroup
 
@@ -1598,7 +1598,7 @@ Sysctls hold a list of namespaced sysctls used for the pod. Pods with unsupporte
 
 ## obj spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.jobTemplate.spec.template.spec.securityContext.seLinuxOptions.withLevel
 

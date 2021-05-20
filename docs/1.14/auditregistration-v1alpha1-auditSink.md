@@ -273,7 +273,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj metadata.initializers
 
-
+Initializers tracks the progress of initialization.
 
 ### fn metadata.initializers.withPending
 
@@ -295,7 +295,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -435,7 +435,7 @@ Stages is a list of stages for which events are created.
 
 ## obj spec.webhook
 
-
+Webhook holds the configuration of the webhook
 
 ## obj spec.webhook.clientConfig
 

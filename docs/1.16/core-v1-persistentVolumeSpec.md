@@ -503,7 +503,7 @@ volume id used to identify the volume in cinder. More info: https://examples.k8s
 
 ## obj cinder.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn cinder.secretRef.withName
 
@@ -1047,7 +1047,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj iscsi.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn iscsi.secretRef.withName
 
@@ -1119,7 +1119,7 @@ VolumeNodeAffinity defines constraints that limit what nodes this volume can be 
 
 ## obj nodeAffinity.required
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn nodeAffinity.required.withNodeSelectorTerms
 
@@ -1311,7 +1311,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj rbd.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn rbd.secretRef.withName
 
@@ -1407,7 +1407,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj scaleIO.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn scaleIO.secretRef.withName
 

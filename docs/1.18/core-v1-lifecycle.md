@@ -145,7 +145,7 @@ Handler defines a specific action that should be taken
 
 ## obj preStop.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn preStop.exec.withCommand
 

@@ -295,7 +295,7 @@ minReplicas is the lower limit for the number of replicas to which the autoscale
 
 ## obj spec.behavior
 
-
+HorizontalPodAutoscalerBehavior configures the scaling behavior of the target in both Up and Down directions (scaleUp and scaleDown fields respectively).
 
 ## obj spec.behavior.scaleDown
 
@@ -375,7 +375,7 @@ StabilizationWindowSeconds is the number of seconds for which past recommendatio
 
 ## obj spec.scaleTargetRef
 
-
+CrossVersionObjectReference contains enough information to let you identify the referred resource.
 
 ### fn spec.scaleTargetRef.withKind
 

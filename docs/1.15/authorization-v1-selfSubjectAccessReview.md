@@ -291,7 +291,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-
+Status is a return value for calls that don't return other objects.
 
 ### fn metadata.initializers.result.withCode
 
@@ -401,7 +401,7 @@ SelfSubjectAccessReviewSpec is a description of the access request.  Exactly one
 
 ## obj spec.nonResourceAttributes
 
-NonResourceAttributes includes the authorization attributes available for non-resource requests to the Authorizer interface
+
 
 ### fn spec.nonResourceAttributes.withPath
 

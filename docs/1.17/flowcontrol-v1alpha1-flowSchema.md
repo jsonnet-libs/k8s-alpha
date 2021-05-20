@@ -276,7 +276,7 @@ withRulesMixin(rules)
 
 ## obj spec.distinguisherMethod
 
-
+FlowDistinguisherMethod specifies the method of a flow distinguisher.
 
 ### fn spec.distinguisherMethod.withType
 

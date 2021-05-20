@@ -9,6 +9,7 @@ ClusterRoleBinding references a ClusterRole, but not contain it.  It can referen
 ## Index
 
 * [`fn new(name)`](#fn-new)
+* [`fn bindRole(role)`](#fn-bindrole)
 * [`fn withSubjects(subjects)`](#fn-withsubjects)
 * [`fn withSubjectsMixin(subjects)`](#fn-withsubjectsmixin)
 * [`obj metadata`](#obj-metadata)
@@ -64,6 +65,14 @@ new(name)
 ```
 
 new returns an instance of Clusterrolebinding
+
+### fn bindRole
+
+```ts
+bindRole(role)
+```
+
+`bindRole` returns a roleRef for a Role or ClusterRole object.
 
 ### fn withSubjects
 
@@ -303,7 +312,7 @@ Pending is a list of initializers that must execute in order before this object 
 
 ## obj metadata.initializers.result
 
-Status is a return value for calls that don't return other objects.
+
 
 ### fn metadata.initializers.result.withCode
 

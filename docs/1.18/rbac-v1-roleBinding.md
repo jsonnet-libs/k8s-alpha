@@ -9,6 +9,7 @@ RoleBinding references a role, but does not contain it.  It can reference a Role
 ## Index
 
 * [`fn new(name)`](#fn-new)
+* [`fn bindRole(role)`](#fn-bindrole)
 * [`fn withSubjects(subjects)`](#fn-withsubjects)
 * [`fn withSubjectsMixin(subjects)`](#fn-withsubjectsmixin)
 * [`obj metadata`](#obj-metadata)
@@ -47,6 +48,14 @@ new(name)
 ```
 
 new returns an instance of Rolebinding
+
+### fn bindRole
+
+```ts
+bindRole(role)
+```
+
+`bindRole` returns a roleRef for a Role or ClusterRole object.
 
 ### fn withSubjects
 

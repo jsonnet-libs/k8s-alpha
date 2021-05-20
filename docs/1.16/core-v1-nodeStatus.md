@@ -211,7 +211,7 @@ Error describes any problems reconciling the Spec.ConfigSource to the Active con
 
 ## obj config.active
 
-NodeConfigSource specifies a source of node configuration. Exactly one subfield (excluding metadata) must be non-nil.
+
 
 ## obj config.active.configMap
 

@@ -375,7 +375,7 @@ StabilizationWindowSeconds is the number of seconds for which past recommendatio
 
 ## obj spec.scaleTargetRef
 
-CrossVersionObjectReference contains enough information to let you identify the referred resource.
+
 
 ### fn spec.scaleTargetRef.withKind
 

@@ -431,7 +431,7 @@ type determines how the Service is exposed. Defaults to ClusterIP. Valid options
 
 ## obj spec.sessionAffinityConfig.clientIP
 
-ClientIPConfig represents the configurations of Client IP based session affinity.
+
 
 ### fn spec.sessionAffinityConfig.clientIP.withTimeoutSeconds
 

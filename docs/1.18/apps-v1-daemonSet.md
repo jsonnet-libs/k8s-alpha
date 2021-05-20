@@ -9,8 +9,14 @@ DaemonSet represents the configuration of a daemon set.
 ## Index
 
 * [`fn new(name, containers, podLabels={})`](#fn-new)
+* [`fn configMapVolumeMount(configMap, path, volumeMountMixin)`](#fn-configmapvolumemount)
+* [`fn configVolumeMount(name, path, volumeMountMixin)`](#fn-configvolumemount)
+* [`fn emptyVolumeMount(name, path, volumeMountMixin, volumeMixin)`](#fn-emptyvolumemount)
+* [`fn hostVolumeMount(name, hostPath, path, readOnly, volumeMountMixin)`](#fn-hostvolumemount)
 * [`fn mapContainers(f)`](#fn-mapcontainers)
 * [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
+* [`fn pvcVolumeMount(name, path, readOnly, volumeMountMixin)`](#fn-pvcvolumemount)
+* [`fn secretVolumeMount(name, path, defaultMode, volumeMountMixin)`](#fn-secretvolumemount)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -165,6 +171,53 @@ new(name, containers, podLabels={})
 
 new returns an instance of Daemonset
 
+### fn configMapVolumeMount
+
+```ts
+configMapVolumeMount(configMap, path, volumeMountMixin)
+```
+
+`configMapVolumeMount` mounts a `configMap` into all container on `path`. It will
+also add an annotation hash to ensure the pods are re-deployed when the config map
+changes.
+This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn configVolumeMount
+
+```ts
+configVolumeMount(name, path, volumeMountMixin)
+```
+
+`configVolumeMount` mounts a ConfigMap by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn emptyVolumeMount
+
+```ts
+emptyVolumeMount(name, path, volumeMountMixin, volumeMixin)
+```
+
+`emptyVolumeMount` mounts empty volume by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn hostVolumeMount
+
+```ts
+hostVolumeMount(name, hostPath, path, readOnly, volumeMountMixin)
+```
+
+`hostVolumeMount` mounts a `hostPath` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
 ### fn mapContainers
 
 ```ts
@@ -187,6 +240,28 @@ mapContainersWithName(names, f)
 ```
 
 `mapContainersWithName` is like `mapContainers`, but only applies to those containers in the `names` array
+
+### fn pvcVolumeMount
+
+```ts
+pvcVolumeMount(name, path, readOnly, volumeMountMixin)
+```
+
+`hostVolumeMount` mounts a PersistentVolumeClaim by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn secretVolumeMount
+
+```ts
+secretVolumeMount(name, path, defaultMode, volumeMountMixin)
+```
+
+`secretVolumeMount` mounts a Secret by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
 
 ## obj metadata
 
@@ -404,7 +479,7 @@ The number of old history to retain to allow rollback. This is a pointer to dist
 
 ## obj spec.selector
 
-
+A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
 
 ### fn spec.selector.withMatchExpressions
 
@@ -642,7 +717,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 ## obj spec.template.spec
 
-PodSpec is a description of a pod.
+
 
 ### fn spec.template.spec.withActiveDeadlineSeconds
 
@@ -1004,7 +1079,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
@@ -1132,7 +1207,7 @@ If the anti-affinity requirements specified by this field are not met at schedul
 
 ## obj spec.template.spec.dnsConfig
 
-
+PodDNSConfig defines the DNS parameters of a pod in addition to those generated from DNSPolicy.
 
 ### fn spec.template.spec.dnsConfig.withNameservers
 
@@ -1190,7 +1265,7 @@ A list of DNS search domains for host-name lookup. This will be appended to the 
 
 ## obj spec.template.spec.securityContext
 
-
+PodSecurityContext holds pod-level security attributes and common container settings. Some fields are also present in container.securityContext.  Field values of container.securityContext take precedence over field values of PodSecurityContext.
 
 ### fn spec.template.spec.securityContext.withFsGroup
 
@@ -1310,7 +1385,7 @@ User is a SELinux user label that applies to the container.
 
 ## obj spec.template.spec.securityContext.windowsOptions
 
-
+WindowsSecurityContextOptions contain Windows-specific options and credentials.
 
 ### fn spec.template.spec.securityContext.windowsOptions.withGmsaCredentialSpec
 
@@ -1338,7 +1413,7 @@ The UserName in Windows to run the entrypoint of the container process. Defaults
 
 ## obj spec.updateStrategy
 
-DaemonSetUpdateStrategy is a struct used to control the update strategy for a DaemonSet.
+
 
 ### fn spec.updateStrategy.withType
 
@@ -1350,7 +1425,7 @@ Type of daemon set update. Can be "RollingUpdate" or "OnDelete". Default is Roll
 
 ## obj spec.updateStrategy.rollingUpdate
 
-Spec to control the desired behavior of daemon set rolling update.
+
 
 ### fn spec.updateStrategy.rollingUpdate.withMaxUnavailable
 

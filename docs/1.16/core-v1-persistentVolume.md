@@ -505,7 +505,9 @@ volumeMode defines if a volume is intended to be used with a formatted filesyste
 
 ## obj spec.awsElasticBlockStore
 
+Represents a Persistent Disk resource in AWS.
 
+An AWS EBS disk must exist before mounting to a container. The disk must also be in the same AWS zone as the kubelet. An AWS EBS disk can only be mounted as read/write once. AWS EBS volumes support ownership management and SELinux relabeling.
 
 ### fn spec.awsElasticBlockStore.withFsType
 
@@ -541,7 +543,7 @@ Unique ID of the persistent disk resource in AWS (Amazon EBS volume). More info:
 
 ## obj spec.azureDisk
 
-AzureDisk represents an Azure Data Disk mount on the host and bind mount to the pod.
+
 
 ### fn spec.azureDisk.withCachingMode
 
@@ -629,7 +631,7 @@ Share Name
 
 ## obj spec.cephfs
 
-Represents a Ceph Filesystem mount that lasts the lifetime of a pod Cephfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.cephfs.withMonitors
 
@@ -731,7 +733,7 @@ volume id used to identify the volume in cinder. More info: https://examples.k8s
 
 ## obj spec.cinder.secretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.cinder.secretRef.withName
 
@@ -751,7 +753,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.claimRef
 
-ObjectReference contains enough information to let you inspect or modify the referred object.
+
 
 ### fn spec.claimRef.withFieldPath
 
@@ -803,7 +805,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.csi
 
-Represents storage that is managed by an external CSI volume driver (Beta feature)
+
 
 ### fn spec.csi.withDriver
 
@@ -857,7 +859,7 @@ VolumeHandle is the unique volume name returned by the CSI volume plugin’s Cre
 
 ## obj spec.csi.controllerExpandSecretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.csi.controllerExpandSecretRef.withName
 
@@ -877,7 +879,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.csi.controllerPublishSecretRef
 
-
+SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
 
 ### fn spec.csi.controllerPublishSecretRef.withName
 
@@ -1067,7 +1069,7 @@ Namespace defines the space within which the secret name must be unique.
 
 ## obj spec.flocker
 
-
+Represents a Flocker volume mounted by the Flocker agent. One and only one of datasetName and datasetUUID should be set. Flocker volumes do not support ownership management or SELinux relabeling.
 
 ### fn spec.flocker.withDatasetName
 
@@ -1125,7 +1127,7 @@ ReadOnly here will force the ReadOnly setting in VolumeMounts. Defaults to false
 
 ## obj spec.glusterfs
 
-Represents a Glusterfs mount that lasts the lifetime of a pod. Glusterfs volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.glusterfs.withEndpoints
 
@@ -1275,7 +1277,7 @@ iSCSI Target Portal. The Portal is either an IP or ip_addr:port if the port is o
 
 ## obj spec.iscsi.secretRef
 
-SecretReference represents a Secret Reference. It has enough information to retrieve secret in any namespace
+
 
 ### fn spec.iscsi.secretRef.withName
 
@@ -1417,7 +1419,7 @@ VolumeID uniquely identifies a Portworx volume
 
 ## obj spec.quobyte
 
-Represents a Quobyte mount that lasts the lifetime of a pod. Quobyte volumes do not support ownership management or SELinux relabeling.
+
 
 ### fn spec.quobyte.withGroup
 
@@ -1691,7 +1693,7 @@ VolumeNamespace specifies the scope of the volume within StorageOS.  If no names
 
 ## obj spec.storageos.secretRef
 
-ObjectReference contains enough information to let you inspect or modify the referred object.
+
 
 ### fn spec.storageos.secretRef.withFieldPath
 
@@ -1743,7 +1745,7 @@ UID of the referent. More info: https://kubernetes.io/docs/concepts/overview/wor
 
 ## obj spec.vsphereVolume
 
-Represents a vSphere volume resource.
+
 
 ### fn spec.vsphereVolume.withFsType
 

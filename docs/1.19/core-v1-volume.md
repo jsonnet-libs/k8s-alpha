@@ -705,7 +705,7 @@ Specifies a read-only configuration for the volume. Defaults to false (read/writ
 
 ## obj ephemeral.volumeClaimTemplate.metadata
 
-ObjectMeta is metadata that all persisted resources must have, which includes all objects users must create.
+
 
 ### fn ephemeral.volumeClaimTemplate.metadata.withAnnotations
 
@@ -945,7 +945,7 @@ VolumeName is the binding reference to the PersistentVolume backing this claim.
 
 ## obj ephemeral.volumeClaimTemplate.spec.dataSource
 
-TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.
+
 
 ### fn ephemeral.volumeClaimTemplate.spec.dataSource.withApiGroup
 
@@ -1013,7 +1013,7 @@ Requests describes the minimum amount of compute resources required. If Requests
 
 ## obj ephemeral.volumeClaimTemplate.spec.selector
 
-A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects.
+
 
 ### fn ephemeral.volumeClaimTemplate.spec.selector.withMatchExpressions
 
@@ -1665,7 +1665,7 @@ The rados user name. Default is admin. More info: https://examples.k8s.io/volume
 
 ## obj rbd.secretRef
 
-LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
+
 
 ### fn rbd.secretRef.withName
 
@@ -1753,7 +1753,7 @@ The name of a volume already created in the ScaleIO system that is associated wi
 
 ## obj scaleIO.secretRef
 
-
+LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 
 ### fn scaleIO.secretRef.withName
 

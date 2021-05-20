@@ -9,6 +9,8 @@ specification (`swagger.json`) of the Kubernetes API.
 
 Currently, artifacts for the following Kubernetes versions are provided:
 
+- [v1.21](1.19/README.md)
+- [v1.20](1.19/README.md)
 - [v1.19](1.19/README.md)
 - [v1.18](1.18/README.md)
 - [v1.17](1.17/README.md)

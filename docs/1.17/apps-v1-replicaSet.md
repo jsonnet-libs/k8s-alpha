@@ -9,8 +9,14 @@ ReplicaSet ensures that a specified number of pod replicas are running at any gi
 ## Index
 
 * [`fn new(name)`](#fn-new)
+* [`fn configMapVolumeMount(configMap, path, volumeMountMixin)`](#fn-configmapvolumemount)
+* [`fn configVolumeMount(name, path, volumeMountMixin)`](#fn-configvolumemount)
+* [`fn emptyVolumeMount(name, path, volumeMountMixin, volumeMixin)`](#fn-emptyvolumemount)
+* [`fn hostVolumeMount(name, hostPath, path, readOnly, volumeMountMixin)`](#fn-hostvolumemount)
 * [`fn mapContainers(f)`](#fn-mapcontainers)
 * [`fn mapContainersWithName(names, f)`](#fn-mapcontainerswithname)
+* [`fn pvcVolumeMount(name, path, readOnly, volumeMountMixin)`](#fn-pvcvolumemount)
+* [`fn secretVolumeMount(name, path, defaultMode, volumeMountMixin)`](#fn-secretvolumemount)
 * [`obj metadata`](#obj-metadata)
   * [`fn withAnnotations(annotations)`](#fn-metadatawithannotations)
   * [`fn withAnnotationsMixin(annotations)`](#fn-metadatawithannotationsmixin)
@@ -160,6 +166,53 @@ new(name)
 
 new returns an instance of Replicaset
 
+### fn configMapVolumeMount
+
+```ts
+configMapVolumeMount(configMap, path, volumeMountMixin)
+```
+
+`configMapVolumeMount` mounts a `configMap` into all container on `path`. It will
+also add an annotation hash to ensure the pods are re-deployed when the config map
+changes.
+This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn configVolumeMount
+
+```ts
+configVolumeMount(name, path, volumeMountMixin)
+```
+
+`configVolumeMount` mounts a ConfigMap by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn emptyVolumeMount
+
+```ts
+emptyVolumeMount(name, path, volumeMountMixin, volumeMixin)
+```
+
+`emptyVolumeMount` mounts empty volume by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn hostVolumeMount
+
+```ts
+hostVolumeMount(name, hostPath, path, readOnly, volumeMountMixin)
+```
+
+`hostVolumeMount` mounts a `hostPath` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
 ### fn mapContainers
 
 ```ts
@@ -182,6 +235,28 @@ mapContainersWithName(names, f)
 ```
 
 `mapContainersWithName` is like `mapContainers`, but only applies to those containers in the `names` array
+
+### fn pvcVolumeMount
+
+```ts
+pvcVolumeMount(name, path, readOnly, volumeMountMixin)
+```
+
+`hostVolumeMount` mounts a PersistentVolumeClaim by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
+
+### fn secretVolumeMount
+
+```ts
+secretVolumeMount(name, path, defaultMode, volumeMountMixin)
+```
+
+`secretVolumeMount` mounts a Secret by `name` into all container on `path`.This helper function can be augmented with a `volumeMountsMixin. For example,
+passing "k.core.v1.volumeMount.withSubPath(subpath)" will result in a subpath
+mixin.
+
 
 ## obj metadata
 
@@ -439,7 +514,7 @@ matchLabels is a map of {key,value} pairs. A single {key,value} in the matchLabe
 
 ## obj spec.template
 
-
+PodTemplateSpec describes the data a pod should have when created from a template
 
 ## obj spec.template.metadata
 
@@ -999,7 +1074,7 @@ List of volumes that can be mounted by containers belonging to the pod. More inf
 
 ## obj spec.template.spec.affinity
 
-
+Affinity is a group of affinity scheduling rules.
 
 ## obj spec.template.spec.affinity.nodeAffinity
 
@@ -1025,7 +1100,7 @@ The scheduler will prefer to schedule pods to nodes that satisfy the affinity ex
 
 ## obj spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution
 
-A node selector represents the union of the results of one or more label queries over a set of nodes; that is, it represents the OR of the selectors represented by the node selector terms.
+
 
 ### fn spec.template.spec.affinity.nodeAffinity.requiredDuringSchedulingIgnoredDuringExecution.withNodeSelectorTerms
 

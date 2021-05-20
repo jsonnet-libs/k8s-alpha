@@ -63,7 +63,7 @@ Webhook holds the configuration of the webhook
 
 ## obj webhook.clientConfig
 
-
+WebhookClientConfig contains the information to make a connection with the webhook
 
 ### fn webhook.clientConfig.withCaBundle
 
@@ -129,7 +129,7 @@ If specified, the port on the service that hosting webhook. Default to 443 for b
 
 ## obj webhook.throttle
 
-WebhookThrottleConfig holds the configuration for throttling events
+
 
 ### fn webhook.throttle.withBurst
 

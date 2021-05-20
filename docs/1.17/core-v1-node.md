@@ -330,7 +330,7 @@ Unschedulable controls node schedulability of new pods. By default, node is sche
 
 ## obj spec.configSource.configMap
 
-
+ConfigMapNodeConfigSource contains the information to reference a ConfigMap as a config source for the Node.
 
 ### fn spec.configSource.configMap.withKubeletConfigKey
 

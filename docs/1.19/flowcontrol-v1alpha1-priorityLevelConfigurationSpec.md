@@ -48,7 +48,7 @@ bigger numbers of ACS mean more reserved concurrent requests (at the expense of 
 
 ## obj limited.limitResponse
 
-LimitResponse defines how to handle requests that can not be executed right now.
+
 
 ### fn limited.limitResponse.withType
 

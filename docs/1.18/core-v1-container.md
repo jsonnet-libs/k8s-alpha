@@ -373,7 +373,7 @@ Handler defines a specific action that should be taken
 
 ## obj lifecycle.postStart.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn lifecycle.postStart.exec.withCommand
 
@@ -469,7 +469,7 @@ IntOrString is a type that can hold an int32 or a string.  When used in JSON or 
 
 ## obj lifecycle.preStop
 
-
+Handler defines a specific action that should be taken
 
 ## obj lifecycle.preStop.exec
 
@@ -549,7 +549,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.preStop.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn lifecycle.preStop.tcpSocket.withHost
 
@@ -689,7 +689,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj livenessProbe.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn livenessProbe.tcpSocket.withHost
 
@@ -753,7 +753,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj readinessProbe.exec
 
-
+ExecAction describes a "run in container" action.
 
 ### fn readinessProbe.exec.withCommand
 
@@ -775,7 +775,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj readinessProbe.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn readinessProbe.httpGet.withHost
 
@@ -829,7 +829,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj readinessProbe.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn readinessProbe.tcpSocket.withHost
 
@@ -949,7 +949,7 @@ The UID to run the entrypoint of the container process. Defaults to user specifi
 
 ## obj securityContext.capabilities
 
-Adds and removes POSIX capabilities from running containers.
+
 
 ### fn securityContext.capabilities.withAdd
 
@@ -1119,7 +1119,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj startupProbe.httpGet
 
-HTTPGetAction describes an action based on HTTP Get requests.
+
 
 ### fn startupProbe.httpGet.withHost
 

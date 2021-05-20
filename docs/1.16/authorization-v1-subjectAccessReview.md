@@ -312,7 +312,7 @@ User is the user you're testing for. If you specify 'User' but not 'Groups', the
 
 ## obj spec.nonResourceAttributes
 
-
+NonResourceAttributes includes the authorization attributes available for non-resource requests to the Authorizer interface
 
 ### fn spec.nonResourceAttributes.withPath
 

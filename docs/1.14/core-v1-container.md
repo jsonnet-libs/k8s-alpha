@@ -526,7 +526,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj lifecycle.preStop.tcpSocket
 
-TCPSocketAction describes an action based on opening a socket
+
 
 ### fn lifecycle.preStop.tcpSocket.withHost
 
@@ -666,7 +666,7 @@ Scheme to use for connecting to the host. Defaults to HTTP.
 
 ## obj livenessProbe.tcpSocket
 
-
+TCPSocketAction describes an action based on opening a socket
 
 ### fn livenessProbe.tcpSocket.withHost
 
@@ -730,7 +730,7 @@ Number of seconds after which the probe times out. Defaults to 1 second. Minimum
 
 ## obj readinessProbe.exec
 
-ExecAction describes a "run in container" action.
+
 
 ### fn readinessProbe.exec.withCommand
 
@@ -752,7 +752,7 @@ Command is the command line to execute inside the container, the working directo
 
 ## obj readinessProbe.httpGet
 
-
+HTTPGetAction describes an action based on HTTP Get requests.
 
 ### fn readinessProbe.httpGet.withHost
 

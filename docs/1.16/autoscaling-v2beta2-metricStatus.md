@@ -71,7 +71,7 @@ ExternalMetricStatus indicates the current value of a global metric not associat
 
 ## obj external.current
 
-MetricValueStatus holds the current value for a metric
+
 
 ### fn external.current.withAverageUtilization
 
@@ -159,7 +159,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj external.metric
 
-MetricIdentifier defines the name and optionally selector for a metric
+
 
 ### fn external.metric.withName
 
@@ -303,7 +303,7 @@ This format is intended to make it difficult to use these numbers without writin
 
 ## obj object.describedObject
 
-
+CrossVersionObjectReference contains enough information to let you identify the referred resource.
 
 ### fn object.describedObject.withKind
 
@@ -379,7 +379,7 @@ PodsMetricStatus indicates the current value of a metric describing each pod in 
 
 ## obj pods.current
 
-
+MetricValueStatus holds the current value for a metric
 
 ### fn pods.current.withAverageUtilization
 

@@ -75,6 +75,7 @@ permalink: /1.14/core/v1/
 * [limitRange](core-v1-limitRange.md)
 * [limitRangeItem](core-v1-limitRangeItem.md)
 * [limitRangeSpec](core-v1-limitRangeSpec.md)
+* [list](core-v1-list.md)
 * [loadBalancerIngress](core-v1-loadBalancerIngress.md)
 * [loadBalancerStatus](core-v1-loadBalancerStatus.md)
 * [localObjectReference](core-v1-localObjectReference.md)

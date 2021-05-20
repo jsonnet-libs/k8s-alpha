@@ -591,7 +591,7 @@ rule is the strategy that will dictate what FSGroup is used in the SecurityConte
 
 ## obj spec.runAsGroup
 
-
+RunAsGroupStrategyOptions defines the strategy type and any options used to create the strategy.
 
 ### fn spec.runAsGroup.withRanges
 
@@ -651,7 +651,7 @@ rule is the strategy that will dictate the allowable RunAsUser values that may b
 
 ## obj spec.runtimeClass
 
-RuntimeClassStrategyOptions define the strategy that will dictate the allowable RuntimeClasses for a pod.
+
 
 ### fn spec.runtimeClass.withAllowedRuntimeClassNames
 
@@ -681,7 +681,7 @@ defaultRuntimeClassName is the default RuntimeClassName to set on the pod. The d
 
 ## obj spec.seLinux
 
-
+SELinuxStrategyOptions defines the strategy type and any options used to create the strategy.
 
 ### fn spec.seLinux.withRule
 
@@ -693,7 +693,7 @@ rule is the strategy that will dictate the allowable labels that may be set.
 
 ## obj spec.seLinux.seLinuxOptions
 
-
+SELinuxOptions are the labels to be applied to the container
 
 ### fn spec.seLinux.seLinuxOptions.withLevel
 

@@ -46,7 +46,7 @@ withType(type)
 
 ## obj limitResponse.queuing
 
-QueuingConfiguration holds the configuration parameters for queuing
+
 
 ### fn limitResponse.queuing.withHandSize
 

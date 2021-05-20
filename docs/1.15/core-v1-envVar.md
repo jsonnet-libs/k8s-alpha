@@ -175,7 +175,7 @@ Required: resource to select
 
 ## obj valueFrom.secretKeyRef
 
-
+SecretKeySelector selects a key of a Secret.
 
 ### fn valueFrom.secretKeyRef.withKey
 

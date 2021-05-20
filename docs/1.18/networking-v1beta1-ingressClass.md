@@ -256,7 +256,7 @@ Controller refers to the name of the controller that should handle this class. T
 
 ## obj spec.parameters
 
-
+TypedLocalObjectReference contains enough information to let you locate the typed referenced object inside the same namespace.
 
 ### fn spec.parameters.withApiGroup
 

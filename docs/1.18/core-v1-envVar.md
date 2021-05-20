@@ -77,7 +77,7 @@ EnvVarSource represents a source for the value of an EnvVar.
 
 ## obj valueFrom.configMapKeyRef
 
-Selects a key from a ConfigMap.
+
 
 ### fn valueFrom.configMapKeyRef.withKey
 
@@ -175,7 +175,7 @@ Required: resource to select
 
 ## obj valueFrom.secretKeyRef
 
-
+SecretKeySelector selects a key of a Secret.
 
 ### fn valueFrom.secretKeyRef.withKey
 
