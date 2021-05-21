@@ -4,13 +4,14 @@ permalink: /
 
 # Jsonnet Kubernetes library
 
-The Jsonnet Kubernetes library ([`k8s`](https://github.com/jsonnet-libs/k8s)) is a generated from the OpenAPI
-specification (`swagger.json`) of the Kubernetes API.
+The Jsonnet Kubernetes library is a generated with
+[`k8s`](https://github.com/jsonnet-libs/k8s) from the OpenAPI specification
+(`swagger.json`) of the Kubernetes API.
 
 Currently, artifacts for the following Kubernetes versions are provided:
 
-- [v1.21](1.19/README.md)
-- [v1.20](1.19/README.md)
+- [v1.21](1.21/README.md)
+- [v1.20](1.20/README.md)
 - [v1.19](1.19/README.md)
 - [v1.18](1.18/README.md)
 - [v1.17](1.17/README.md)
