@@ -1,7 +1,7 @@
 # k8s-alpha
 
-This repository contains artifacts of the `k8s-alpha` Jsonnet Kubernetes library,
-it is generated with `k8s-gen`, located at https://github.com/jsonnet-libs/k8s.
+This repository contains artifacts of the `k8s-alpha` Jsonnet Kubernetes library.
+It is generated with `k8s-gen`, located at https://github.com/jsonnet-libs/k8s.
 
 ## Usage
 
